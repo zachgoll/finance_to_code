@@ -17,14 +17,14 @@ Although the roadmap looked great right out of the box, I have slightly altered 
 
 # Guidelines  
 
-* All work uploaded to Github in this repository or respective project repository.  I will learn how to use [Git in the terminal](http://gitimmersion.com/index.html) and refer to [this cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf).
+* All work uploaded to Github in this repository.  I will learn how to use [Git in the terminal](http://gitimmersion.com/index.html) and refer to [this cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf).
 * Weekly and monthly reviews of my progress will live here in the [master log](https://github.com/zachgoll/finance_to_code/blob/master/log.md).
 * For each module that does not consist of a project, I will commit some sort of code to github displaying the various things that I learned in that particular module.
 * All code will be written in [Brackets](http://brackets.io/), and development environment run locally. 
 
 ## Individual Project Guidelines
 
-* A new repository will be created for each project, and all projects will be deployed via [surge.sh](https://www.youtube.com/watch?v=LZA8QVLOinE), or Heroku (if full-stack).
+* A new submodule will be created for each minor project (brand new repository for larger projects), and all projects will be deployed via [surge.sh](https://www.youtube.com/watch?v=LZA8QVLOinE), or Heroku (if full-stack).
 * All projects will respect copyright and trademark laws.  Proper attribution will be given to all sources. 
 * For help on projects, I will use official documentation, MDN, Stack Overflow (but no copy/pasting), and Github.  The goal is to avoid deviating from the listed resources, and learning to read through all the technical jargon rather than wasting days on some new Udemy/Lynda course that could easily have been learned in a few hours if I had done the hard reading.
 * Throughout the project, I will develop some sort of basic build process and use [Gulp](http://gulpjs.com/) for my task runner software.
