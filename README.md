@@ -1,4 +1,4 @@
-    # Finance to Code
+# Finance to Code
 
 As a weary student soon to graduate with a degree in Corporate Finance, I decided it was about time to get serious about my career in web-development and computer science.  For years, I've been tinkering with the idea, but it wasn't until now that reality slapped me in the face and made this proejct more of a necessity than a pipe dream.  
 
@@ -24,15 +24,14 @@ Although the roadmap looked great right out of the box, I have slightly altered 
 
 ## Individual Project Guidelines
 
+* A README.md file will be included in each project submodule, and will state an overview of the project, project guidelines, and other useful information
 * A new submodule will be created for each minor project (brand new repository for larger projects), and all projects will be deployed via [surge.sh](https://www.youtube.com/watch?v=LZA8QVLOinE), or Heroku (if full-stack).
 * All projects will respect copyright and trademark laws.  Proper attribution will be given to all sources. 
 * For help on projects, I will use official documentation, MDN, Stack Overflow (but no copy/pasting), and Github.  The goal is to avoid deviating from the listed resources, and learning to read through all the technical jargon rather than wasting days on some new Udemy/Lynda course that could easily have been learned in a few hours if I had done the hard reading.
 * Throughout the project, I will develop some sort of basic build process and use [Gulp](http://gulpjs.com/) for my task runner software.
 * For each project, I will run at least 2 automated tests (Mocha and Jasmine)
-* A README.md file will be included in each project repository
 * I will follow the ["7 Rules of a Great Commit Message"](https://chris.beams.io/posts/git-commit/) for each new substantial commit (not for updating the log.md or things like that).
   * Subject line: If applied, this commit will *your subject line here*
-* All CSS files will have [BEM naming conventions](http://getbem.com/naming/), following [this guide](https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/).
 
 # Acceptable distractions from the main path 
 
