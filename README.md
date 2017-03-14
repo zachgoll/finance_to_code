@@ -4,6 +4,10 @@ As a weary student soon to graduate with a degree in Corporate Finance, I decide
 
 The project I'm embarking on certainly won't be easy nor will it be perfectly engineered, but it should take me from where I am now to an employable/versatile front-end developer.  My ultimate goal is to become employable/employed *before* I complete the curriculum I have set in front of myself. 
 
+# Important Links
+
+* [Project Journal](https://github.com/zachgoll/finance_to_code/blob/master/log.md) 
+
 # Goals 
 
 * Before the project is over, make some sort of income freelancing with my new skills 
@@ -32,14 +36,6 @@ Although the roadmap looked great right out of the box, I have slightly altered 
 * For each project, I will run at least 2 automated tests (Mocha and Jasmine)
 * I will follow the ["7 Rules of a Great Commit Message"](https://chris.beams.io/posts/git-commit/) for each new substantial commit (not for updating the log.md or things like that).
   * Subject line: If applied, this commit will *your subject line here*
-
-# Acceptable distractions from the main path 
-
-As with all endeavors I embark on, distractions will be my biggest enemy.  The main thing to watch out for is signing up for all sorts of online courses (ex: building a portfolio website, and buying a Udemy course on Adobe Illustrator for designing the website).  In light of this, I have designated the following to be my "acceptable distractions:" 
-
-* [Coding Game](https://www.codingame.com/start)
-* Solving problems on Free Code Camp
-* [Working on an open source project](https://www.codetriage.com/)
 
 
 
