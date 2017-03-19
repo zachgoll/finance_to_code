@@ -60,7 +60,20 @@ Overall, I felt that this week was a wake-up call and was my first week of this 
 * Complete CS50 Problem set 4 
 * Complete CS50 Problem set 5
 
+# Recap 
 
+If there is anything I can remember from this week, it would be pointers and file manipulation.  I did not even start PSET 5.  I decided that I needed to get clear on the concepts relating to pointer variables, arrays in relation to pointer variables, and all of the file manipulation functions such as fseek(), fread(), fwrite(), fopen(), which was in pset4.  After this problem set, I feel much more comfortable working with files in my C code, iterating through them, and changing parts as necessary. 
+
+Relevant files: [recover.c](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset4/recover.c), [resize.c](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset4/resize.c), [whodunit.c](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset4/whodunit.c)
+
+Overall, I am pleased with my learning progress.  Although these last few weeks and those moving forward won't be the most exciting, I feel that taking CS50 is creating a strong foundation for me when I move towards the realm of javascript and real-world projects.  Many of the concepts in CS50 are tedious, but implant a deep understanding of how computers work via C code. 
+
+# Week 5: Mar 20 - Mar 26
+
+## Goals
+
+* Complete CS50 Problem set 5
+* Read CS50 Week 6 Material (no problem set assigned)
 
 
 
