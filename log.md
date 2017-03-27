@@ -60,7 +60,7 @@ Overall, I felt that this week was a wake-up call and was my first week of this 
 * Complete CS50 Problem set 4 
 * Complete CS50 Problem set 5
 
-# Recap 
+## Recap 
 
 If there is anything I can remember from this week, it would be pointers and file manipulation.  I did not even start PSET 5.  I decided that I needed to get clear on the concepts relating to pointer variables, arrays in relation to pointer variables, and all of the file manipulation functions such as fseek(), fread(), fwrite(), fopen(), which was in pset4.  After this problem set, I feel much more comfortable working with files in my C code, iterating through them, and changing parts as necessary. 
 
@@ -74,6 +74,28 @@ Overall, I am pleased with my learning progress.  Although these last few weeks 
 
 * Complete CS50 Problem set 5
 * Read CS50 Week 6 Material (no problem set assigned)
+
+**3/23/17 (update)**
+
+Thanks to an intense college golf schedule and a 35 page honors project paper, I have decided to omit the week 6 reading for this week, and pair it up with the week 7 reading for next week.  I hate doing so, but I am on the road for golf for the next 8 days, and will not have sufficient time to continue at this pace.  By assigning only readings for next week, I think this will allow me to finish my honors paper and keep making progress on this project without sacrificing practice time on the golf course since it's in a sense my "full time job" at the moment!
+
+## Recap 
+
+The topics that I worked on were largely a product of last week's problem set.  Not only did I work with files, but also worked a great deal with pointers.  In PSET 5, all of these core concepts were fused together in order to create and work with large data structures.  The problem consisted of three parts, which included *loading* a large list of words into a "dictionary" (I chose to use a hash table as a data structure), *checking* another large file of words to see if they matched those of the dictionary (also involved the retrieval of the hash table addresses via pointers and structs), and finally *unloading*, or "freeing" the dynamically allocated memory that was used to store all of the dictionary words into the hash table.
+
+Relevant files: [dictionary.c](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset5/dictionary.c)
+
+This week was a tough one thanks to a heavy golf schedule that consumed the majority of my week.  I found myself working on Problem Set 5 from airport terminals at night to hotel rooms at 5 in the morning.  It was a struggle because I was not able to put in a large chunk of time until today, which made it difficult to gain momentum and build on the concepts I was learning. 
+
+Despite this, I feel that this week was a pivotal one in this project.  I thought to myself many times throughout the week that I was never going to finish the problem set due to the difficulty of it (this was by far the most difficult one to date) and the lack of time I had to work on it.  In the end, I made it happen, and saw my problem solving knowledge improve dramatically.  Since I didn't have much time, I had to think critically and work out the most efficient way to get things done.  As a result, I stopped guessing and checking so much and started to truly learn the concepts needed to solve the problem (although it took me a while to even figure out what the problem was!).
+
+# Week 6: Mar 27 - April 2
+
+## Goals 
+
+* Read CS50 Week 6 and Week 7 Material (there is no problem set associated with either of these)
+
+
 
 
 
