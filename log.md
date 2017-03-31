@@ -95,7 +95,17 @@ Despite this, I feel that this week was a pivotal one in this project.  I though
 
 * Read CS50 Week 6 and Week 7 Material (there is no problem set associated with either of these)
 
+## Recap 
 
+By far the lightest week of this project, I spent time learning about the web as well as machine learning on a high level.  Prior to these two lectures, I had a fairly good understanding of web development in terms of practical application (HTML, CSS, Javascript), but did not fully understand the theory behind it (HTTP, DNS, DHCP, TCP, IP, etc.).  Although I did not learn nearly as much as the prior weeks in which I solved difficult problem sets, I enjoyed connecting the dots between some concepts that have been floating around in my mind as I began to learn web development one year ago.
+
+Next week, I will once again be booked solid with collegiate golf and writing my honors project paper, so it will take some mental fortitude to complete problem set 6!
+
+# Week 7: April 3 - April 9
+
+## Goals 
+
+* Complete CS50 Problem Set #6 
 
 
 
