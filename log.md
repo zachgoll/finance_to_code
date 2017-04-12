@@ -107,5 +107,20 @@ Next week, I will once again be booked solid with collegiate golf and writing my
 
 * Complete CS50 Problem Set #6 
 
+## Recap 
+
+Finished pset6 late this week due to a 30 page Capstone research paper and a three day golf tournament at the end of the week.  This problem set introduced Python, and I enjoyed finally getting into a higher level language.  Although I previously had no experience in Python, many of the concepts from C translated into the implementations, and many of the concepts (classes, data structures, etc.) were fairly intuitive for me since I had previously read the YDKJS book (parts 1-3) and done some work in javascript.
+
+Overall, this week was the first week in which I truly realized the power of high-level programming languages.  After several weeks of working in C, it became apparent that doing even the simplest tasks with a computer can be mundane and difficult in lower level languages.  Before CS50, I had started out with Javascript, but never appreciated or realized the power of it at the time.  Now, it feels like the possibilities are endless given all of the languages, libraries, and code snippets out there!
+
+Below, I have included the two files which I did the most work on.  As with previous problem sets, some of the code had already been written for me, but the two files below contain a large chunk of my own code.
+
+Relevant files: [tweets.py](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset6/tweets.py), [analyzer.py](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset6/analyzer.py)
+
+# Week 8: April 10 - April 16
+
+## Goals
+
+* Complete CS50 Problem Set #7 (Finance)
 
 
