@@ -123,4 +123,22 @@ Relevant files: [tweets.py](https://github.com/zachgoll/finance_to_code/blob/mas
 
 * Complete CS50 Problem Set #7 (Finance)
 
+## Recap
+
+By far the longest problem set of CS50 thus far.  I spent over 20 hours putting together this finance application which allows new users to sign up, buy stocks queried from Yahoo Finance with fake money, add money to their account, search for stock quotes, sell stocks, and see their portfolio and transaction history.
+
+I thoroughly enjoyed building this app because I was finally able to see how the front end and back end of things come together.  To build the application, I used Flask, Jinja, Python, and SQLite as my framework, templating language, programming language, and database respectively.  The reason I took so long building the application may have been due to my inexperience with ALL of these!  I had only spent 4 days working in Python prior to building this app, and had zero experience with the others!  
+
+I still haven't figured out a good way to deploy and share my files, but will soon figure this out now that I am finally getting the hang of programming and building things.  To date, I have spent 100% of my time figuring out how to make the code work, so I haven't had the time to deploy anything.
+
+Relevant file: [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
+
+# Week 9: April 17 - April 23
+
+## Goals
+
+* Complete CS50 Problem Set #8 (Mashup)
+
+
+
 
