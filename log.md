@@ -131,13 +131,16 @@ I thoroughly enjoyed building this app because I was finally able to see how the
 
 I still haven't figured out a good way to deploy and share my files, but will soon figure this out now that I am finally getting the hang of programming and building things.  To date, I have spent 100% of my time figuring out how to make the code work, so I haven't had the time to deploy anything.
 
-Relevant file: [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
+Relevant file (deployed application coming soon): [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
 
-# Week 9: April 17 - April 23
+# Week 9, 10, 11, 12: April 17 - May 14
 
 ## Goals
 
 * Complete CS50 Problem Set #8 (Mashup)
+* Complete Final Project
+
+I have grouped the final part of CS50 together and given myself just under a month to complete them because for the end of this semester, I will have 7 days of golf tournaments, final projects in all my classes, and graduation.  My goal is to work consistently over this time period, but I will not have a large block of time to knock out the pset or final project until the final week of the semester. 
 
 
 
