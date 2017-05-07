@@ -131,9 +131,9 @@ I thoroughly enjoyed building this app because I was finally able to see how the
 
 I still haven't figured out a good way to deploy and share my files, but will soon figure this out now that I am finally getting the hang of programming and building things.  To date, I have spent 100% of my time figuring out how to make the code work, so I haven't had the time to deploy anything.
 
-Relevant file (deployed application coming soon): [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
+Relevant file: [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
 
-# Week 9, 10, 11, 12: April 17 - May 14
+# Week 9, 10, 11: April 17 - May 7
 
 ## Goals
 
@@ -141,6 +141,24 @@ Relevant file (deployed application coming soon): [Finance Application Main File
 * Complete Final Project
 
 I have grouped the final part of CS50 together and given myself just under a month to complete them because for the end of this semester, I will have 7 days of golf tournaments, final projects in all my classes, and graduation.  My goal is to work consistently over this time period, but I will not have a large block of time to knock out the pset or final project until the final week of the semester. 
+
+## Recap 
+
+I was able to finish the final problem set of CS50 this past week, and figured I would make an entry before starting the final project.  The project this week was quite fun because it incorporated several different technologies all in one.  Not only did I use Python, Flask, and SQLite, but also incorporated javascript files with jQuery and AJAX implementations.  At first, it was difficult for me to understand how everything fit together, but after several hours of reading through each file over and over again, I finally came to an understanding of how information is passed from the database through to the Python routes and the HTML, and finally manipulated by javascript on the front end. 
+
+This week is the first time I can say that I genuinely understand the difference between the front-end and the back-end of a web application.  Although still needing lots of practice, I feel that I have finally gotten to the position where I can create useful applications rather than the typical "coding practice" applications that are purely meant to develop skills (much like we did in the beginning problem sets with C coding).  
+
+Relevant file: [main javascript file](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset8/scripts.js)
+
+# Week 12: May 8 - May 14
+
+## Goals 
+
+* Complete Final Project for CS50
+
+I am graduating college this week, so I will be quite busy near the end of the week.  I hope to make good progress on the final project during the beginning of the week, and maybe even finish it by the end of the week!
+
+
 
 
 
