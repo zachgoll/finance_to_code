@@ -156,7 +156,7 @@ Relevant file: [main javascript file](https://github.com/zachgoll/finance_to_cod
 
 * Complete Final Project for CS50
 
-I am graduating college this week, so I will be quite busy near the end of the week.  I hope to make good progress on the final project during the beginning of the week, and maybe even finish it by the end of the week!
+
 
 
 
