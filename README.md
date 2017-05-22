@@ -5,6 +5,7 @@ As a weary student soon to graduate with a degree in Corporate Finance, I decide
 # Important Links
 
 * [Project Journal](https://github.com/zachgoll/finance_to_code/blob/master/log.md) 
+* [List of Courses Taken/Certifications Earned During Project]()
 
 # Goals 
 
