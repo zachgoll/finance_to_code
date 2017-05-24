@@ -1,22 +1,17 @@
-# Finance to Code
+# Project Background
 
-As a weary student soon to graduate with a degree in Corporate Finance, I decided it was about time to get serious about my career in web-development and computer science.  For years, I've been tinkering with the idea, but it wasn't until now that reality slapped me in the face and made this proejct more of a necessity than a pipe dream.  The project won't be easy nor will it be perfectly engineered, but my goal is to obtain a quality computer science education over the many months it will take to finish.
+I initially got the idea after stumbling upon [a post made in the FCC forums](https://forum.freecodecamp.com/t/computer-guide-get-job-ready-with-1-fcc-cert-3-projects-2-courses-and-10-books/64027) by [P1xt](https://forum.freecodecamp.com/users/P1xt), and decided it looked both practical enough and difficult enough to get me where I want to go.  After a bit of exploration, I found another post from the same user that provided a much more detailed path to becoming a front-end developer.  These posts, along with the [100 days of Code](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) challenge were the inspiration behind this project.
+
+UPDATE (05/18/17) - After working through CS50, I found my interests leaning towards the logical parts of CS rather than visual aspects, and have transitioned to [PxT1's comprehensive guide with computer science applications](https://github.com/imleonmorris/computer-science-and-web-development).  The original guide (as noted by the author) was meant to provide the "bare minimum," while I would like to get a complete CS education through this project.
 
 # Important Links
 
 * [Project Journal](https://github.com/zachgoll/finance_to_code/blob/master/log.md) 
 * [List of Courses Taken/Certifications Earned During Project](https://github.com/zachgoll/finance_to_code/blob/master/course_list.md)
 
-# Goals 
+# Goal
 
-* Before the project is over, make some sort of income freelancing with my new skills 
-* By the end of the project, land a job as a full-time ~~junior front-end developer~~ full-stack developer/data scientist
-
-# Project Background
-
-I initially got the idea after stumbling upon [a post made in the FCC forums](https://forum.freecodecamp.com/t/computer-guide-get-job-ready-with-1-fcc-cert-3-projects-2-courses-and-10-books/64027) by [P1xt](https://forum.freecodecamp.com/users/P1xt), and decided it looked both practical enough and difficult enough to get me where I want to go.  After a bit of exploration, I found another post from the same user that provided a much more detailed path to becoming a front-end developer.  These posts, along with the [100 days of Code](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) challenge were the inspiration behind this project.
-
-UPDATE (05/18/17) - After working through CS50, I found my interests leaning towards the logical parts of CS rather than visual aspects, and have transitioned to [PxT1's comprehensive guide with computer science applications](https://github.com/imleonmorris/computer-science-and-web-development).  The original guide (as noted by the author) was meant to provide the "bare minimum," while I would like to get a complete CS education through this project.
+* By the end of the project, acquire a full time ~~junior front-end developer~~ full-stack developer/dev-ops job
 
 # General Guidelines  
 
