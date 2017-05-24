@@ -1,0 +1,87 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/05/CPU.hdl
+
+/**
+ * The Hack CPU (Central Processing unit), consisting of an ALU,
+ * two registers named A and D, and a program counter named PC.
+ * The CPU is designed to fetch and execute instructions written in 
+ * the Hack machine language. In particular, functions as follows:
+ * Executes the inputted instruction according to the Hack machine 
+ * language specification. The D and A in the language specification
+ * refer to CPU-resident registers, while M refers to the external
+ * memory location addressed by A, i.e. to Memory[A]. The inM input 
+ * holds the value of this location. If the current instruction needs 
+ * to write a value to M, the value is placed in outM, the address 
+ * of the target location is placed in the addressM output, and the 
+ * writeM control bit is asserted. (When writeM==0, any value may 
+ * appear in outM). The outM and writeM outputs are combinational: 
+ * they are affected instantaneously by the execution of the current 
+ * instruction. The addressM and pc outputs are clocked: although they 
+ * are affected by the execution of the current instruction, they commit 
+ * to their new values only in the next time step. If reset==1 then the 
+ * CPU jumps to address 0 (i.e. pc is set to 0 in next time step) rather 
+ * than to the address resulting from executing the current instruction. 
+ */
+
+CHIP CPU {
+
+    IN  inM[16],         // M value input  (M = contents of Memory[A])
+        instruction[16], // Instruction for execution
+        reset;           // Signals whether to re-start the current
+                         // program (reset==1) or continue executing
+                         // the current program (reset==0).
+
+    OUT outM[16],        // M value output
+        writeM,          // Write to M? 
+        addressM[15],    // Address in data memory (of M)
+        pc[15];          // address of next instruction
+
+    PARTS:
+    
+    // If i bit is 1, output of Mux is C-instruction, else, A-instruction
+    Not(in=instruction[15], out=noti);
+    Mux16(a=aluout, b=instruction, sel=noti, out=aa);
+
+    // If a=1, inM, else A-register
+    Or(a=instruction[5], b=noti, out=regaload);
+    ARegister(in=aa, load=regaload, out[0..14]=addressM, out=pcin);
+
+    And(a=instruction[15], b=instruction[12], out=aorm);
+    Mux16(a=pcin, b=inM, sel=aorm, out=cc);
+
+    // Write M if instruction is a c-instruction and the M bit is 1
+    And(a=instruction[15], b=instruction[3], out=writeM);
+
+    // ALU and D-register
+    ALU(x=dd, y=cc, zx=instruction[11], nx=instruction[10], 
+    zy=instruction[9], ny=instruction[8], f=instruction[7], 
+    no=instruction[6], out=outM, out=aluout, zr=zr, ng=ng);
+    
+    And(a=instruction[15], b=instruction[4], out=dreg);
+    DRegister(in=aluout, load=dreg, out=dd);
+
+    // PC Logic
+    
+    // Figure out if the ALU output is =0, !=0, >0, <0, >=0, or <=0
+    Not(in=ng, out=pos);
+    Not(in=zr, out=notzero);
+    And(a=notzero, b=pos, out=gzero);
+    
+    And(a=zr, b=instruction[1], out=JEQ);       // If JEQ selected and output == 0, then JEQ is true
+    And(a=ng, b=instruction[2], out=JLT);       // If JLT selected and output < 0, then JLT is true
+    And(a=gzero, b=instruction[0], out=JGT);    // If JGT selected and output > 0, then JGT is true
+    And(a=JEQ, b=JLT, out=JLE);                 // If JEQ and JLT, then JLE
+    And(a=JEQ, b=JGT, out=JGE);                 // If JEQ and JGT, then JGE
+    And(a=JLE, b=JGT, out=JMP);                 // If JLE and JGT, then JMP
+    And(a=JGT, b=JLT, out=JNE);                 // If JGT and JLT, then JNE
+
+    // If any of above conditions, true, there is a jump
+    Or8Way(in[0]=JEQ, in[1]=JLT, in[2]=JGT, in[3]=JLE, in[4]=JGE, in[5]=JMP, in[6]=JNE, in[7]=JNE, out=jmptrue);
+    
+    // If there is a jump and the instruction is a c-instruction, load the PC
+    And(a=jmptrue, b=instruction[15], out=jmpistrue);
+    PC(in=pcin, load=jmpistrue, inc=true, reset=reset, out[0..14]=pc);
+    
+}
