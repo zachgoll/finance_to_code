@@ -1,6 +1,14 @@
-#Table of Contents
-*[Week 1](#week-1-feb-20---feb-26)
-*[Week 1](#week-2-feb-27---mar-5)
+# Table of Contents
+* [Week 1](#week-1-feb-20---feb-26)
+* [Week 2](#week-2-feb-27---mar-5)
+* [Week 3](#week-3-mar-6---mar-12)
+* [Week 4](#week-4-mar-13---mar-19)
+* [Week 5](#week-5-mar-20---mar-26)
+* [Week 6](#week-6-mar-27---april-2)
+* [Week 7](#week-7-april-3---april-9)
+* [Week 8](#week-8-april-10---april-16)
+* [Weeks 9, 10, 11](#weeks-9-10-11-april-17---may-7)
+* [Weeks 12, 13, 14](#weeks-12-13-may-8---may-21)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -35,7 +43,7 @@ For now, I am going to stay away from working with submodules, and hone my basic
 
 Unfortunately, I do not have time to redo the portfolio site, as I need to move on to the next modules in the curriculum I have created.  Despite the mishap, I learned a ton about HTML and CSS in regards to layouts and content positioning.
 
-# Week 3: Mar 6 - 12
+# Week 3: Mar 6 - Mar 12
 
 ## Goals 
 
@@ -137,7 +145,7 @@ I still haven't figured out a good way to deploy and share my files, but will so
 
 Relevant file: [Finance Application Main File](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset7/application.py)
 
-# Week 9, 10, 11: April 17 - May 7
+# Weeks 9, 10, 11: April 17 - May 7
 
 ## Goals
 
@@ -154,11 +162,19 @@ This week is the first time I can say that I genuinely understand the difference
 
 Relevant file: [main javascript file](https://github.com/zachgoll/finance_to_code/blob/master/cs50/pset8/scripts.js)
 
-# Week 12: May 8 - May 14
+# Weeks 12, 13: May 8 - May 21
 
-## Goals 
+Although I did a good amount of work during this time period, I did not record any of it in the log, and being my final project for CS50, I have spent longer than a week to work on it.
 
-* Complete Final Project for CS50
+# Week 14: May 22 - May 28
+
+## *Update*
+
+As I have been able to work more frequently since graduation, I have decided to record a daily log of the various concepts and projects that I am working on in attempts to consolidate and visually see my progress each day.
+
+## Thursday 5/25 
+
+Spent the majority of the day setting up a local development environment with Python, re-learning the basics of programming in Python, and writing pseudocode for writing an assembler for the machine code that I have already written for the Nand2Tetris Hack Machine.  After writing the pseudocode, I realized that I would need to use Python's "re" module.  Already tired, I worked slowly to understand regular expressions via a [friendly Python documentation](https://docs.python.org/3.6/howto/regex.html#more-metacharacters) and [YouTube tutorial](https://www.youtube.com/watch?v=sZyAn2TW7GY).  Tomorrow, I hope to be able to finish writing the Assembler in Python.
 
 
 
