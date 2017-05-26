@@ -1,5 +1,6 @@
-[Week 1](#week-1:-feb.-20---feb-26)
-
+#Table of Contents
+*[Week 1](#week-1-feb-20---feb-26)
+*[Week 1](#week-2-feb-27---mar-5)
 
 # Week 1: Feb. 20 - Feb 26
 
