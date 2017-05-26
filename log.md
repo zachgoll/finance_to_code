@@ -1,8 +1,7 @@
-[Week 1](#week-1)
+[Week 1](#week-1:-feb.-20---feb-26)
 
 
-# Week 1
-Feb. 20 - Feb 26
+# Week 1: Feb. 20 - Feb 26
 
 ## Goals
 
