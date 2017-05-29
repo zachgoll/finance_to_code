@@ -172,9 +172,13 @@ Although I did a good amount of work during this time period, I did not record a
 
 As I have been able to work more frequently since graduation, I have decided to record a daily log of the various concepts and projects that I am working on in attempts to consolidate and visually see my progress each day.
 
-## Thursday 5/25 
+### Thursday 5/25 
 
 Spent the majority of the day setting up a local development environment with Python, re-learning the basics of programming in Python, and writing pseudocode for writing an assembler for the machine code that I have already written for the Nand2Tetris Hack Machine.  After writing the pseudocode, I realized that I would need to use Python's "re" module.  Already tired, I worked slowly to understand regular expressions via a [friendly Python documentation](https://docs.python.org/3.6/howto/regex.html#more-metacharacters) and [YouTube tutorial](https://www.youtube.com/watch?v=sZyAn2TW7GY).  Tomorrow, I hope to be able to finish writing the Assembler in Python.
+
+### Sunday 5/28
+
+After a few days working with regular expressions, I have begun to understand them better.  Unfortunately, I found myself writing a never-ending function in Python, and spent several hours splitting it up into less complex functions.  The assembler I am writing has several different modules, and I found myself a bit confused as to how all the modules work together.  I ended up breaking things down to the basics and doing a lot of debugging.  Tomorrow I should be able to finish up the assembler!
 
 
 
