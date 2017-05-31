@@ -170,7 +170,7 @@ Although I did a good amount of work during this time period, I did not record a
 
 ## *Update*
 
-As I have been able to work more frequently since graduation, I have decided to record a daily log of the various concepts and projects that I am working on in attempts to consolidate and visually see my progress each day.
+As I have been able to work more frequently since graduation, I have decided to record a semi-daily log of the various concepts and projects that I am working on in attempts to consolidate and visually see my progress each day.
 
 ### Thursday 5/25 
 
@@ -180,6 +180,15 @@ Spent the majority of the day setting up a local development environment with Py
 
 After a few days working with regular expressions, I have begun to understand them better.  Unfortunately, I found myself writing a never-ending function in Python, and spent several hours splitting it up into less complex functions.  The assembler I am writing has several different modules, and I found myself a bit confused as to how all the modules work together.  I ended up breaking things down to the basics and doing a lot of debugging.  Tomorrow I should be able to finish up the assembler!
 
+# Week 15: May 29 - June 4
+
+### Wednesday 5/31
+
+After struggling for several days with the Assembler I was building in Python, I finally finished it!  Most of the problems I faced were with code organization and getting the regular expressions to isolate the exact part of the data that I needed.  I got the assembler to work with smaller programs written in the Hack machine language ("Hack" being an arbitrarily defined name for the computer that I am building), but it was having trouble scaling up to run the "pong" game supplied as a test file in the Nand2Tetris software suite.  The pong game had close to 25,000 lines of assembly language, and with the program that I had written, I was executing a loop where the each time the assembler translated a line of code, it had to read through the entire program.  I eventually figured out how to globalize a few variables that enabled me to only run through the program twice to build a table of symbols, and then once to execute the actual translation process.  Before, I was running through the entire program thousands of times, which at 25,000 lines of code, this would have taken all day.  As a new programmer, my main goal has been to get programs to work, but this was my first encounter with writing a workable AND efficient program.  After fixing the efficiency problem, I spent several hours debugging to later find out that a single symbol in one of my regular expressions was causing the entire program to break!  
+
+Finally, as I was going to update my Github repository to show the new files, I ran into a problem that I hadn't before.  Since I had updated the remote repository earlier in the week, the local repository that I had to push changes from was not merged/synced with the remote repository.  This led me to several hours working through [Git Immersion](http://gitimmersion.com/lab_16.html) trying to understand how Git works under the hood.  I eventually was able to understand Git well enough to get my local and remote repositories resolved so I could push my [Assembler.py](https://github.com/zachgoll/finance_to_code/tree/master/cs50/final_project/Assembler) to the project repository.  
+
+Completing the Assembler marked the first project that marginally resembled a "real-world" software project.  Although the file tree wasn't very complex and I didn't collaborate with others, creating the Assembler required me to write code from scratch, use Python documentation, test my program extensively, and debug until my brain was about to explode.  Yes, it was frustrating, but in the end, I am proud that I put together this program without any templates or elaborate tutorials.  
 
 
 
