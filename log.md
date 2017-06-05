@@ -201,6 +201,17 @@ In the morning, I learned a [method for setting up a Python project](https://lea
 
 After setting up the project, I spent the remainder of the day constructing my vm_translator program using classes.  In comparison to last project (assembler) where I didn't use any classes, I am finding things much easier in terms of variable access and program control.  The program itself is more modular, and with the various class methods, I find myself thinking a lot more clearly when reading through the program and deciding what to do next.  Writing the program is still difficult, but I feel more comfortable adding and removing things without breaking the entire program.  This is enormously helpful for quickly testing and iterating on the program because I am not spending all of my time trying to figure out how to get it to compile after altering one part of it.
 
+### Sunday 6/04
+I did a slight experiment today with my work.  Yesterday, I read Cal Newport's book, [Deep Work](http://calnewport.com/books/deep-work/), in an attempt to increase the efficiency in which I work.  I have been putting in a lot of hours lately, but have not felt like I have gotten much out of these hours.  Sitting in front of the computer for 8-10 hours is not difficult for me, but doing so while intensely focusing is.  After reading the book, it occurred to me that the human brain is only capable of about 4-5 hours of "deep work" a day.  As described by Newport, deep work can be defined as "professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit."  Evaluating the past weeks, I realized that although I've been putting in long hours, I haven't been putting in quality hours.  10 hours of moderately focused input yields about 3 hours of highly focused input (deep work) for me.  After exploring the idea, I decided to start small and split the day up into two work periods.  Both work periods were 2 hours in length, but during the 4 total hours, I did not touch my phone, email, the internet (except for documentation), or any other distraction, and pushed myself to the limit.  
+
+In the end, these four hours resulted in me knocking out 80% of the Virtual Machine Translator that I have been at a standstill on for several days now.  I was fairly exhausted (although I could probably have done one more focused session), and realized the power of Parkinson's Law.  Tim Ferriss, whom I read his work frequently, has this in his [Not to do list](http://tim.blog/2007/08/16/the-not-to-do-list-9-habits-to-stop-now/): 
+
+9. Do not expect work to fill a void that non-work relationships and activities should.  Work is not all of life. Your co-workers shouldn’t be your only friends. Schedule life and defend it just as you would an important business meeting. Never tell yourself “I’ll just get it done this weekend.” Review Parkinson’s Law in 4HWW and force yourself to cram within tight hours so your per-hour productivity doesn’t fall through the floor. Focus, get the critical few done, and get out. E-mailing all weekend is no way to spend the little time you have on this planet.
+
+Thanks to this experiment, I was able to read for several hours and spend time with family all while finishing just as much work as I would have in an 8-10 hour "unfocused" day of work.  Moving forward, I hope to apply deep work on a regular basis and maximize my per-hour output.
+
+None of these ideas are new, but today was a great reminder for me on the power of true focus.
+
 
 
 
