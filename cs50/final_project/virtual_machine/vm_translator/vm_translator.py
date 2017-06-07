@@ -15,43 +15,57 @@ def main():
     filetrue = os.path.isfile(sys.argv[1])
     dirtrue = os.path.isdir(sys.argv[1])
     vmfiles = []
+    dirname = os.path.basename(os.path.normpath(sys.argv[1])) + ".asm"
 
     # Create list of files to convert to .asm
     if dirtrue:
+        cw = CodeWriter(dirname)
         fi = os.listdir(sys.argv[1])
         for names in fi:
             if names.endswith(".vm"):
                 vmfiles.append(sys.argv[1]+names)
+
     elif filetrue:
         di = sys.argv[1]
         if di.endswith(".vm"):
             vmfiles.append(di)
+            tr = vmfiles[0]
+            trs = tr.replace("vm", "asm")
+            cw = CodeWriter(trs)
         else:
             print "invalid filetype: only input .vm files"
     else:
         print "usage: 'python <file.vm/dir>'"
 
-    cw = CodeWriter("outfile.asm")
 
-    for files in vmfiles:
+    out = cw.constructor()
+    print vmfiles
+    with out as outfile:
+        print outfile
+        for files in vmfiles:
+            print "WE HAVE STARTED A NEW FILE"
+            # Create new instance of class Parser()
+            p = cw.setFileName(files)
 
-        p = Parser(files)
-
-        with p.constructor() as infile:
-            for line in infile:
-                commandType = p.commandType(line)
-                print commandType
-
-
-
-
-
-
-
-
+            with p.constructor() as infile:
+                    for line in infile:
+                        # If line format is command arg1 arg2
+                        if p.arg2(line):
+                            if p.commandType(line)=="C_PUSH" or "C_POP":
+                                print line
+                                cw.writePushPop(outfile, p.commandType(line), p.arg1(line), p.arg2(line))
+                        # If line format is command or command arg1
+                        elif p.arg1(line):
+                            if p.commandType(line)=="C_ARITHMETIC":
+                                print line
+                                cw.writeArithmetic(outfile, p.arg1(line))
 
 
 class CodeWriter(object):
+
+    counter1 = 0
+    counter2 = 0
+    counter3 = 0
 
     def __init__(self, filename):
 
@@ -59,23 +73,110 @@ class CodeWriter(object):
 
     def constructor(self):
         '''Open the file for writing.'''
-        return "hello, this is the Codewriter constructor speaking"
+        self.outfile = open(self.filename, "w")
+        return self.outfile
 
 
     def setFileName(self, filename):
         '''Inform CodeWriter that a new file has been opened and is ready'''
+        return Parser(filename)
 
-        pass
+    def extractFile(self, parsefile):
+        afile = open(parsefile, "r")
+        contentString = ""
+        for line in afile:
+            contentString += line
+        afile.close()
+        return contentString
 
-    def writeArithmetic(self, command):
+    def writeArithmetic(self, outfile, command):
         '''Convert the given arithmetic command into assembly code'''
+        command = command.lower()
 
-        pass
+        if command == "add":
+            outfile.write(self.extractFile("asm_functions/add.asm"))
+        elif command =="sub":
+            outfile.write(self.extractFile("asm_functions/sub.asm"))
+        elif command =="neg":
+            outfile.write(self.extractFile("asm_functions/neg.asm"))
+        elif command =="eq":
+            asmcommand1 = self.extractFile("asm_functions/eq.asm")
 
-    def writePushPop(self, command, segement, index):
+            n1 = asmcommand1.replace("TRUE_ONE", "TRUE_ONE" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            n2 = n1.replace("END_ONE", "END_ONE" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            outfile.write(n2)
+
+        elif command =="gt":
+            asmcommand1 = self.extractFile("asm_functions/gt.asm")
+
+            n1 = asmcommand1.replace("TRUE_TWO", "TRUE_TWO" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            n2 = n1.replace("END_TWO", "END_TWO" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            outfile.write(n2)
+
+        elif command =="lt":
+            asmcommand1 = self.extractFile("asm_functions/lt.asm")
+
+            n1 = asmcommand1.replace("TRUE_THREE", "TRUE_THREE" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            n2 = n1.replace("END_THREE", "END_THREE" + str(CodeWriter.counter1))
+            CodeWriter.counter1 += 1
+
+            outfile.write(n2)
+
+        elif command =="and":
+            outfile.write(self.extractFile("asm_functions/and.asm"))
+        elif command =="or":
+            outfile.write(self.extractFile("asm_functions/or.asm"))
+        elif command =="not":
+            outfile.write(self.extractFile("asm_functions/not.asm"))
+
+    def writePushPop(self, outfile, command, segment, index):
         '''Convert the given push/pop command into assembly code'''
 
-        pass
+        if command == "C_PUSH":
+            if segment == "argument":
+                pass
+            elif segment == "local":
+                pass
+            elif segment == "static":
+                pass
+            elif segment == "constant":
+                outfile.write("@" + index + "\n")
+                outfile.write(self.extractFile("asm_functions/push_constant.asm"))
+            elif segment == "this":
+                pass
+            elif segment == "that":
+                pass
+            elif segment == "pointer":
+                pass
+            elif segment == "temp":
+                pass
+        elif command == "C_POP":
+            if segment == "argument":
+                pass
+            elif segment == "local":
+                pass
+            elif segment == "static":
+                pass
+            elif segment == "constant":
+                pass
+            elif segment == "this":
+                pass
+            elif segment == "that":
+                pass
+            elif segment == "pointer":
+                pass
+            elif segment == "temp":
+                pass
 
     def close(self):
         '''Close the file'''
@@ -93,40 +194,61 @@ class Parser(object):
         self.infile = open(self.filename, "r")
         return self.infile
 
-
     def commandType(self, line):
         '''Reads the line and returns the command type'''
-        arithmeticList  = ['add', 'sub', 'neg', 'eq', 'gt', 'lt', 'and', 'or', 'not']
+        self.arithmeticList  = ['add', 'sub', 'neg', 'eq', 'gt', 'lt', 'and', 'or', 'not']
+        self.ll = line.lower()
 
         if re.match(r'^\s*/{2}|(\r?\n)', line):
             return "comments"
-        elif any(word in line.lower() for word in arithmeticList):
-            return "C_ARITHMETIC"
-        """elif re.match(push, line):
-            return "C_PUSH"
-        elif re.match(pop, line):
-            return "C_POP"
-        elif re.match(label, line):
-            return "C_LABEL"
-        elif re.match(goto, line):
-            return "C_GOTO"
-        elif re.match(ifs, line):
+        elif 'if' in self.ll:
             return "C_IF"
-        elif re.match(func, line):
+        elif any(word in self.ll for word in self.arithmeticList):
+            return "C_ARITHMETIC"
+        elif 'push' in self.ll:
+            return "C_PUSH"
+        elif 'pop' in self.ll:
+            return "C_POP"
+        elif 'label' in self.ll:
+            return "C_LABEL"
+        elif 'goto' in self.ll:
+            return "C_GOTO"
+        elif 'function' in self.ll:
             return "C_FUNCTION"
-        elif re.match(ret, line):
+        elif 'return' in self.ll:
             return "C_RETURN"
-        elif re.match(call, line):
+        elif 'call' in self.ll:
             return "C_CALL"
-            """
+
 
     def arg1(self, line):
         '''Reads the line and returns the first argument if there is one'''
-        pass
+        self.arg1List = ['argument', 'local', 'static', 'constant', 'this', 'that',
+                     'pointer', 'temp']
+        self.commandList = ['push', 'pop', 'label', 'goto', 'if-goto','function','call']
+        self.ll = line.lower()
+        arg1 = []
+
+        if re.match(r'^\s*/{2}|(\r?\n)', line):
+            pass
+        elif self.commandType(line) == "C_RETURN":
+            pass
+        else:
+            for y in self.arg1List:
+                if y in line:
+                    return y
+            for x in self.arithmeticList:
+                if x in line:
+                    return x
+
+        return arg1
 
     def arg2(self, line):
         '''Reads the line and returns the second argument if there is one'''
-        pass
+        if re.match(r'^\s*/{2}|(\r?\n)', line):
+            pass
+        elif re.search(r'[\d]+', line):
+            return re.search(r'([\d]+)', line).group(1)
 
 
 
