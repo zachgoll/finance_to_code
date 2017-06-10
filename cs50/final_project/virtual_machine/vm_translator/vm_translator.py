@@ -142,46 +142,95 @@ class CodeWriter(object):
     def writePushPop(self, outfile, command, segment, index):
         '''Convert the given push/pop command into assembly code'''
 
+        firstLine = "@" + index + "\n"
+
         if command == "C_PUSH":
             if segment == "argument":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_arg.asm"))
+
             elif segment == "local":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_local.asm"))
+
             elif segment == "static":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_static.asm"))
+
             elif segment == "constant":
-                outfile.write("@" + index + "\n")
+
+                outfile.write(firstLine)
                 outfile.write(self.extractFile("asm_functions/push_constant.asm"))
+
             elif segment == "this":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_this.asm"))
+
             elif segment == "that":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_that.asm"))
+
             elif segment == "pointer":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_pointer.asm"))
+
             elif segment == "temp":
-                pass
+
+                outfile.write(firstLine)
+                outfile.write(self.extractFile("asm_functions/push_temp.asm"))
+
         elif command == "C_POP":
             if segment == "argument":
-                pass
+
+                argu1 = self.extractFile("asm_functions/pop_arg.asm")
+                argu2 = argu1.replace("variable", index)
+                outfile.write(argu2)
+
             elif segment == "local":
-                pass
+
+                loc1 = self.extractFile("asm_functions/pop_local.asm")
+                loc2 = loc1.replace("variable", index)
+                outfile.write(loc2)
+
             elif segment == "static":
-                pass
+
+                stat1 = self.extractFile("asm_functions/pop_static.asm")
+                stat2 = stat1.replace("variable", index)
+                outfile.write(stat2)
+
             elif segment == "constant":
+
                 pass
+
             elif segment == "this":
-                pass
+
+                this1 = self.extractFile("asm_functions/pop_this.asm")
+                this2 = this1.replace("variable", index)
+                outfile.write(this2)
+
             elif segment == "that":
-                pass
+
+                that1 = self.extractFile("asm_functions/pop_that.asm")
+                that2 = that1.replace("variable", index)
+                outfile.write(that2)
+
             elif segment == "pointer":
-                pass
+
+                point1 = self.extractFile("asm_functions/pop_pointer.asm")
+                point2 = point1.replace('variable', index)
+                outfile.write(point2)
+
             elif segment == "temp":
-                pass
 
-    def close(self):
-        '''Close the file'''
-
-        pass
+                temp1 = self.extractFile("asm_functions/pop_temp.asm")
+                temp2 = temp1.replace('variable', index)
+                outfile.write(temp2)
 
 class Parser(object):
 

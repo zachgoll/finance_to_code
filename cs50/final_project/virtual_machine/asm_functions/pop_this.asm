@@ -1,0 +1,16 @@
+@variable
+D=A
+@THIS
+M=M+D
+@SP
+A=M-1
+D=M
+@THIS
+A=M
+M=D
+@variable
+D=A
+@THIS
+M=M-D
+@SP
+M=M-1

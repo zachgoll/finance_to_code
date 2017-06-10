@@ -10,6 +10,7 @@
 * [Weeks 9, 10, 11](#weeks-9-10-11-april-17---may-7)
 * [Weeks 12, 13, 14](#weeks-12-13-may-8---may-21)
 * [Week 15](#week-15-may-29---june-4)
+* [Week 16](#week-15-june-5---june-11)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -202,6 +203,7 @@ In the morning, I learned a [method for setting up a Python project](https://lea
 After setting up the project, I spent the remainder of the day constructing my vm_translator program using classes.  In comparison to last project (assembler) where I didn't use any classes, I am finding things much easier in terms of variable access and program control.  The program itself is more modular, and with the various class methods, I find myself thinking a lot more clearly when reading through the program and deciding what to do next.  Writing the program is still difficult, but I feel more comfortable adding and removing things without breaking the entire program.  This is enormously helpful for quickly testing and iterating on the program because I am not spending all of my time trying to figure out how to get it to compile after altering one part of it.
 
 ### Sunday 6/04
+
 I did a slight experiment today with my work.  Yesterday, I read Cal Newport's book, [Deep Work](http://calnewport.com/books/deep-work/), in an attempt to increase the efficiency in which I work.  I have been putting in a lot of hours lately, but have not felt like I have gotten much out of these hours.  Sitting in front of the computer for 8-10 hours is not difficult for me, but doing so while intensely focusing is.  After reading the book, it occurred to me that the human brain is only capable of about 4-5 hours of "deep work" a day.  As described by Newport, deep work can be defined as "professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit."  Evaluating the past weeks, I realized that although I've been putting in long hours, I haven't been putting in quality hours.  10 hours of moderately focused input yields about 3 hours of highly focused input (deep work) for me.  After exploring the idea, I decided to start small and split the day up into two work periods.  Both work periods were 2 hours in length, but during the 4 total hours, I did not touch my phone, email, the internet (except for documentation), or any other distraction, and pushed myself to the limit.  
 
 In the end, these four hours resulted in me knocking out 80% of the Virtual Machine Translator that I have been at a standstill on for several days now.  I was fairly exhausted (although I could probably have done one more focused session), and realized the power of Parkinson's Law.  Tim Ferriss, whom I read his work frequently, has this in his [Not to do list](http://tim.blog/2007/08/16/the-not-to-do-list-9-habits-to-stop-now/): 
@@ -212,6 +214,21 @@ Thanks to this experiment, I was able to read for several hours and spend time w
 
 None of these ideas are new, but today was a great reminder for me on the power of true focus.
 
+# Week 16: June 5 - June 11
+
+### Monday 6/05
+
+No new concepts, just worked on writing basic arithmetic commands in machine language which I will later use in my vm_translator.
+
+### Wednesday 6/07
+
+Worked on implementing the first stage of the vm_translator, which is capable of translating any .vm file with the commands "push constant [index]", "add," "subtract," "less-than," "greater than," "equal," "and," "or," "not," and "negate."  My main challenge in implementing was figuring out which functions and code should go in which part of the vm_translator.  I am trying to keep the actual vm_translator as small and concise as possible and utilize the Parser and CodeWriter classes for most of the intricate code.  This was still a bit challenging because I was initially struggling to keep track of and pass variables around.
+
+### Saturday 6/10
+
+FINALLY finished the virtual machine translator!!  This was an exciting moment because this is my first ever Python program which utilizes classes, and works in a rather efficient, understandable way.  I still would like to improve on my commenting throughout the code, and will need to refactor the code that I have written, but I have a great sense of satisfaction finishing this program.  This program was a test of my ability to take it step by step, because trying to plan out and write the entire program at once would have been impossible.  By constantly building and testing, building and testing, I was able to make it to the end with no major roadblocks along the way.  There were certainly difficult moments throughout the process, but I was always able to debug quickly and move forward.
+
+In comparison to the assembler that I wrote for the last chapter of the Nand2Tetris project, I spent far less time randomly debugging because of the architecture of the program.  By using Python classes and methods, it was easy to test each individual part without breaking the program.
 
 
 
