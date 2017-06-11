@@ -19,46 +19,95 @@ def main():
 
     # Create list of files to convert to .asm
     if dirtrue:
+
         cw = CodeWriter(dirname)
         fi = os.listdir(sys.argv[1])
+
         for names in fi:
+
             if names.endswith(".vm"):
                 vmfiles.append(sys.argv[1]+names)
 
     elif filetrue:
+
         di = sys.argv[1]
+
         if di.endswith(".vm"):
+
             vmfiles.append(di)
             tr = vmfiles[0]
             trs = tr.replace("vm", "asm")
             cw = CodeWriter(trs)
+
         else:
             print "invalid filetype: only input .vm files"
+
     else:
         print "usage: 'python <file.vm/dir>'"
 
-
     out = cw.constructor()
-    print vmfiles
+
     with out as outfile:
-        print outfile
+
         for files in vmfiles:
+
             print "WE HAVE STARTED A NEW FILE"
+
             # Create new instance of class Parser()
             p = cw.setFileName(files)
 
             with p.constructor() as infile:
+
+                    cw.writeInit(outfile)
+
                     for line in infile:
-                        # If line format is command arg1 arg2
-                        if p.arg2(line):
-                            if p.commandType(line)=="C_PUSH" or "C_POP":
-                                print line
-                                cw.writePushPop(outfile, p.commandType(line), p.arg1(line), p.arg2(line))
-                        # If line format is command or command arg1
-                        elif p.arg1(line):
-                            if p.commandType(line)=="C_ARITHMETIC":
-                                print line
-                                cw.writeArithmetic(outfile, p.arg1(line))
+
+                        if p.commandType(line)=="comments":
+
+                            pass
+
+                        elif p.commandType(line)=="C_ARITHMETIC":
+
+                            cw.writeArithmetic(outfile, p.args(line)[0])
+
+                        elif p.commandType(line)=="C_IF":
+
+                            pass
+                            # Handle if-goto command
+                            #cw.writeIf(outfile, p.arg1(line))
+
+                        elif p.commandType(line)=="C_GOTO":
+
+                            pass
+                            # Handle goto command
+                            #cw.writeGoto(outfile, p.arg1(line))
+
+                        elif p.commandType(line)=="C_RETURN":
+
+                            pass
+                            # Return function result
+                            #cw.writeReturn(outfile)
+
+                        elif p.commandType(line)=="C_LABEL":
+
+                            pass
+                            # Set label address
+                            #cw.writeLabel(outfile, p.arg1(line))
+
+                        elif p.commandType(line)=="C_CALL":
+
+                            pass
+                            # Handle function calls
+                            #cw.writeCall(outfile, p.arg1(line), p.arg2(line))
+
+                        elif p.commandType(line)=="C_FUNCTION":
+
+                            pass
+                            #cw.writeFunction(outfile, p.arg1(line), p.arg2(line))
+
+                        elif p.commandType(line)=="C_PUSH" or "C_POP":
+
+                            cw.writePushPop(outfile, p.commandType(line), p.args(line)[1], p.args(line)[2])
 
 
 class CodeWriter(object):
@@ -232,6 +281,46 @@ class CodeWriter(object):
                 temp2 = temp1.replace('variable', index)
                 outfile.write(temp2)
 
+    def writeInit(self, outfile):
+        '''Writes assembly code that effects the VM initialization (beginning of output file)'''
+        outfile.write('@256\n'+'D=A\n'+'@SP\n'+'M=D\n')
+        #outfile.write('call Sys.init\n')
+
+    def writeLabel(self, outfile, label):
+        '''Sets a given label to an address in memory'''
+        #print label
+        pass
+
+    def writeGoto(self, outfile, address):
+        '''Go to the program instruction address of the given label'''
+        #print address
+        pass
+
+    def writeIf(self, outfile, address):
+        '''Under a certain condition, current state of program changes and goes to label'''
+        # the arithmetic commands will store their result at the top of the stack,
+        # so you can do a conditional where "if top-of-stack = -1, then goto label", otherwise don't
+        #print address
+        pass
+
+    def writeCall(self, outfile, functionName, numArgs):
+        '''Calls a function'''
+        pass
+        #print functionName
+        #print numArgs
+
+    def writeReturn(self, outfile):
+        '''Returns the result of a function to the top of the stack and erases args'''
+        pass
+
+    def writeFunction(self, outfile, functionName, numLocals):
+        '''Initializes a function for use'''
+        pass
+        #print functionName
+        #print numLocals
+
+
+
 class Parser(object):
 
     def __init__(self, filename):
@@ -250,7 +339,7 @@ class Parser(object):
 
         if re.match(r'^\s*/{2}|(\r?\n)', line):
             return "comments"
-        elif 'if' in self.ll:
+        elif 'if-goto' in self.ll:
             return "C_IF"
         elif any(word in self.ll for word in self.arithmeticList):
             return "C_ARITHMETIC"
@@ -269,37 +358,29 @@ class Parser(object):
         elif 'call' in self.ll:
             return "C_CALL"
 
+    def parse(self, line):
 
-    def arg1(self, line):
-        '''Reads the line and returns the first argument if there is one'''
-        self.arg1List = ['argument', 'local', 'static', 'constant', 'this', 'that',
-                     'pointer', 'temp']
-        self.commandList = ['push', 'pop', 'label', 'goto', 'if-goto','function','call']
-        self.ll = line.lower()
-        arg1 = []
+        regex = r'[\s]*([a-zA-Z\-]+){1}[\s]{1}([a-zA-Z0-9\_\.\:]+)?[\s]?([\d]+)?'
 
-        if re.match(r'^\s*/{2}|(\r?\n)', line):
-            pass
-        elif self.commandType(line) == "C_RETURN":
+        if self.commandType(line) == "comments":
             pass
         else:
-            for y in self.arg1List:
-                if y in line:
-                    return y
-            for x in self.arithmeticList:
-                if x in line:
-                    return x
+            com = re.match(regex, line).group(1)
+            mid = re.match(regex, line).group(2)
+            dig = re.match(regex, line).group(3)
 
-        return arg1
+            if mid == None:
+                return [com]
+            elif dig == None:
+                return [com, mid]
+            else:
+                return [com, mid, dig]
 
-    def arg2(self, line):
-        '''Reads the line and returns the second argument if there is one'''
-        if re.match(r'^\s*/{2}|(\r?\n)', line):
-            pass
-        elif re.search(r'[\d]+', line):
-            return re.search(r'([\d]+)', line).group(1)
+    def args(self, line):
+        '''Reads the line and returns the first argument if there is one'''
 
-
+        a = self.parse(line)
+        return a
 
 
 # If the name of the module is "__main__", then run the main function, else,

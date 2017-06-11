@@ -10,7 +10,7 @@
 * [Weeks 9, 10, 11](#weeks-9-10-11-april-17---may-7)
 * [Weeks 12, 13, 14](#weeks-12-13-may-8---may-21)
 * [Week 15](#week-15-may-29---june-4)
-* [Week 16](#week-15-june-5---june-11)
+* [Week 16](#week-16-june-5---june-11)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -182,7 +182,7 @@ Spent the majority of the day setting up a local development environment with Py
 
 After a few days working with regular expressions, I have begun to understand them better.  Unfortunately, I found myself writing a never-ending function in Python, and spent several hours splitting it up into less complex functions.  The assembler I am writing has several different modules, and I found myself a bit confused as to how all the modules work together.  I ended up breaking things down to the basics and doing a lot of debugging.  Tomorrow I should be able to finish up the assembler!
 
-# Week 15: May 29 - June 4
+# Week 15: May 29 - June 4 
 
 ### Wednesday 5/31
 
@@ -226,10 +226,13 @@ Worked on implementing the first stage of the vm_translator, which is capable of
 
 ### Saturday 6/10
 
-FINALLY finished the virtual machine translator!!  This was an exciting moment because this is my first ever Python program which utilizes classes, and works in a rather efficient, understandable way.  I still would like to improve on my commenting throughout the code, and will need to refactor the code that I have written, but I have a great sense of satisfaction finishing this program.  This program was a test of my ability to take it step by step, because trying to plan out and write the entire program at once would have been impossible.  By constantly building and testing, building and testing, I was able to make it to the end with no major roadblocks along the way.  There were certainly difficult moments throughout the process, but I was always able to debug quickly and move forward.
+FINALLY finished the virtual machine translator stage 1!!  This was an exciting moment because this is my first ever Python program which utilizes classes, and works in a rather efficient, understandable way.  I still would like to improve on my commenting throughout the code, and will need to refactor the code that I have written, but I have a great sense of satisfaction finishing this program.  This program was a test of my ability to take it step by step, because trying to plan out and write the entire program at once would have been impossible.  By constantly building and testing, building and testing, I was able to make it to the end with no major roadblocks along the way.  There were certainly difficult moments throughout the process, but I was always able to debug quickly and move forward.
 
 In comparison to the assembler that I wrote for the last chapter of the Nand2Tetris project, I spent far less time randomly debugging because of the architecture of the program.  By using Python classes and methods, it was easy to test each individual part without breaking the program.
 
+### Sunday 6/11
+
+Backtracked a bit today... I started the second stage of the VM Translator, and spent a good amount of the day understanding how the stack works to keep variables inherent to their called function, and how to keep functions in order with branching.  After devising a plan for implementation, I realized that some of my code was not extendible enough to accomodate new feature requests.  My parser class could parse the commands given in the first part of the vm translator, but struggled with the commands in the second part.  I ended up redoing most of the Parser class, which was discouraging, but at the same time encouraging.  I used a regular expression to get the various parts of the code that I needed, and surprisingly, I didn't spend much time at all fiddling with the syntax of the regular expression!  On just my second try, I was able to get exactly what I needed, which was exciting considering I spent hours upon hours trying to figure out regular expressions in the last project.  After a long day of re-writing code, I am ready to implement the second part of the VM translator tomorrow!
 
 
 
