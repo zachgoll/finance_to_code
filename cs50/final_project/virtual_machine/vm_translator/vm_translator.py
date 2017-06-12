@@ -72,15 +72,13 @@ def main():
 
                         elif p.commandType(line)=="C_IF":
 
-                            pass
                             # Handle if-goto command
-                            #cw.writeIf(outfile, p.arg1(line))
+                            cw.writeIf(outfile, p.args(line)[1])
 
                         elif p.commandType(line)=="C_GOTO":
 
-                            pass
                             # Handle goto command
-                            #cw.writeGoto(outfile, p.arg1(line))
+                            cw.writeGoto(outfile, p.args(line)[1])
 
                         elif p.commandType(line)=="C_RETURN":
 
@@ -90,9 +88,8 @@ def main():
 
                         elif p.commandType(line)=="C_LABEL":
 
-                            pass
                             # Set label address
-                            #cw.writeLabel(outfile, p.arg1(line))
+                            cw.writeLabel(outfile, p.args(line)[1])
 
                         elif p.commandType(line)=="C_CALL":
 
@@ -119,6 +116,7 @@ class CodeWriter(object):
     def __init__(self, filename):
 
         self.filename = filename
+
 
     def constructor(self):
         '''Open the file for writing.'''
@@ -288,20 +286,19 @@ class CodeWriter(object):
 
     def writeLabel(self, outfile, label):
         '''Sets a given label to an address in memory'''
-        #print label
-        pass
+        outfile.write('(' + label + ')\n')
 
-    def writeGoto(self, outfile, address):
+    def writeGoto(self, outfile, label):
         '''Go to the program instruction address of the given label'''
-        #print address
-        pass
+        outfile.write('@' + label + '\n0;JMP\n')
 
-    def writeIf(self, outfile, address):
+    def writeIf(self, outfile, label):
         '''Under a certain condition, current state of program changes and goes to label'''
-        # the arithmetic commands will store their result at the top of the stack,
-        # so you can do a conditional where "if top-of-stack = -1, then goto label", otherwise don't
-        #print address
-        pass
+
+        popstack = self.extractFile("asm_functions/pop_temp.asm")
+        popstack2 = popstack.replace('variable', '0')
+
+        outfile.write(popstack2 + '@R5\nD=M\n@' + label + '\nD;JNE\n')
 
     def writeCall(self, outfile, functionName, numArgs):
         '''Calls a function'''
