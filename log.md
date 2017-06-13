@@ -11,6 +11,7 @@
 * [Weeks 12, 13, 14](#weeks-12-13-may-8---may-21)
 * [Week 15](#week-15-may-29---june-4)
 * [Week 16](#week-16-june-5---june-11)
+* [Week 17](#week-17-june-12---june-18)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -233,6 +234,16 @@ In comparison to the assembler that I wrote for the last chapter of the Nand2Tet
 ### Sunday 6/11
 
 Backtracked a bit today... I started the second stage of the VM Translator, and spent a good amount of the day understanding how the stack works to keep variables inherent to their called function, and how to keep functions in order with branching.  After devising a plan for implementation, I realized that some of my code was not extendible enough to accomodate new feature requests.  My parser class could parse the commands given in the first part of the vm translator, but struggled with the commands in the second part.  I ended up redoing most of the Parser class, which was discouraging, but at the same time encouraging.  I used a regular expression to get the various parts of the code that I needed, and surprisingly, I didn't spend much time at all fiddling with the syntax of the regular expression!  On just my second try, I was able to get exactly what I needed, which was exciting considering I spent hours upon hours trying to figure out regular expressions in the last project.  After a long day of re-writing code, I am ready to implement the second part of the VM translator tomorrow!
+
+# Week 17: June 12 - June 18
+
+### Monday 6/12
+
+Today, I nearly completed the final parts of the Virtual Machine Translator, but had a few bugs to work through near the end of the day that I was far too tired to find.  I called it quits after about 6 hours of solid work! 
+
+### Tuesday 6/13 
+
+With a fresh mind, I was able to find the bugs in the VM Translator, and completed it!  After fixing the bugs, I separated and cleaned up the files and wrote a README for the project just for practice. Like the Assembler, this project took a long time to complete for me, although I learned a ton, and became much more comfortable with Python classes, file handling, and regular expressions!
 
 
 
