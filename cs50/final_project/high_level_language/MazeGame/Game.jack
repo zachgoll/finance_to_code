@@ -1,0 +1,225 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/Game.jack
+
+/**
+* This game allows a user to control a small square displayed on the screen
+* and move it through a Maze.  If the square hits any of the maze walls or
+* moving obstacles, the game ends and the user has to start again.  The game
+* is started and reset by pressing spacebar, and the game is quit by pressing
+* "q" on the keyboard.  Upon exit, the entire screen is erased.
+*/
+
+class Game {
+
+  field MovingObstacle movingObstacle;
+  field End endBlock;
+  field Text text;
+  field GamePiece piece;
+  field int direction;
+  field boolean collisionPos;
+  field boolean collisionNeg;
+  //field int endX;
+  //field int endY;
+  //field int movingX;
+  //field int movingY;
+
+  field int pax;
+  field int pay;
+  field int pbx;
+  field int pby;
+  field int counter;
+  field Array temp;
+  field int c, c1, c2, c3;
+  field int i;
+
+
+
+  /** Constructs a new Maze Game. */
+  constructor Game new(){
+
+      let movingObstacle = MovingObstacle.new(20, 20, 50);
+      let endBlock  = End.new(50, 461, 205);
+      let piece = GamePiece.new(10, 5, 20);
+      do Screen.drawRectangle(0,15,511,16);
+      do drawGame();
+      let counter = 0;
+      let direction = 0;
+      let i = 0;
+      let text = Text.new("Get to the finish without hitting anything!");
+
+      return this;
+
+  }
+
+  /** Disposes this game. */
+  method void dispose(){
+
+      do movingObstacle.dispose();
+      do endBlock.dispose();
+      do text.dispose();
+      do Memory.deAlloc(this);
+      //do coordinates.dispose();
+      return;
+
+  }
+
+
+  /** Draws game board to screen. */
+  method void drawGame(){
+
+
+
+        let c = co(100, 80, 200, 81);
+        let c1 = co(300, 120, 301, 140);
+        let c2 = co(64, 16, 65,40);
+        let c3 = co(16,40, 65, 235);
+
+        do dr(c[0], c[1], c[2], c[3]);
+        do dr(c1[0], c1[1], c1[2], c1[3]);
+        do dr(c2[0], c2[1], c2[2], c2[3]);
+        do dr(c3[0], c3[1], c3[2], c3[3]);
+
+
+      return;
+
+  }
+
+  /** Draws rectangle */
+  method void dr(int a, int b, int c, int d){
+
+    do Screen.drawRectangle(a, b, c, d);
+    return;
+  }
+
+  /** Creates coordinate array and pushes it to master coordinate array */
+  method Array co(int a, int b, int c, int d){
+
+      let temp = Array.new(14);
+
+      let temp[0] = a;
+      let temp[1] = b;
+      let temp[2] = c;
+      let temp[3] = d;
+
+      return temp;
+  }
+
+  /** Erases game board from screen. */
+  method void eraseGame(){
+
+      return;
+
+  }
+
+  /** Allow user to move game piece with arrow keys on keyboard */
+  method void movePiece(){
+
+      if(direction = 1){
+      let pay = piece.moveUp();
+      let pby = pay + 15;
+      }
+      if(direction = 2){
+      let pay = piece.moveDown();
+      let pby = pay + 15;
+      }
+      if(direction = 3){
+      let pax = piece.moveLeft();
+      let pbx = pax + 15;
+      }
+      if(direction = 4){
+      let pax = piece.moveRight();
+      let pbx = pax + 15;
+      }
+      do Sys.wait(20);
+
+      return;
+
+  }
+
+  /** Provides functionality for the Maze Game. */
+  method void runGame(){
+
+      var Game game;
+      var char key;
+      var boolean quit;
+      var boolean reset;
+      let reset = false;
+      let quit = false;
+      let collisionPos = false;
+      let collisionNeg = false;
+
+
+      while(~quit){
+
+          if (reset) {
+
+              do Screen.clearScreen();
+              do dispose();
+              let game = Game.new();
+              let reset = false;
+              let collisionPos = false;
+              let collisionNeg = false;
+              let pbx = 0;
+              let pby = 0;
+              let pax = 0;
+              let pay = 0;
+
+          }
+
+
+
+
+            if (collisionPos){
+                do text.dispose();
+                do Screen.clearScreen();
+                let text = Text.new("YOU WON!  Press 'r' to reset and start again");
+                let collisionPos = false;
+            }
+
+            if (collisionNeg){
+            do text.dispose();
+            do Screen.clearScreen();
+            let text = Text.new("You lost.  Press 'r' to reset and start again");
+            let collisionNeg = false;
+            }
+
+
+
+
+         // while no key is pressed, stop movement of Game Piece
+         while (key = 0) {
+             let key = Keyboard.keyPressed();
+             let direction = 0;
+         }
+
+         if (key = 82) { let reset = true; } // r key
+         if (key = 81)  { let quit = true; }     // q key
+         if (key = 131) { let direction = 1; }   // up arrow
+         if (key = 133) { let direction = 2; }   // down arrow
+         if (key = 130) { let direction = 3; }   // left arrow
+         if (key = 132) { let direction = 4; }   // right arrow
+
+
+         // while the key is pressed, key = Keyboard input
+         while (~(key = 0)) {
+            let key = Keyboard.keyPressed();
+            do movePiece();
+            if ((pbx > 461) & (pby > 205)){
+              let collisionPos = true;
+            }
+
+
+            if ((pbx>c1[0]) & (pby > c1[1]) & (pax<c1[2]) & (pay<c1[3])){ let collisionNeg = true; }
+            if ((pbx>c[0]) & (pby > c[1]) & (pax<c[2]) & (pay<c[3])){ let collisionNeg = true; }
+            if ((pbx>20) & (pby > 50) & (pax<50) & (pay<40)){ let collisionNeg = true; }
+            if ((pbx>c3[0]) & (pby > c3[1]) & (pax<c3[2]) & (pay<c3[3])){ let collisionNeg = true; }
+
+
+         }
+
+      }
+      return;
+  }
+
+}

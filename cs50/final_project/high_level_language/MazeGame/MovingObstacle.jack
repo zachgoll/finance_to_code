@@ -1,0 +1,69 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/MovingObstacle.jack
+
+/**
+* Creates a single moving object in the maze, which detects whether the game
+* piece has hit it.  If the game piece and moving obstacle collide, the game
+* is ended.
+*/
+
+class MovingObstacle {
+
+  field int xPos;
+  field int yPos;
+  field int size;
+
+  /** Creates new Moving Obstacle. */
+  constructor MovingObstacle new(int w, int x, int y){
+
+      let size = w;
+      let xPos = x;
+      let yPos = y;
+      do drawObstacle();
+
+      return this;
+
+  }
+
+
+  /** Disposes Moving Obstacle. */
+  method void dispose(){
+
+      do Memory.deAlloc(this);
+      return;
+
+  }
+
+  /** Moves obstacle to the right. */
+  method void moveRight(){
+
+      return;
+
+  }
+
+  /** Moves obstacle to the left. */
+  method void moveLeft(){
+
+      return;
+
+  }
+
+  /** Draws the moving obstacle to the screen. */
+  method void drawObstacle(){
+
+      do Screen.setColor(true);
+      do Screen.drawRectangle(xPos, yPos, xPos + size, yPos + size);
+      return;
+
+  }
+
+  /** Erases the moving obstacle from the screen. */
+  method void eraseObstacle(){
+
+      return;
+
+  }
+
+
+}
