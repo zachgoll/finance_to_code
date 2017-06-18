@@ -1,0 +1,48 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/Text.jack
+
+
+/**
+* Writes a new line of text at the top of the game.  If the user is just entering
+* the game, the text reads: "Get to the finish without hitting anything!"
+* If the user loses, reads: "You lost.  Press 'r' to reset and start again"
+* If the user wins, reads: "You won!  Press 'r' to reset and start again"
+*/
+
+class Text {
+
+  field int textX;
+  field int textY;
+
+  field String printText;
+
+  /** Creates new text. */
+  constructor Text new(String s){
+
+      let textY = 0;
+      let textX = 0;
+      let printText = s;
+      do drawText();
+      return this;
+
+  }
+
+  /** Disposes text. */
+  method void dispose(){
+
+      do Memory.deAlloc(this);
+      return;
+
+  }
+
+  /** Writes "Press spacebar to begin, or "q" to quit." to the screen */
+  method void drawText(){
+
+      do Output.moveCursor(textY, textX);
+      do Output.printString(printText);
+      return;
+
+  }
+
+}

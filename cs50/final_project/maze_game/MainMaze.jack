@@ -1,0 +1,14 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/Main.jack
+
+/** Initializes a new Maze game and starts running it. */
+class Main {
+    function void main() {
+        var Game game;
+        let game = Game.new();
+        do game.runGame();
+        do game.dispose();
+        return;
+    }
+}

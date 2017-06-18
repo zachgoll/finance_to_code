@@ -1,0 +1,104 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/GamePiece.jack
+
+/**
+* Creates the game piece which the user can control using the four arrow keys
+* on the keyboard.  If the piece collides with anything, the game ends!
+*/
+
+class GamePiece {
+
+  field int size;
+  field int xPos, yPos;
+
+  /** Creates new Game Piece. */
+  constructor GamePiece new(int w, int x, int y){
+
+      let size = w;
+      let xPos = x;
+      let yPos = y;
+      do drawPiece();
+
+      return this;
+
+  }
+
+  /** Disposes Game Piece. */
+  method void dispose(){
+
+      do Memory.deAlloc(this);
+      return;
+
+  }
+
+  /** Draws game piece to screen. */
+  method void drawPiece(){
+
+      do Screen.setColor(true);
+      do Screen.drawRectangle(xPos, yPos, xPos + size, yPos + size);
+      return;
+
+  }
+
+  /** Moves game piece left. */
+  method int moveLeft(){
+
+      if (xPos > 1) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle((xPos + size) - 1, yPos, xPos + size, yPos + size);
+         let xPos = xPos - 2;
+         do Screen.setColor(true);
+         do Screen.drawRectangle(xPos, yPos, xPos + 1, yPos + size);
+      }
+
+      return xPos;
+
+  }
+
+  /** Moves game piece right. */
+  method int moveRight(){
+
+      if ((xPos + size) < 510) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle(xPos, yPos, xPos + 1, yPos + size);
+         let xPos = xPos + 2;
+         do Screen.setColor(true);
+         do Screen.drawRectangle((xPos + size) - 1, yPos, xPos + size, yPos + size);
+      }
+
+      return xPos;
+
+  }
+
+  /** Moves game piece up 2px. */
+  method int moveUp(){
+
+      if (yPos > 18) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle(xPos, (yPos + size) - 1, xPos + size, yPos + size);
+         let yPos = yPos - 2;
+         do Screen.setColor(true);
+         do Screen.drawRectangle(xPos, yPos, xPos + size, yPos + 1);
+      }
+
+      return yPos;
+
+  }
+
+  /** Moves game piece down 2 px. */
+  method int moveDown(){
+
+      if ((yPos + size) < 254) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle(xPos, yPos, xPos + size, yPos + 1);
+         let yPos = yPos + 2;
+         do Screen.setColor(true);
+         do Screen.drawRectangle(xPos, (yPos + size) - 1, xPos + size, yPos + size);
+      }
+      return yPos;
+
+  }
+
+
+}

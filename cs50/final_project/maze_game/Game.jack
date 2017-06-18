@@ -1,0 +1,419 @@
+// This game is part of the Nand2Tetris Project.
+// by Zach Gollwitzer
+// File name: final_project/high_level_language/MazeGame/Game.jack
+
+/**
+* This game allows a user to control a small square displayed on the screen
+* and move it through a Maze.  If the square hits any of the maze walls or
+* moving obstacles, the game ends and the user has to start again.  The game
+* is started and reset by pressing spacebar, and the game is quit by pressing
+* "q" on the keyboard.  Upon exit, the entire screen is erased.
+*/
+
+class Game {
+
+  field MovingObstacle movingObstacle1;
+  field MovingObstacle movingObstacle2;
+
+  // Obstacle 1 and 2 motion logic
+  field boolean rl;
+  field boolean right;
+  field boolean rl2;
+  field boolean right2;
+
+  // Obstacle 1's coordinates
+  field int m1qx;
+  field int m1qy;
+  field int m1fx;
+  field int m1fy;
+
+  // Obstacle 2's coordinates
+  field int m2qx;
+  field int m2qy;
+  field int m2fx;
+  field int m2fy;
+
+  // Instantiate objects
+  field End endBlock;
+  field Text text;
+  field GamePiece piece;
+  field Game game;
+
+  // Initialize variables
+  field int direction;
+  field boolean collisionPos;
+  field boolean collisionNeg;
+  field boolean quit;
+  field boolean reset;
+  field char key;
+
+  // Game Piece coordinates
+  field int pax;
+  field int pay;
+  field int pbx;
+  field int pby;
+
+  // Temporary arrays for wall coordinates
+  field Array temp;
+  field int c, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11;
+
+  /** Constructs a new Maze Game. */
+  constructor Game new(){
+
+      // Create moving obstacle 1 and set initial coordinates
+      let movingObstacle1 = MovingObstacle.new(44, 240, 18);
+      let m1qy = 18;
+      let m1fy = 63;
+      let m1qx = 240;
+      let m1fx = 285;
+
+      // Create moving obstacle 2 and set initial coordinates
+      let movingObstacle2 = MovingObstacle.new(20, 322, 102);
+      let m2qy = 102;
+      let m2fy = 122;
+      let m2qx = 322;
+      let m2fx = 342;
+
+      // Create main game piece and set initial coordinates
+      let piece = GamePiece.new(10, 40, 20);
+      let pax = 40;
+      let pay = 20;
+      let pbx = 50;
+      let pby = 30;
+
+      // Create the end block for a victory
+      let endBlock  = End.new(50, 461, 205);
+      do Screen.drawRectangle(0,15,511,16);
+      do Screen.setColor(false);
+      do Screen.drawRectangle(465, 210, 505, 250);
+      do Screen.setColor(true);
+      do Output.moveCursor(21, 59);
+      do Output.printString("END");
+      do Output.moveCursor(0,0);
+
+      // Draw the board
+      do drawGame();
+
+      // Set initialized variables
+      let direction = 0;
+      let rl = true;
+      let rl2 = true;
+      let reset = false;
+      let quit = false;
+      let collisionPos = false;
+      let collisionNeg = false;
+
+      // Print starting text
+      let text = Text.new("Get to the finish without hitting anything!");
+
+      return this;
+
+  }
+
+  /** Disposes this game. */
+  method void dispose(){
+      do movingObstacle1.dispose();
+      do movingObstacle2.dispose();
+      do endBlock.dispose();
+      do text.dispose();
+      do Memory.deAlloc(this);
+      return;
+  }
+
+  /** Draws game board to screen. */
+  method void drawGame(){
+
+        // Puts board pieces in temporary arrays
+        let c = co(100, 127, 128, 193);
+        let c1 = co(64, 100, 100, 101);
+        let c2 = co(64, 16, 65, 40);
+        let c3 = co(16,40, 65, 235);
+        let c4 = co(65, 234, 384, 235);
+        let c5 = co(128, 192, 448, 193);
+        let c6 = co(127, 64, 128, 192);
+        let c7 = co(95, 64, 128, 65);
+        let c8 = co(320, 17, 510, 100);
+        let c9 = co(345, 127, 448, 128);
+        let c10 = co(180, 65, 320, 160);
+        let c11 = co(448, 128, 449, 255);
+
+        // Draws the board
+        do dr(c[0], c[1], c[2], c[3]);
+        do dr(c1[0], c1[1], c1[2], c1[3]);
+        do dr(c2[0], c2[1], c2[2], c2[3]);
+        do dr(c3[0], c3[1], c3[2], c3[3]);
+        do dr(c4[0], c4[1], c4[2], c4[3]);
+        do dr(c5[0], c5[1], c5[2], c5[3]);
+        do dr(c6[0], c6[1], c6[2], c6[3]);
+        do dr(c7[0], c7[1], c7[2], c7[3]);
+        do dr(c8[0], c8[1], c8[2], c8[3]);
+        do dr(c9[0], c9[1], c9[2], c9[3]);
+        do dr(c10[0], c10[1], c10[2], c10[3]);
+        do dr(c11[0], c11[1], c11[2], c11[3]);
+
+        return;
+  }
+
+  /** Draws rectangle */
+  method void dr(int a, int b, int c, int d){
+    do Screen.drawRectangle(a, b, c, d);
+    return;
+  }
+
+  /** Creates coordinate array and pushes it to master coordinate array */
+  method Array co(int a, int b, int c, int d){
+      let temp = Array.new(14);
+      let temp[0] = a;
+      let temp[1] = b;
+      let temp[2] = c;
+      let temp[3] = d;
+      return temp;
+  }
+
+  //** Sets obstacles in motion */
+  method void moveR1(){
+
+      // Move the obstacle right and store the new coordinates in position vars
+      let m1qx = movingObstacle1.moveRight(318);
+      let m1fx = m1qx + 44;
+
+      // If at rightmost limit, change directions
+      if(m1fx=318){
+      let right = false;
+      }
+
+      let key = Keyboard.keyPressed();
+      return;
+
+  }
+
+  /** Sets obstacle 2 in leftward motion */
+  method void moveR2(){
+
+    // Move the obstacle right and store the new coordinates in position vars
+    let m2qx = movingObstacle2.moveRight(510);
+    let m2fx = m2qx + 20;
+
+    // If at rightmost limit, change directions
+    if(m2fx = 510){
+    let right2 = false;
+    }
+
+    let key = Keyboard.keyPressed();
+    return;
+
+}
+
+  /** Sets obstacle 1 in leftward motion */
+  method void moveL1(){
+
+      // Move the obstacle left and store the new coordinates in position vars
+      let m1qx = movingObstacle1.moveLeft(66);
+      let m1fx = m1qx + 44;
+
+      // If at leftmost limit, change directions
+      if(m1qx = 66){
+      let right = true;
+      }
+
+      let key = Keyboard.keyPressed();
+      return;
+
+  }
+
+  /** Sets obstacle 2 in leftward motion */
+  method void moveL2(){
+
+    // Move the obstacle left and store the new coordinates in position vars
+    let m2qx = movingObstacle2.moveLeft(322);
+    let m2fx = m2qx + 20;
+
+    // If at leftmost limit, change directions
+    if(m2qx = 322){
+    let right2 = true;
+    }
+
+    let key = Keyboard.keyPressed();
+    return;
+
+}
+
+
+  /** Allow user to move game piece with arrow keys on keyboard */
+  method void movePiece(){
+
+      // Set direction of the main game piece according to the currently pressed key
+      if(direction = 1){
+      let pay = piece.moveUp();
+      let pby = pay + 15;
+      }
+      if(direction = 2){
+      let pay = piece.moveDown();
+      let pby = pay + 15;
+      }
+      if(direction = 3){
+      let pax = piece.moveLeft();
+      let pbx = pax + 15;
+      }
+      if(direction = 4){
+      let pax = piece.moveRight();
+      let pbx = pax + 15;
+      }
+
+      // Controls sensitivity of arrow keys to piece movement
+      do Sys.wait(30);
+
+      return;
+  }
+
+  /** Checks to see if there is a collision */
+  method void checkCollision(){
+
+      // Collision with walls
+      if ((pbx>c[0]) & (pby > c[1]) & (pax<c[2]) & (pay<c[3])){ let collisionNeg = true; }
+      if ((pbx>c1[0]) & (pby > c1[1]) & (pax<c1[2]) & (pay<c1[3])){ let collisionNeg = true; }
+      if ((pbx>c2[0]) & (pby > c2[1]) & (pax<c2[2]) & (pay<c2[3])){ let collisionNeg = true; }
+      if ((pbx>c3[0]) & (pby > c3[1]) & (pax<c3[2]) & (pay<c3[3])){ let collisionNeg = true; }
+      if ((pbx>c4[0]) & (pby > c4[1]) & (pax<c4[2]) & (pay<c4[3])){ let collisionNeg = true; }
+      if ((pbx>c5[0]) & (pby > c5[1]) & (pax<c5[2]) & (pay<c5[3])){ let collisionNeg = true; }
+      if ((pbx>c6[0]) & (pby > c6[1]) & (pax<c6[2]) & (pay<c6[3])){ let collisionNeg = true; }
+      if ((pbx>c7[0]) & (pby > c7[1]) & (pax<c7[2]) & (pay<c7[3])){ let collisionNeg = true; }
+      if ((pbx>c8[0]) & (pby > c8[1]) & (pax<c8[2]) & (pay<c8[3])){ let collisionNeg = true; }
+      if ((pbx>c9[0]) & (pby > c9[1]) & (pax<c9[2]) & (pay<c9[3])){ let collisionNeg = true; }
+      if ((pbx>c10[0]) & (pby > c10[1]) & (pax<c10[2]) & (pay<c10[3])){ let collisionNeg = true; }
+      if ((pbx>c11[0]) & (pby > c11[1]) & (pax<c11[2]) & (pay<c11[3])){ let collisionNeg = true; }
+      if ((pbx>20) & (pby > 50) & (pax<50) & (pay<40)){ let collisionNeg = true; }
+
+      // Collision with moving obstacles
+      if ((pbx>m1qx) & (pby > m1qy) & (pax<m1fx) & (pay<m1fy)){ let collisionNeg = true; }
+      if ((pbx>m2qx) & (pby > m2qy) & (pax<m2fx) & (pay<m2fy)){ let collisionNeg = true; }
+
+      // Reached the end
+      if ((pbx > 461) & (pby > 205)){let collisionPos = true;}
+        return;
+  }
+
+  /** Reset the game when user clicks 'r' key */
+  method void reset(){
+      do Screen.clearScreen();
+      do dispose();
+      let game = Game.new();
+      let reset = false;
+      let collisionPos = false;
+      let collisionNeg = false;
+      return;
+  }
+
+
+
+
+  /** When user hits an obstacle, game over and wait for reset */
+  method void gameOver(){
+
+      do text.dispose();
+      do Screen.clearScreen();
+      let text = Text.new("You lost.  Press 'r' to reset and start again");
+      let rl = false;
+      let rl2 = false;
+
+      while(~reset){
+      let key = Keyboard.keyPressed();
+      if (key = 82) { let reset = true; } // r key
+      }
+
+      if (reset) {
+          do reset();
+      }
+
+      return;
+  }
+
+  /** If user wins, discard game and wait for reset */
+  method void win(){
+      do text.dispose();
+      do Screen.clearScreen();
+      let text = Text.new("YOU WON!  Press 'r' to reset and start again");
+      let rl = false;
+      let rl2 = false;
+
+      while(~reset){
+      let key = Keyboard.keyPressed();
+      if (key = 82) { let reset = true; } // r key
+      }
+
+      if (reset) {
+          do reset();
+      }
+
+      return;
+  }
+
+  /** Provides functionality for the Maze Game. */
+  method void runGame(){
+
+      while(~quit){
+
+         // while no key is pressed, stop movement of Game Piece
+         while (key = 0) {
+
+             let key = Keyboard.keyPressed();
+             let direction = 0;
+             do checkCollision();
+             if (collisionNeg){do gameOver();}
+             if (collisionPos){ do win();}
+
+             if ((~right) & rl){
+             do moveL1();
+             }
+
+             if (right & rl){
+             do moveR1();
+             }
+
+             if((~right2) & rl2){
+             do moveL2();
+             }
+
+             if(right2 & rl2){
+             do moveR2();
+             }
+
+         }
+
+         if (key = 82) { let reset = true; } // r key
+         if (key = 81)  { let quit = true; }     // q key
+         if (key = 131) { let direction = 1; }   // up arrow
+         if (key = 133) { let direction = 2; }   // down arrow
+         if (key = 130) { let direction = 3; }   // left arrow
+         if (key = 132) { let direction = 4; }   // right arrow
+
+         // while the key is pressed, key = Keyboard input
+         while (~(key = 0)) {
+            let key = Keyboard.keyPressed();
+            do movePiece();
+            do checkCollision();
+            if (collisionNeg){do gameOver();}
+            if (collisionPos){ do win();}
+
+            if ((~right) & rl){
+            do moveL1();
+            }
+
+            if (right & rl){
+            do moveR1();
+            }
+
+            if((~right2) & rl2){
+            do moveL2();
+            }
+
+            if(right2 & rl2){
+            do moveR2();
+            }
+        }
+
+      }
+      return;
+    }
+
+}
