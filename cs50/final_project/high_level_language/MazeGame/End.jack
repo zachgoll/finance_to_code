@@ -39,11 +39,4 @@ class End {
 
   }
 
-  /** Erases the End Block from the screen */
-  method void eraseBlock(){
-
-      return;
-
-  }
-
 }

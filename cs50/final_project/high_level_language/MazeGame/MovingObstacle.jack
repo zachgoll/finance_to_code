@@ -10,16 +10,16 @@
 
 class MovingObstacle {
 
-  field int xPos;
-  field int yPos;
-  field int size;
+  field int x1Pos;
+  field int y1Pos;
+  field int size1;
 
   /** Creates new Moving Obstacle. */
   constructor MovingObstacle new(int w, int x, int y){
 
-      let size = w;
-      let xPos = x;
-      let yPos = y;
+      let size1 = w;
+      let x1Pos = x;
+      let y1Pos = y;
       do drawObstacle();
 
       return this;
@@ -36,31 +36,42 @@ class MovingObstacle {
   }
 
   /** Moves obstacle to the right. */
-  method void moveRight(){
+  method int moveRight(int a){
 
-      return;
+      if((x1Pos+size1)<a){
+          do Screen.setColor(false);
+          do Screen.drawRectangle(x1Pos, y1Pos, x1Pos + 1, y1Pos + size1);
+          let x1Pos = x1Pos + 1;
+          do Screen.setColor(true);
+          do Screen.drawRectangle((x1Pos + size1) - 1, y1Pos, x1Pos + size1, y1Pos + size1);
+      }
+
+
+      return x1Pos;
 
   }
 
   /** Moves obstacle to the left. */
-  method void moveLeft(){
+  method int moveLeft(int a){
 
-      return;
+      if(x1Pos > a){
+      do Screen.setColor(false);
+      do Screen.drawRectangle((x1Pos + size1) - 1, y1Pos, x1Pos + size1, y1Pos + size1);
+      let x1Pos = x1Pos - 1;
+      do Screen.setColor(true);
+      do Screen.drawRectangle(x1Pos, y1Pos, x1Pos + 1, y1Pos + size1);
+      }
+
+      return x1Pos;
 
   }
+
 
   /** Draws the moving obstacle to the screen. */
   method void drawObstacle(){
 
       do Screen.setColor(true);
-      do Screen.drawRectangle(xPos, yPos, xPos + size, yPos + size);
-      return;
-
-  }
-
-  /** Erases the moving obstacle from the screen. */
-  method void eraseObstacle(){
-
+      do Screen.drawRectangle(x1Pos, y1Pos, x1Pos + size1, y1Pos + size1);
       return;
 
   }

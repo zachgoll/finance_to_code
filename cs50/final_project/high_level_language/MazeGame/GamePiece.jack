@@ -41,13 +41,6 @@ class GamePiece {
 
   }
 
-  /** Erases game piece from screen. */
-  method void erasePiece(){
-
-      return;
-
-  }
-
   /** Moves game piece left. */
   method int moveLeft(){
 
@@ -81,7 +74,7 @@ class GamePiece {
   /** Moves game piece up 2px. */
   method int moveUp(){
 
-      if (yPos > 5) {
+      if (yPos > 18) {
          do Screen.setColor(false);
          do Screen.drawRectangle(xPos, (yPos + size) - 1, xPos + size, yPos + size);
          let yPos = yPos - 2;
