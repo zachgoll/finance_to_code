@@ -12,6 +12,7 @@
 * [Week 15](#week-15-may-29---june-4)
 * [Week 16](#week-16-june-5---june-11)
 * [Week 17](#week-17-june-12---june-18)
+* [Week 18](#week-18-june-19---june-25)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -249,6 +250,13 @@ With a fresh mind, I was able to find the bugs in the VM Translator, and complet
 
 Moved on to the next chapter of Nand2Tetris, and was tasked with building some sort of game in the "Jack" language.  This is the language (inspired by Java) that is built specifically for compiling in the Nand2Tetris project.  Since the language was built in the interest of easy compilation, there are some serious limitations to writing code in it.  Over the last 3 days, I learned the language, and built a maze game which the user controls a small square and navigates through a maze.  If the user hits a wall, the game is over, and they have an option to reset the game.  If the user gets to the end, a success message is flashed on the screen.  This game utilizes several classes and methods (which are available in Jack).  Today (Fri.), I worked on building the game board with all of the obstacles, and quickly began to appreciate the power of languages like Python, Java, Javascript, and even C!!  Although the Jack language is supposedly a higher level language than C, I found it just as difficult if not more difficult than writing C code.  As I attempted to build a multi-dimensional array and use it throughout my program, I quickly realized that this isn't as simple as enclosing some numbers in brackets.  In the end, I decided that a large part of my code was going to have to be repetitious.  This pained me, but after spending hours and hours trying to write DRY code (without a debugger or any sort of print/printf command at my disposal), I had to call it quits and go for repetition.  In the end, I will never have to write in the Jack programming language again, but attempting to write efficient code in it has opened my eyes to the fact that not all languages have the power to write this so called "beautiful code."  I have just a few tweaks to make to the game, and I'll be moving on to writing the compiler.  I'm looking forward to getting back to some Python!
 
+### Saturday/Sunday 6/17 - 6/18
+
+Completed the Maze Game that I thought was going to be completed much quicker than it was!  Nevertheless, I learned a ton through creating this game.  With the Jack programming language and the simplicity of the computer platform that I was programming on, I had to be extremely careful with the instructions I was writing in the code.  Unlike a language such as Javascript which has asynchronous functionality, this language does not, which made it extremely difficult to get the motion effects on the screen to work all at the same time.  The program I wrote is relatively slow, but I believe it is fairly efficient given the resources I had. 
+
+[Game files here.](https://github.com/zachgoll/finance_to_code/tree/master/cs50/final_project/maze_game)
+
+# Week 18: June 18 - June 25
 
 
 
