@@ -45,6 +45,7 @@ $> cd ~/virtual_computer_final_project/software/Assembler
 $> python assembler.py ~/.asmfile
 
 The "~/.asmfile" represents the path to the .asm file that was created from the last step.
+```
 
 #### 5. You now have one enormously long file containing 0's and 1's.  To run this machine code, we will need the CPUEmulator that you downloaded from the Nand2Tetris software suite.  Theoretically, this machine code could be run on a real, physical machine built via the chipset specification in the hardware directory of this repository.  Since this would be awfully tedious to do, go to the command line and open the CPUEmulator.
 
