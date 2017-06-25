@@ -1,0 +1,1 @@
+The files found in this directory are simply practice files going along with the “Learn Python the Hard Way” Ebook.  As a fairly new programmer, I got to this chapter in the Nand2Tetris project, and realized that I was not being held back by the actual content of the book, but rather my programming expertise.  This directory was a slight detour.
