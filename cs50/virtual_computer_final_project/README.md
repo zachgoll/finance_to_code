@@ -18,8 +18,8 @@ After installing, you will need two of the tools to successfully run the "maze_g
 
 ### Running a "Jack Program" (see software/maze_game)
 
-1. Create a new directory which contains all the .jack files, and all the [.vm files from the operating system folder.](https://github.com/zachgoll/finance_to_code/tree/master/cs50/virtual_computer_final_project/software/operating_system). 
-2. Assuming you have downloaded the prerequisites, from the command line (where "projectdirectory" is the directory you have just created): 
+#### 1. Create a new directory which contains all the .jack files, and all the [.vm files from the operating system folder.](https://github.com/zachgoll/finance_to_code/tree/master/cs50/virtual_computer_final_project/software/operating_system). 
+#### 2. Assuming you have downloaded the prerequisites, from the command line (where "projectdirectory" is the directory you have just created): 
 
 ```
 $> cd projectdirectory
@@ -29,7 +29,7 @@ $> JackCompiler.bat projectdirectory/              // If using Windows
 
 This will compile your .jack files into vm files. 
 
-3. Now, you will have to convert all of your .vm files into .hack files.
+#### 3. Now, you will have to convert all of your .vm files into .hack files.
 
 ``` 
 $> cd ~/virtual_computer_final_project/software/virtual_machine
@@ -38,7 +38,7 @@ $> python vm_translator.py ~/projectdirectory/
 
 Please note that in place of "~/projectdirectory/" you will need to supply a full path to the directory which you would like translated.
 
-4. You now have a long .asm file.  To convert this file into machine language which will run on the "Hack" hardware/chipset,  you must use the Assembler. 
+#### 4. You now have a long .asm file.  To convert this file into machine language which will run on the "Hack" hardware/chipset,  you must use the Assembler. 
 
 ``` 
 $> cd ~/virtual_computer_final_project/software/Assembler
@@ -46,7 +46,7 @@ $> python assembler.py ~/.asmfile
 
 The "~/.asmfile" represents the path to the .asm file that was created from the last step.
 
-5. You now have one enormously long file containing 0's and 1's.  To run this machine code, we will need the CPUEmulator that you downloaded from the Nand2Tetris software suite.  Theoretically, this machine code could be run on a real, physical machine built via the chipset specification in the hardware directory of this repository.  Since this would be awfully tedious to do, go to the command line and open the CPUEmulator.
+#### 5. You now have one enormously long file containing 0's and 1's.  To run this machine code, we will need the CPUEmulator that you downloaded from the Nand2Tetris software suite.  Theoretically, this machine code could be run on a real, physical machine built via the chipset specification in the hardware directory of this repository.  Since this would be awfully tedious to do, go to the command line and open the CPUEmulator.
 
 ```
 $> CPUEmulator.sh    // If using Mac
