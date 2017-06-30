@@ -258,6 +258,30 @@ Completed the Maze Game that I thought was going to be completed much quicker th
 
 # Week 18: June 18 - June 25
 
+Took most of the week off for travel, but managed to submit my CS50 final project.
+
+# Week 19: June 26 - July 2
+
+## *Started 42 Piscine in Fremont, CA*
+
+### Monday June 26
+
+Made it through the first day of the 42 piscine.  The project today focused mainly on bash and ldap.  Had several projects to complete, and they were all challenging.  I learned several new commands today, but the main thing that I took away was how to read a man page.  Previous to today, I had never used the man pages in the terminal, but the exercises assigned here at 42 were so dependent on your knowledge of the terminal that I had to learn to read a man page quickly and correctly.  Still have a long way to go, but a great start!
+
+### Tuesday June 27
+
+Today was more rewarding as I began to get into more advanced shell commands and scripts.  Spent the majority of the day working with the grep and sed command, and learning how to pipe commands together.  Understanding how stdin and stdout works was helpful for piping.  After today, I feel much more agile at the command line.  This will hopefully save me a lot of time in the future as I will now be able to manipulate large groups of files, and large files in and of themselves. 
+
+### Wednesday June 28
+
+Did my first corrections here at 42.  I quickly realized how meticulous the grading standards are here.  After failing the first exercise for not having the correct number of bytes in my file, I knew it was going to be a rough day.  After doing corrections, I started the day02 project, which was our introduction to writing C programs.  The majority of my day was spent figuring out how to get a preloaded 42 header (init.el) via emacs.  I switched from vim to emacs as a matter of preference, so this required a little bit of extra work to figure out the basic commands for emacs.  After figuring this out, I wrote a few simple C programs (print the alphabet forwards, print the alphabet backwards only using the function putchar()).  I then spent the remainder of the night trying to get my programs to match 42's "norms."  The format required by 42 can be checked via the "norminette" utility.  I spent at least an hour on my first program sorting through all the errors and re-formatting the file to meet the norms.  Overall a frustrating day, but better days to come!
+
+### Thursday June 29
+
+Today consisted of two primary learning points.
+
+1. The "Mouillenete" bot that checks our work at 42 is extremely specific, and I was once again killed by a small error in my formatting for the second day's work.  A good portion of my day was spent reading through the specifications required for writing C programs to match the bot's requirements.  The project today was to write several basic functions in C, and turn only these functions in.  At first, I had a "main()" function in my files, but found out that the bot would supply this main function.  It took me a while to realize how this was possible, but eventually, after learning how function prototyping in C works, I was able to craft my files to work with the bot.  Previously to today, all of my programs have been rather sloppy in formatting and structure.  Adhering to the bot's standards was a huge lesson in writing "clean" code and using best practices.  Although it was tedious at first, writing clean code not only helps other people read through it, but also myself!  Understanding EXACTLY how the different parts of the program work in conjunction with each other proved invaluable to my understanding of the C programming language.
+2. After nailing the formatting of my code down, I moved on to the next project, which required me to brush up on pointers in C.  Going through the Nand2Tetris course was massively helpful in understanding pointers.  I still am working on understanding the concept of passing pointers through functions, but will hopefully get that nailed down tomorrow!
 
 
 
