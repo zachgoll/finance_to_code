@@ -290,3 +290,11 @@ Passed a project for the first time here at 42!  I got myself a little behind wh
 I'm getting really quick in the terminal, and comfortable using the Emacs text editor.  when I first started using it I couldn't understand why it would be so useful.  I was used to typing my code in Atom, but when writing simple scripts and C functions, it's much quicker to pull up Vim or Emacs.  Additionally, I created a profile in the terminal which (when launched) automatically launches three separate windows that I can work in.  This was enormously helpful for writing and compiling code from multiple files at a time.  I then found the hotkeys, and became exponentially quicker in the terminal and Emacs because I was then able to press one key to close all terminals, and toggle quickly between them!
 
 Learning a lot here at 42!!
+
+
+### Saturday July 1
+
+Today was busy!  Backlogged with an entire project and a group project, I stayed busy all day.  This was the first group project here at 42, and I thoroughly enjoyed the experience.  I have never worked with others on a coding project, but found it quite productive; something I have not experienced often thanks to the terribly unproductive group projects during my undergraduate education in Corporate Finance.  It was nice to have multiple eyes on the code, because we spent far less time debugging.
+
+In terms of learning, I spent a good part of today attempting to understand the black box programmers call "recursion."  If you think about it too hard, it get's quite overwhelming.  That said, I walked through several of my programs line by line to see how the recursion was working.
+
