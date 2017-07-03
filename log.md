@@ -13,6 +13,8 @@
 * [Week 16](#week-16-june-5---june-11)
 * [Week 17](#week-17-june-12---june-18)
 * [Week 18](#week-18-june-19---june-25)
+* [Week 19](#week-19-june-26---july-2)
+* [Week 20](#week-20-july-3---july-9)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -298,3 +300,8 @@ Today was busy!  Backlogged with an entire project and a group project, I stayed
 
 In terms of learning, I spent a good part of today attempting to understand the black box programmers call "recursion."  If you think about it too hard, it get's quite overwhelming.  That said, I walked through several of my programs line by line to see how the recursion was working.
 
+### Sunday July 2
+
+Super frustrating and rewarding day.  I got a good nights rest last night, which kept me sharp all day, but unfortunately, I wasn't quite able to finish the assigned project today.  The project was to print a pyramid with incrementing size and complexity (doors, door handles, etc.) all in the terminal as standard output.  Reflecting back on the day, I think I approached the problem incorrectly.  Although I did careful planning once I figured out the pattern and algorithm, I did not plan my functions.  I should have figured out which functions I needed, and then wrote skeleton code for those functions.  Although I learned a lot today and became more comfortable using pointers in C, I am a bit frustrated that I didn't plan out my program like I did the [vm_translator](https://github.com/zachgoll/finance_to_code/tree/master/cs50/virtual_computer_final_project/software/virtual_machine/vm_translator) several weeks ago.  Yes, C is a much more primitive language than Python (which I wrote the vm_translator in), but planning out a program follows the same principles!  Moving forward, before writing a program that is more than one function, I will plan out my functions and write solid pseudo/skeleton code before jumping in and confusing myself with all sorts of random variables.
+
+# Week 20: June 3 - July 9
