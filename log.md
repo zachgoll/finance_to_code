@@ -305,3 +305,13 @@ In terms of learning, I spent a good part of today attempting to understand the 
 Super frustrating and rewarding day.  I got a good nights rest last night, which kept me sharp all day, but unfortunately, I wasn't quite able to finish the assigned project today.  The project was to print a pyramid with incrementing size and complexity (doors, door handles, etc.) all in the terminal as standard output.  Reflecting back on the day, I think I approached the problem incorrectly.  Although I did careful planning once I figured out the pattern and algorithm, I did not plan my functions.  I should have figured out which functions I needed, and then wrote skeleton code for those functions.  Although I learned a lot today and became more comfortable using pointers in C, I am a bit frustrated that I didn't plan out my program like I did the [vm_translator](https://github.com/zachgoll/finance_to_code/tree/master/cs50/virtual_computer_final_project/software/virtual_machine/vm_translator) several weeks ago.  Yes, C is a much more primitive language than Python (which I wrote the vm_translator in), but planning out a program follows the same principles!  Moving forward, before writing a program that is more than one function, I will plan out my functions and write solid pseudo/skeleton code before jumping in and confusing myself with all sorts of random variables.
 
 # Week 20: July 3 - July 9
+
+### Monday July 3
+
+Starting with the good, I wrote a few bash scripts that dramatically increased the efficiency of my workflow.  Here at 42, we have to write several different C files, and they have to be separated from their main functions.  I found myself typing the same command "gcc -o -Wall -Wextra -Werror tester file.c file.c file.c" over and over again, so I wrote a script which asks for two inputs, the file name, and the current project name, and it automatically compiles the file alongside the main function.  Saved me a ton of time!  Additionally, I learned several new Vim commands, which dramatically increased my efficiency while writing my C code in the text editor.  When checking the format of my code, the built in "Norminette" which checks formatting of our files will list the line of the formatting error.  Prior to today, I was slowly navigating to these lines to correct the errors, but with my new Vim knowledge, I'm much quicker!
+
+On the down side, I got stuck on a program today, and could not get myself to quit and get away from it.  After finally getting away from the computer, I realized the importance of:
+
+1. Writing solid pseudo-code prior to writing a program
+2. If stuck, TAKE A BREAK, and then come back and write out some more pseudo code!
+
