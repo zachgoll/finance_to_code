@@ -315,3 +315,13 @@ On the down side, I got stuck on a program today, and could not get myself to qu
 1. Writing solid pseudo-code prior to writing a program
 2. If stuck, TAKE A BREAK, and then come back and write out some more pseudo code!
 
+### Tuesday July 4
+
+Started to get the hang of things today!  Switched over to Vim text editor (rather than Emacs) and noticed a huge improvement in the ease of editing.  Additionally, before writing each program today, I wrote solid pseudo code with well defined functions and sub-routines.  This helped me stay clear with what I was doing in the code, and kept me from getting stuck like I have the last couple of days.
+
+Today, I wrote the implementation for several functions in various C standard libraries. This included putstr, putnbr, atoi, strstr, strcpy, strcmp, strncmp, strlower, and strupper.
+
+Writing each of the functions was a challenge, but the most challenging part was learning how the function worked and coming up with all of the test cases for it.  For example, atoi() can accept the string "\r\n +50" and still convert this into an integer of 50.  Finding all the possible test cases (to meet the 0% error policy here at 42) was tedious and frustrating.  On the same note, it taught me to critique my own code to a high level of accuracy; something that I have never done before.  
+
+Since starting here at 42, I have become much more conscious of writing clean, thorough, and efficient code.  These three words didn't mean much to me before coming here, but thanks to norminette (the bot that checks the formatting of the code), the 25 line maximum for each function, and the endless test cases for each function, I have learned to write code that professional standard.  It certainly isn't as complex as most "professional code," but getting there.
+
