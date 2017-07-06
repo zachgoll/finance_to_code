@@ -1,4 +1,4 @@
-# Table of Contents
+ Table of Contents
 * [Week 1](#week-1-feb-20---feb-26)
 * [Week 2](#week-2-feb-27---mar-5)
 * [Week 3](#week-3-mar-6---mar-12)
@@ -325,3 +325,12 @@ Writing each of the functions was a challenge, but the most challenging part was
 
 Since starting here at 42, I have become much more conscious of writing clean, thorough, and efficient code.  These three words didn't mean much to me before coming here, but thanks to norminette (the bot that checks the formatting of the code), the 25 line maximum for each function, and the endless test cases for each function, I have learned to write code that professional standard.  It certainly isn't as complex as most "professional code," but getting there.
 
+### Wednesday July 5
+
+Started the day off strong, but ran into some trouble with pointers again.  I spent several hours today walking myself through the different kinds of pointers, how to reassign pointers, and how to use this knowledge to swap strings, pass pointer arguments, etc.  I was trying to implement a program that sorted the command line arguments for an executable and print them in order (by ASCII value) to the stdout.  The implementation forbid using any external libraries to do this, so I ran into problems with memory allocation when trying to swap strings as a part of a bubble sorting algorithm.  Despite struggling to complete this program, I can finally say that I understand C pointers with a good amount of depth.  Unlike before, I now understand WHY a simple string swap does not always work in C, and understand the power of double pointers in swapping strings!
+
+I am also doing better planning out my programs before writing them, which has cut the time it takes for me to write my code nearly in half.  
+
+Last, I learned how to compile my own C library with '.o' or 'object' files via the ar rc command, and include my newly created libary into any of my programs!
+
+### Thursday July 6
