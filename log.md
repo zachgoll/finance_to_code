@@ -333,4 +333,7 @@ I am also doing better planning out my programs before writing them, which has c
 
 Last, I learned how to compile my own C library with '.o' or 'object' files via the ar rc command, and include my newly created libary into any of my programs!
 
+
 ### Thursday July 6
+
+By far the most productive day yet here at the Piscine!  Today, I made a rule for myself that I would never stay in the lab for more than 2 hours at a time without taking a break.  Although I didn't adhere perfectly to this rule, I did as best as I could, and as a result, kept my concentration/focus throughout the entire day.  Taking periodic breaks (even when I didn't want to) helped more than anything I have tried to this point.  I ended up finishing four exercises, which included a string concatenation program that I was quite proud to get working.  Most of the code I wrote today incorporated the malloc function, and helped me further understand the importance of managing memory in any computer.  Also, after writing over 100 lines of code just to concatenate a few string pointers into a dynamically allocated char pointer, it dawned on me just how complex some of the high level languages that handle this stuff for you are.  In the past two months I have done a good amount of low level programming, and it is allowing me to not only learn the core principles of computers, but also appreciate those rare times when I get to write something in Python and watch as magic happens in front of my eyes!
