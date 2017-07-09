@@ -342,4 +342,43 @@ By far the most productive day yet here at the Piscine!  Today, I made a rule fo
 
 Difficult day.  Worked on a function to split a string separated by tabs, spaces, and line breaks, and dynamically allocate memory for each new string.  After working on this for several hours, I learned about header files, structs, enums, defines, typedefs, etc.  I'm still a bit cloudy on these topics, but have a good understanding of protecting from double inclusions of header files.  Also, thanks to my Python programming experience (working with classes and objects), I understand the concept of structs in a sense, but will have to get used to the meticulous C syntax, especially with the dereferencing of struct pointers.
 
- 
+### Saturday July 8
+
+Today I had an overwhelming amount of peer corrections to do.  I read a lot of
+code today, and for maybe the first time began to realize how much of a skill
+this is in and of itself.  Additionally, I began working on my individual
+weekend project, which is a program which takes two strings, and determines if
+they match.  This would be rather easy in normal circumstances, but one of the
+strings can have wildcards, making the program much more complex.  I began to
+solve the problem iteratively, and was able to return the correct answer for all
+but one test case.  I then realized that this problem could be solved with
+dynamic programming after reading about string searching algorithms on
+Wikipedia, which led me to watching an [MIT lecture on dynamic
+programming](https://www.youtube.com/watch?v=OQ5jsbhAv_M).
+
+Throughout most of the piscine, I haven't taken the time to learn concepts of
+programming necessary for a given problem, which has led to overly complex
+solutions, and lots of frustration.  This weekend, I have to implement both the
+match program AND a sudoku solver, both of which could be solved recursively via
+dynamic programming.  In contrast to my previous problem solving approach of: 
+
+1. Read the problem
+2. Try and solve it
+3. Try and solve it again
+4. Try and solve it again
+5. ad infinitum 
+
+I am instead trying something more like: 
+
+1. Read the problem
+2. Try and solve it
+3. Fill in knowledge gaps with research and lectures
+4. Try and solve it
+5. Fill in knowledge gaps
+6. Try and solve it...
+
+With so many things due in such a short time frame here at 42, it has been
+tempting to start working on the problems as soon as possible, but I'm hoping
+this new approach will cut the time it takes to solve the problem down to the
+point that justifies the extra time spent on researching different possible
+solutions.
