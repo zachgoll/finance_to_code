@@ -15,6 +15,7 @@
 * [Week 18](#week-18-june-19---june-25)
 * [Week 19](#week-19-june-26---july-2)
 * [Week 20](#week-20-july-3---july-9)
+* [Week 20](#week-20-july-10---july-16)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -382,3 +383,20 @@ tempting to start working on the problems as soon as possible, but I'm hoping
 this new approach will cut the time it takes to solve the problem down to the
 point that justifies the extra time spent on researching different possible
 solutions.
+
+### Sunday July 9
+
+Frustrating day, but made good progress in my understanding of recursion.
+Thanks to my corrections marathon yesterday, I got behind on the weekend
+projects.  I then started the day later than I wanted to, and was tasked with
+finishing both a group project (sudoku solver) and a string matching program.
+I ended up spending most of my day learning about and trying to understand
+recursive algorithms alongside dynamic programming.  The first half of the
+morning I spent trying to understand the [coin change
+problem](https://www.youtube.com/watch?v=PafJOaMzstY&t=1154s).  Once I finally
+understood this, I moved on to the string sorting program I was tasked to write.
+Although I'm still a bit fuzzy on the concepts, I now have a much better
+approach to looking at a problem and determine the base cases for a recursive
+solution.
+
+## Week 20: July 10 - July 16 
