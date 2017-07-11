@@ -400,3 +400,20 @@ approach to looking at a problem and determine the base cases for a recursive
 solution.
 
 ## Week 20: July 10 - July 16 
+
+### Monday July 10
+
+Learned about Makefiles today.  Didn't realize how complex you could get with
+the makefile!  With our rather small projects and programs, a makefile isn't
+all that useful, but as we add more dependencies I can see how a makefile could
+expedite the process of compilation.
+
+I first watched [this YouTube
+video](https://www.youtube.com/watch?v=GExnnTaBELk) on makefiles, but eventually
+ended up at the [GNU
+documentation](https://www.gnu.org/software/make/manual/make.html) for make and
+makefiles.
+
+I realized today that documentation is much harder to understand initially than
+say a YouTube tutorial, but reading is much quicker than watching a video.  I am
+going to make an effort to find more text sources for future learning.
