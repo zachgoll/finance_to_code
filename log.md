@@ -417,3 +417,18 @@ makefiles.
 I realized today that documentation is much harder to understand initially than
 say a YouTube tutorial, but reading is much quicker than watching a video.  I am
 going to make an effort to find more text sources for future learning.
+
+### Tuesday July 11
+
+Most productive day of the piscine by far.  Getting a quick start on the day
+helped a ton; even if it was just a placebo effect.  Getting ahead allowed for
+some momentum that carried throughout the day.
+
+I started the day working with pointers to functions.  I still haven't grasped
+the true benefit of using pointers to functions, but understand how to use them.
+I then moved on to linked lists, which were difficult to grasp as first, but
+after understanding them thoroughly, I immediately saw the potential that they
+bring to the C language.  Just like a Python list which you can append, prepend,
+and remove from the beginning and end of the list, you can do this all in C.
+After building a few simple functions, we have full list functionality just like
+Python and other high level languages.
