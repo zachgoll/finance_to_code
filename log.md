@@ -432,3 +432,18 @@ bring to the C language.  Just like a Python list which you can append, prepend,
 and remove from the beginning and end of the list, you can do this all in C.
 After building a few simple functions, we have full list functionality just like
 Python and other high level languages.
+
+### Wednesday July 12
+
+Learned about file manipulation in C today.  This included open, close, read,
+write, and lseek on C files.  I have worked with files before, but today it
+finally dawned on me that the C programming language is a system level language
+that is useful for performing tasks on a local machine.  I knew it was a "low
+level" programming language, and I also knew it was much more tedious to write
+in than say, Python or Javascript, but I did not understand the reason people
+still use it.  After reading through several man pages today and learning about
+buffers, sockets, blocking/non-blocking I/O, I began to understand the true
+power of the C programming language (although I'm sure I only scratched the
+surface).
+
+
