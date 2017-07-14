@@ -446,4 +446,31 @@ buffers, sockets, blocking/non-blocking I/O, I began to understand the true
 power of the C programming language (although I'm sure I only scratched the
 surface).
 
+### Thursday July 13
 
+Tough day here at the piscine.  I misinterpreted the directions on one of the
+exercises for day 11, and failed the entire project.  Just a reminder of how
+brutal this piscine is in terms of grading.  I finished 11 exercises, got 10 of
+them correct, and still failed.
+
+Adding to that, I spent all day on an exercise for day 12 which I ended up
+giving up on so I don't get behind on sleep.  It was tough to throw in the
+towel, but I was getting nowhere, and it was getting late.
+
+Despite these unfortunate outcomes, I learned a ton today.  Worked with binary
+trees and the different methods of traversing through the trees.  I also
+recreated the unix systems "tail" function.  Unfortunately, I used "lseek" in my
+code, which I was not aware was a forbidden function.  I then had to redo the
+program with my own implementation of lseek, but I didn't properly plan my steps
+and ended up with a mess of a program with variables everywhere!
+
+I have a lot to improve in the area of refactoring code, and modifying existing
+programs.  Every time I have to do either of these, it seems as if I end up with
+more variables and a mess than I started with.  Just like it is important to
+have a blueprint for a program, I think it might be helpful to have a blueprint
+for modifying/refactoring a program as well.  That way, before I start moving
+around pieces of the code, I have my steps planned out.  Also, I think it would
+be beneficial to commit to my repository more often, so I can revert to old
+versions of the program if I screw it up too bad.  Tonight, I did not commit to
+my repo before making changes, which made it impossible to go back to where I
+started.
