@@ -474,3 +474,11 @@ be beneficial to commit to my repository more often, so I can revert to old
 versions of the program if I screw it up too bad.  Tonight, I did not commit to
 my repo before making changes, which made it impossible to go back to where I
 started.
+
+### Friday July 14
+
+Worked with binary trees today, and found the recursion for them quite
+interesting and difficult at the same time.  After several weeks of attempts, I
+finally understand recursion well enough to implement it.  During the exam
+today, I was able to implement two different problems with recursion.  It was
+quite rewarding to finally get to this point!
