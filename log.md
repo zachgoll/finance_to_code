@@ -482,3 +482,16 @@ interesting and difficult at the same time.  After several weeks of attempts, I
 finally understand recursion well enough to implement it.  During the exam
 today, I was able to implement two different problems with recursion.  It was
 quite rewarding to finally get to this point!
+
+### Saturday July 15
+
+Everything kind of came together today.  The two weekend projects I am working
+on require several files, and I did a great job planning my programs out before
+writing them.  One program takes a mathematical expression string and returns
+the result (following order of operations and parsing through parenthetical
+statements).  The other program reads from stdin, matches characters, and
+returns either a match or null.
+
+After 3 weeks of trudging through basic C concepts and command line subjects,
+everything is finally getting put to the test with these remaining projects, and
+I'm starting to see the fruits of my labor!
