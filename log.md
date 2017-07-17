@@ -495,3 +495,22 @@ returns either a match or null.
 After 3 weeks of trudging through basic C concepts and command line subjects,
 everything is finally getting put to the test with these remaining projects, and
 I'm starting to see the fruits of my labor!
+
+### Sunday July 16
+
+Another grueling day at the piscine.  Came out on bottom today, and was not able
+to finish either of the weekend projects.  I spent too much time trying to come
+up with an algorithm to write in code, and didn't have enough time to actually
+write the code itself.  Today, I recognized my tendency to dig too deep into the
+problems I am trying to solve.  The program I was attempting to write today
+reads a mathematical expression string, parses it from infix to postfix
+notation, and then uses the shunting yard algorithm to solve via postfix
+notation.  My problem was not understanding the algorithm or writing the code,
+but rather getting myself to use the algorithm in the first place.  Often times,
+I feel like using someone else's algorithm is cheating myself, but I realized
+today that in many areas of computer science, you NEED the work of others to
+move forward.  There is a reason it takes PhD students several years to develop
+these complex algorithms, and there is no reason I should be attempting to
+recreate them on my own!  
+
+My takeaway from today is to USE THE TOOLS AVAILABLE TO YOU.
