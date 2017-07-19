@@ -1,0 +1,5 @@
+Credentials cache: API:24717
+        Principal: zgollwit@42.US.ORG
+
+  Issued                Expires               Principal
+Jun 26 13:35:30 2017  Jun 26 23:35:30 2017  krbtgt/42.US.ORG@42.US.ORG
