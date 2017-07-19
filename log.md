@@ -15,7 +15,8 @@
 * [Week 18](#week-18-june-19---june-25)
 * [Week 19](#week-19-june-26---july-2)
 * [Week 20](#week-20-july-3---july-9)
-* [Week 20](#week-20-july-10---july-16)
+* [Week 21](#week-21-july-10---july-16)
+* [Week 22](#week-22-July 17---July 23)
 
 # Week 1: Feb. 20 - Feb 26
 
@@ -399,7 +400,7 @@ Although I'm still a bit fuzzy on the concepts, I now have a much better
 approach to looking at a problem and determine the base cases for a recursive
 solution.
 
-## Week 20: July 10 - July 16 
+## Week 21: July 10 - July 16 
 
 ### Monday July 10
 
@@ -514,3 +515,27 @@ these complex algorithms, and there is no reason I should be attempting to
 recreate them on my own!  
 
 My takeaway from today is to USE THE TOOLS AVAILABLE TO YOU.
+
+# Week 22: July 17 - July 23
+
+### Monday July 17
+
+Things are slowing down here at the piscine.  We are working on the final
+project, which is definitely a handful, but since we don't have corrections
+every day, several hours have been freed up.  I'm loving this project because I
+get to apply everything I have learned during the piscine all at once.  Just a
+short few weeks ago, I had no idea how pointers worked, didn't know what
+recursion was, and would have had a better chance of striking it rich off the
+lottery than creating a stack/queue in C.  Now, I'm comfortable working with all
+these concepts, and alongside the technical aspects, I have become a much better
+problem solver in general!
+
+### Tuesday July 18
+
+Completed the functionality for my final project.  Really happy with how I
+structured my code and kept everything clean and organized.  I feel much more
+confident now organizing my source files in a program!  Tomorrow I just need to
+fix some formatting errors, and refactor a few functions which surpass the
+"standard" of 25 lines per function here at 42.  Although this requirement has
+been really frustrating, it has forced me to think precisely and strategically
+before slapping a bunch of variables in my code.
