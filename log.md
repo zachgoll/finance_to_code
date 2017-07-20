@@ -539,3 +539,18 @@ fix some formatting errors, and refactor a few functions which surpass the
 "standard" of 25 lines per function here at 42.  Although this requirement has
 been really frustrating, it has forced me to think precisely and strategically
 before slapping a bunch of variables in my code.
+
+### Wednesday July 19
+
+Spent most of the day refactoring my final project, and running test cases on
+it.  Unfortunately, I found a test case that failed late in the day, and was
+unable to find the error before the deadline tonight.  It was quite frustrating
+because I tried to use GDB debugger, but realized that the OS on my Mac couldn't
+run GDP without modifying the LLDB certificates (whatever that means).  The test
+case that failed was when I passed in arguments which had a large size, which
+caused a seg fault in my program.
+
+Fortunately, I think I found the problem, but was unable to fix it before the
+deadline.  Overall, despite the one extreme test case that failed, I was very
+pleased with my final project.  The functionality is solid, and the code is
+clean.
