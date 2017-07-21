@@ -554,3 +554,12 @@ Fortunately, I think I found the problem, but was unable to fix it before the
 deadline.  Overall, despite the one extreme test case that failed, I was very
 pleased with my final project.  The functionality is solid, and the code is
 clean.
+
+### Thursday July 20
+
+Took the Hacker Rank test today for the first time, and was disappointed in the result.  I thought after spending a month here at the piscine it would be a piece of cake, but I still have some practice to do in solving algorithmic problems.  Although the lessons learned here at the piscine were valuable, we did not get into the 
+C libraries that would have been helpful on the Hacker Rank.  I found myself in need
+of some more complex functions, and I simply did not know where to find them.  After
+taking the exam, I bought [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1500616884&sr=8-1&keywords=cracking+the+coding), and got myself setup with Hacker Rank's online training portal.  I need to practice solving challenges every day just like
+we did here at the piscine, but with ALL the C libraries instead of the limited
+number of functions that we used here. 
