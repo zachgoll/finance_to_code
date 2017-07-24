@@ -563,3 +563,10 @@ of some more complex functions, and I simply did not know where to find them.  A
 taking the exam, I bought [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1500616884&sr=8-1&keywords=cracking+the+coding), and got myself setup with Hacker Rank's online training portal.  I need to practice solving challenges every day just like
 we did here at the piscine, but with ALL the C libraries instead of the limited
 number of functions that we used here. 
+
+### Sunday July 23
+
+Took some time off since taking (and passing!) my final exam at 42.  I am now
+working on Hacker Rank exercises to prepare for interview questions, improve the
+breadth of my CS knowledge, and to expand my working knowledge of the C
+language.
