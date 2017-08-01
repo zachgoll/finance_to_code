@@ -1,36 +1,10 @@
-# Project Background
+## Project Overview
 
-I initially got the idea after stumbling upon [a post made in the FCC forums](https://forum.freecodecamp.com/t/computer-guide-get-job-ready-with-1-fcc-cert-3-projects-2-courses-and-10-books/64027) by [P1xt](https://forum.freecodecamp.com/users/P1xt), and decided it looked both practical enough and difficult enough to get me where I want to go.  After a bit of exploration, I found another post from the same user that provided a much more detailed path to becoming a front-end developer.  These posts, along with the [100 days of Code](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) challenge were the inspiration behind this project.
+This repository documents all the projects and miscellaneous work I have done while
+educating myself in the vast field of computer science. 
 
-UPDATE (05/18/17) - After working through CS50, I found my interests leaning towards the logical parts of CS rather than visual aspects, and have transitioned to [PxT1's comprehensive guide with computer science applications](https://github.com/imleonmorris/computer-science-and-web-development).  The original guide (as noted by the author) was meant to provide the "bare minimum," while I would like to get a complete CS education through this project.
-
-# Important Links
-
-* [Project Journal](https://github.com/zachgoll/finance_to_code/blob/master/log.md) 
-* [List of Courses Taken/Certifications Earned During Project](https://github.com/zachgoll/finance_to_code/blob/master/course_list.md)
-
-# Goal
-
-* By the end of the project, acquire a full time ~~junior front-end developer~~ full-stack developer/dev-ops job
-
-# General Guidelines  
-
-* All work uploaded to Github in this repository.  I will learn how to use [Git in the terminal](http://gitimmersion.com/index.html) and refer to [this cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf).
-* Weekly and monthly reviews of my progress will live here in the [master log](https://github.com/zachgoll/finance_to_code/blob/master/log.md).
-
-## Individual Project Guidelines
-
-* Useful README.md files per [this article](http://www.pixelearth.net/pages/project-specification)
-* Front-end projects deployed on surge.sh -- full-stack projects deployed on heroku
-* All projects will respect copyright and trademark laws.  Proper attribution will be given to all sources. 
-* For help on projects, I will use official documentation, MDN, Stack Overflow (but no copy/pasting), and Github.  My goal is to become comfortable reading through technical jargon and documentation.
-* Throughout the project, I will develop some sort of basic build process and use [Gulp](http://gulpjs.com/) for my task runner software.
-* For larger projects, I will do some testing via Mocha, Jasmine, etc.
-* I will follow the ["7 Rules of a Great Commit Message"](https://chris.beams.io/posts/git-commit/) for each new substantial commit (not for updating the log.md or things like that).
-  * Example Subject line: "If applied, this commit will *commit goes here*"
-
-
-
-
-
+[Several online
+courses](https://github.com/zachgoll/finance_to_code/blob/master/course_list.md)
+have been taken throughout the project and I have documented the various
+technologies learned and skills built along the way in my log.
 
