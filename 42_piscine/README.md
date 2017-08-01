@@ -1,4 +1,6 @@
-The following shows the marks on all of my exercises for each project.  Several of the projects I did not finish entirely, as shown by the missing exercises in my repos.
+This directory has all of the files that I created and worked on throughout my month-long bootcamp at [42 Coding University](https://www.42.us.org/) in Fremont, California.
+
+The following are the marks for each day/project.  Several of the projects are incomplete as indicated by "Nothing turned in".
 
 ## Day 00
 
