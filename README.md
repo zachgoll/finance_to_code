@@ -6,5 +6,6 @@ educating myself in the vast field of computer science.
 [Several online
 courses](https://github.com/zachgoll/finance_to_code/blob/master/course_list.md)
 have been taken throughout the project and I have documented the various
-technologies learned and skills built along the way in my log.
+technologies learned and skills built along the way in my [project
+log](https://github.com/zachgoll/finance_to_code/blob/master/project_log.md).
 
