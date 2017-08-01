@@ -1,0 +1,15 @@
+0. The game of fifteen supports a board size from anywhere from 3x3 (dimmin) to 9x9 (dimmax), where the dimensions will 
+always produce a dxd square
+1. The game board is represented by a 2-d array data structure
+2. greet();
+3. I am tasked with creating functions init(), draw(), move(), and won().
+
+Game testing: 
+
+./fifteen 3 < ~cs50/pset3/3x3.txt
+
+./fifteen 4 < ~cs50/pset3/4x4.txt
+
+Note about 2-d array: 
+
+[x][y] format where x is the row, and y is the column 

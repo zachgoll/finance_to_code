@@ -1,0 +1,30 @@
+0.  This is the longest word in the English dictionary and refers to a lung disease known as "silicosis"
+1.  "getrusage" returns the resource usage measures for a given variable, which can be RUSAGE_SELF (calling process),
+    RUSAGE_CHILDREN (children of calling process), or RUSAGE_THREAD (calling thread).  These usages are returned in a struct 
+    called "rusage," which has several declarations that are not used and are set to zero by the kernel.  This is part of the 
+    sys/time.h and sys/resource.h libraries.
+2.  There are 16 members of the rusage struct.
+3.  In its definition, calculate() receives two struct pointer arguments.  In order to find the rusage struct in memory to
+    implement the before and after variables, you need an address, which is the purpose of the references rather than values.
+4.  The for loop in speller.c iterates through a single word in the specified text file, checks for spelling errors or incorrect 
+    length, and keeps track of the number of missppelled words as well as total words.  More specifically, we must first open the
+    text file as a read only file, and initialize the variables that will keep track of our valid and misspelled words throughout
+    the loop.  
+    
+    The loop works by using the fgetc() function, which will iterate through each letter of the current word being examined.  We 
+    know which word we are on by using the index integer.  The loop starts by asking if the current letter is an alphabetic 
+    character.  If it is, we assign that letter to the string "word" at the current index (which is zero at the moment).  Then, we 
+    increment the index value, check to make sure we haven't passed our maximum word length, and move into the next operation of the
+    for loop.  Note that if the first if statement or the "word count" does not pass our tests, we iterate through the remainder of
+    that faulty string, and reset the index to 0 to get ready for the next word in the text document. 
+    
+    If we make it through the if statements without finding a faulty character, and the index is greater than 0, we assume that we
+    have found a string, and now add the terminating character to the string, check for misspellings via our check() function, and 
+    finally update the appropriate variables and reset the index to 0 to get ready for the next word in the file.
+    
+5.  If we didn't iterate through each character, it would be impossible to check to see if the word had any invalid characters.
+    Also, we net fgetc() because this allows us to index each word in an array, which can be compared directly to the dictionary 
+    word for misspellings.
+6.  Since we are using a character pointer to point to the string/word that is being checked/loaded, this means that it is possible
+    to modify the values unlike a non-pointer variable passed through a function.  The const is there to ensure that this doesn't
+    happen, because we do not want these strings to change while they are being checked. 

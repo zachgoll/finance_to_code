@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Shares
+{% endblock %}
+
+{% block main %}
+    <h1>Sell Shares</h1>
+    <form action="{{ url_for('sell') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="ticker" placeholder="ex: MSFT" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="numShares" placeholder="# shares" type="number"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Sell Shares</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

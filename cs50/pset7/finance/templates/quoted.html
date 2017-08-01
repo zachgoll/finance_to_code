@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lookup Results
+{% endblock %}
+
+{% block main %}
+    <h1>Lookup Results</h1>
+    <table class="table">
+        <tr>
+            <th>Ticker</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>{{ticker.symbol}}</td>
+            <td>{{ticker.name}}</td>
+            <td>{{price}}</td>
+        </tr>
+    </table>
+{% endblock %}

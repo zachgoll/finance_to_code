@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1>{{username.capitalize()}}'s Transaction History</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Ticker</th>
+            <th>Date</th>
+            <th>Number of Shares</th>
+            <th>Current Price/share</th>
+            <th>Total Transaction Value</th>
+            <th>Buy/Sell</th>
+        </tr>
+        {% for row in portfolio %}
+        <tr>
+            <td>{{row["purchase_id"]}}</td>
+            <td>{{row["ticker"]}}</td>
+            <td>{{row["date_purchased"]}}</td>
+            <td>{{row["num_shares_purchased"]}}</td>
+            <td>{{row["current_share_price"]}}</td>
+            <td>{{row["total_purchase"]}}</td>
+            <td>{{row["buy_or_sell"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

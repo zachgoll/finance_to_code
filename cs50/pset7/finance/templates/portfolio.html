@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1>{{username.capitalize()}}'s Portfolio</h1>
+    <table class="table">
+        <tr>
+            <th>Ticker</th>
+            <th>Number of Shares Owned</th>
+            <th>Current Price/share</th>
+            <th>Total Value of Stock</th>
+        </tr>
+        {% for row in portfolio %}
+        <tr>
+            <td>{{row["ticker"]}}</td>
+            <td>{{row["num_shares_owned"]}}</td>
+            <td>{{row["current_price"]}}</td>
+            <td>{{row["total_value"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h3>Portfolio Value: {{value}}</h3>    
+    <h3>Cash Available = {{curBal}}</h3> 
+    <hr>
+    <a href="/deposit" class="btn btn-success">Deposit Funds</a>
+{% endblock %}

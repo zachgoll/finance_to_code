@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('quote') }}" method="post">
+        <fieldset>
+            <h1>Stock Lookup</h1>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="ticker" placeholder="ex: MSFT" type="text"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Lookup</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

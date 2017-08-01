@@ -1,0 +1,52 @@
+1.  stdint.h is a C header file that has a bunch of typeDefs that take longer primitive C data types, and consolidates them
+into easier to type words that represent these data types.  For example, if someone needed to define a data type of "unsigned_int64",
+it would be awfully cumbersome to have to type all that out each time it is used.  In stdint.h, this primitive data type is "typedef'd" 
+to "DWORD64."  So now, the programmer wishing to define data can use DWORD64 rather than unsigned_int64. 
+
+Ex:  unsigned_int64 bigNumber = 190000;              vs.              DWORD64 bigNumber = 190000;  (second example more concise)
+
+2.  Different data/programs are going to use different amounts of bytes to store data.  Having these different data types allows
+flexibility to allocate the appropriate amount of memory as to maximize the speed the program runs while still allowing enough space
+to run the program.  Sometimes, using one of these specified data types is not sufficient, and we have to use "malloc" in order 
+to ensure enough memory is allocated for the given data.
+
+3.  BYTE = 1 byte
+    DWORD, LONG = 4 bytes
+    WORD = 2 bytes
+    
+4.  The declaration "WORD bfType;" is the first declaration at the top of the BITMAPFILEHEADER, which contains the first 16 bytes 
+of data of a bmp format.  This tells the program that we are working with bitmap.
+
+5.  "bfsize" specifies the size of your entire bitmap file, while "bisize" specifies the total size in bytes of the BITMAPINFOHEADER
+structure.
+
+6.  If biHeight is negative, this means that the file works from the upper-left corner to the bottom-right corner, or in other words, 
+is a "top-down" bitmap file.
+
+7.  The "biBitCount" WORD data type defines the color depth of a BMP file.
+
+8.  On line 24, the fopen will return null if the file "infile" entered as an argument on the command line either has no data, has 
+incorrectly formatted data, or the user has made a typo.  On line 32, the fopen will return null simply because the line 24 returned
+null.  If there is no infile to work with, then the program is incapable of creating any outfile since the outfile is entirely 
+dependent of the infile.
+
+9.  We use 1 as the third argument in fread because we only want to read the BITMAPINFOHEADER 1 time.  Since the size of the element
+we are reading is the full size of the entire file that we are reading it from, it makes no sense to read it more than one time, as
+it would just add too much data to the pointer defined as "bi". 
+
+10. padding =  (4 - ((3*3) * 3) % 4) % 4    =    1 byte of padding                  
+
+            // 3 pixels wide * 3 bytes/pixel = 9 bytes
+
+11. int fseek(FILE* fp, long int offset, int from_where);
+
+fseek() changes the offset of the file pointer, or the variable that points to the file that you are reading in.  Most of the time, 
+the file will be read straight through from say... top left to bottom right.  But with fseek(), we can alter this.  First, enter the 
+pointer to the file, then how many bytes of offset you want, and finally, the reference point from where those number of bytes will
+offset from.  
+
+For example, if I wanted to change the offset to read 2 bytes from the origin of the file, I would execute: 
+
+int fseek(FILE* fp, 2, SEEK_SET);
+
+12. SEEK_CUR tells fseek() that you want to offset "long int offset" number of bytes from your current position in the file.
