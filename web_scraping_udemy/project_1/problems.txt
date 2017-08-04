@@ -1,0 +1,2218 @@
+The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+
+sleepIn(false, false) → true
+sleepIn(true, false) → false
+sleepIn(false, true) → true
+
+
+We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
+
+monkeyTrouble(true, true) → true
+monkeyTrouble(false, false) → true
+monkeyTrouble(true, false) → false
+
+
+Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+
+sumDouble(1, 2) → 3
+sumDouble(3, 2) → 5
+sumDouble(2, 2) → 8
+
+
+Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+diff21(19) → 2
+diff21(10) → 11
+diff21(21) → 0
+
+
+We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
+
+parrotTrouble(true, 6) → true
+parrotTrouble(true, 7) → false
+parrotTrouble(false, 6) → false
+
+
+Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+
+makes10(9, 10) → true
+makes10(9, 9) → false
+makes10(1, 9) → true
+
+
+Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+
+nearHundred(93) → true
+nearHundred(90) → true
+nearHundred(89) → false
+
+
+Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
+
+posNeg(1, -1, false) → true
+posNeg(-1, 1, false) → true
+posNeg(-4, -5, true) → true
+
+
+Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+notString("candy") → "not candy"
+notString("x") → "not x"
+notString("not bad") → "not bad"
+
+
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
+
+missingChar("kitten", 1) → "ktten"
+missingChar("kitten", 0) → "itten"
+missingChar("kitten", 4) → "kittn"
+
+
+Given a string, return a new string where the first and last chars have been exchanged.
+
+frontBack("code") → "eodc"
+frontBack("a") → "a"
+frontBack("ab") → "ba"
+
+
+Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+front3("Java") → "JavJavJav"
+front3("Chocolate") → "ChoChoCho"
+front3("abc") → "abcabcabc"
+
+
+Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+
+backAround("cat") → "tcatt"
+backAround("Hello") → "oHelloo"
+backAround("a") → "aaa"
+
+
+None
+
+or35(3) → true
+or35(10) → true
+or35(8) → false
+
+
+Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+
+front22("kitten") → "kikittenki"
+front22("Ha") → "HaHaHa"
+front22("abc") → "ababcab"
+
+
+Given a string, return true if the string starts with "hi" and false otherwise.
+
+startHi("hi there") → true
+startHi("hi") → true
+startHi("hello hi") → false
+
+
+Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+
+icyHot(120, -1) → true
+icyHot(-1, 120) → true
+icyHot(2, 120) → false
+
+
+Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+
+in1020(12, 99) → true
+in1020(21, 12) → true
+in1020(8, 99) → false
+
+
+We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+
+hasTeen(13, 20, 10) → true
+hasTeen(20, 19, 10) → true
+hasTeen(20, 10, 13) → true
+
+
+We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+
+loneTeen(13, 99) → true
+loneTeen(21, 19) → true
+loneTeen(13, 13) → false
+
+
+Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+
+delDel("adelbc") → "abc"
+delDel("adelHello") → "aHello"
+delDel("adedbc") → "adedbc"
+
+
+Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+
+mixStart("mix snacks") → true
+mixStart("pix snacks") → true
+mixStart("piz snacks") → false
+
+
+Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+
+startOz("ozymandias") → "oz"
+startOz("bzoo") → "z"
+startOz("oxx") → "o"
+
+
+Given three int values, a b c, return the largest.
+
+intMax(1, 2, 3) → 3
+intMax(1, 3, 2) → 3
+intMax(3, 2, 1) → 3
+
+
+Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number.
+
+close10(8, 13) → 8
+close10(13, 8) → 8
+close10(13, 7) → 0
+
+
+Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
+
+in3050(30, 31) → true
+in3050(30, 41) → false
+in3050(40, 50) → true
+
+
+Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
+
+max1020(11, 19) → 19
+max1020(19, 11) → 19
+max1020(11, 9) → 11
+
+
+Return true if the given string contains between 1 and 3 'e' chars.
+
+stringE("Hello") → true
+stringE("Heelle") → true
+stringE("Heelele") → false
+
+
+Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+
+lastDigit(7, 17) → true
+lastDigit(6, 17) → false
+lastDigit(3, 113) → true
+
+
+Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string.
+
+endUp("Hello") → "HeLLO"
+endUp("hi there") → "hi thERE"
+endUp("hi") → "HI"
+
+
+Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+
+everyNth("Miracle", 2) → "Mrce"
+everyNth("abcdefg", 2) → "aceg"
+everyNth("abcdefg", 3) → "adg"
+
+
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+stringTimes("Hi", 2) → "HiHi"
+stringTimes("Hi", 3) → "HiHiHi"
+stringTimes("Hi", 1) → "Hi"
+
+
+Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
+
+frontTimes("Chocolate", 2) → "ChoCho"
+frontTimes("Chocolate", 3) → "ChoChoCho"
+frontTimes("Abc", 3) → "AbcAbcAbc"
+
+
+Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
+
+countXX("abcxx") → 1
+countXX("xxx") → 2
+countXX("xxxx") → 3
+
+
+Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+
+doubleX("axxbb") → true
+doubleX("axaxax") → false
+doubleX("xxxxx") → true
+
+
+Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+stringBits("Hello") → "Hlo"
+stringBits("Hi") → "H"
+stringBits("Heeololeo") → "Hello"
+
+
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+stringSplosion("Code") → "CCoCodCode"
+stringSplosion("abc") → "aababc"
+stringSplosion("ab") → "aab"
+
+
+Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+
+last2("hixxhi") → 1
+last2("xaxxaxaxx") → 1
+last2("axxxaaxx") → 2
+
+
+Given an array of ints, return the number of 9's in the array.
+
+arrayCount9([1, 2, 9]) → 1
+arrayCount9([1, 9, 9]) → 2
+arrayCount9([1, 9, 9, 3, 9]) → 3
+
+
+Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+
+arrayFront9([1, 2, 9, 3, 4]) → true
+arrayFront9([1, 2, 3, 4, 9]) → false
+arrayFront9([1, 2, 3, 4, 5]) → false
+
+
+Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+
+array123([1, 1, 2, 3, 1]) → true
+array123([1, 1, 2, 4, 1]) → false
+array123([1, 1, 2, 1, 2, 3]) → true
+
+
+Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+stringMatch("xxcaazz", "xxbaaz") → 3
+stringMatch("abc", "abc") → 2
+stringMatch("abc", "axc") → 0
+
+
+Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end should not be removed.
+
+stringX("xxHxix") → "xHix"
+stringX("abxxxcd") → "abcd"
+stringX("xabxxxcdx") → "xabcdx"
+
+
+Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+
+altPairs("kitten") → "kien"
+altPairs("Chocolate") → "Chole"
+altPairs("CodingHorror") → "Congrr"
+
+
+Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+
+stringYak("yakpak") → "pak"
+stringYak("pakyak") → "pak"
+stringYak("yak123ya") → "123ya"
+
+
+Given an array of ints, return the number of times that two 6's are next to each other in the array. Also count instances where the second "6" is actually a 7.
+
+array667([6, 6, 2]) → 1
+array667([6, 6, 2, 6]) → 1
+array667([6, 7, 2, 6]) → 1
+
+
+Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array. Return true if the array does not contain any triples.
+
+noTriples([1, 1, 2, 2, 1]) → true
+noTriples([1, 1, 2, 2, 2, 1]) → false
+noTriples([1, 1, 1, 2, 2, 2, 1]) → false
+
+
+Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
+
+has271([1, 2, 7, 1]) → true
+has271([1, 2, 8, 1]) → false
+has271([2, 7, 1]) → true
+
+
+Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+
+helloName("Bob") → "Hello Bob!"
+helloName("Alice") → "Hello Alice!"
+helloName("X") → "Hello X!"
+
+
+Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+
+makeAbba("Hi", "Bye") → "HiByeByeHi"
+makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+makeAbba("What", "Up") → "WhatUpUpWhat"
+
+
+The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example, the "i" tag makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+
+makeTags("i", "Yay") → "<i>Yay</i>"
+makeTags("i", "Hello") → "<i>Hello</i>"
+makeTags("cite", "Yay") → "<cite>Yay</cite>"
+
+
+Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the middle of the out string, e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
+
+makeOutWord("<<>>", "Yay") → "<<Yay>>"
+makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+makeOutWord("[[]]", "word") → "[[word]]"
+
+
+Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
+
+extraEnd("Hello") → "lololo"
+extraEnd("ab") → "ababab"
+extraEnd("Hi") → "HiHiHi"
+
+
+Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "". Note that str.length() returns the length of a string.
+
+firstTwo("Hello") → "He"
+firstTwo("abcdefg") → "ab"
+firstTwo("ab") → "ab"
+
+
+Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
+
+firstHalf("WooHoo") → "Woo"
+firstHalf("HelloThere") → "Hello"
+firstHalf("abcdef") → "abc"
+
+
+Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
+
+withoutEnd("Hello") → "ell"
+withoutEnd("java") → "av"
+withoutEnd("coding") → "odin"
+
+
+Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
+
+comboString("Hello", "hi") → "hiHellohi"
+comboString("hi", "Hello") → "hiHellohi"
+comboString("aaa", "b") → "baaab"
+
+
+Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
+
+nonStart("Hello", "There") → "ellohere"
+nonStart("java", "code") → "avaode"
+nonStart("shotl", "java") → "hotlava"
+
+
+Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
+
+left2("Hello") → "lloHe"
+left2("java") → "vaja"
+left2("Hi") → "Hi"
+
+
+Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. The string length will be at least 2.
+
+right2("Hello") → "loHel"
+right2("java") → "vaja"
+right2("Hi") → "Hi"
+
+
+None
+
+theEnd("Hello", true) → "H"
+theEnd("Hello", false) → "o"
+theEnd("oh", true) → "o"
+
+
+Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
+
+withouEnd2("Hello") → "ell"
+withouEnd2("abc") → "b"
+withouEnd2("ab") → ""
+
+
+Given a string of even length, return a string made of the middle two chars, so the string "string" yields "ri". The string length will be at least 2.
+
+middleTwo("string") → "ri"
+middleTwo("code") → "od"
+middleTwo("Practice") → "ct"
+
+
+Given a string, return true if it ends in "ly".
+
+endsLy("oddly") → true
+endsLy("y") → false
+endsLy("oddy") → false
+
+
+Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
+
+nTwice("Hello", 2) → "Helo"
+nTwice("Chocolate", 3) → "Choate"
+nTwice("Chocolate", 1) → "Ce"
+
+
+Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+
+twoChar("java", 0) → "ja"
+twoChar("java", 2) → "va"
+twoChar("java", 3) → "ja"
+
+
+Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". The string length will be at least 3.
+
+middleThree("Candy") → "and"
+middleThree("and") → "and"
+middleThree("solving") → "lvi"
+
+
+Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals() to compare 2 strings.
+
+hasBad("badxx") → true
+hasBad("xbadxx") → true
+hasBad("xxbadxx") → false
+
+
+Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars.
+
+atFirst("hello") → "he"
+atFirst("hi") → "hi"
+atFirst("h") → "h@"
+
+
+Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+
+lastChars("last", "chars") → "ls"
+lastChars("yo", "java") → "ya"
+lastChars("hi", "") → "h@"
+
+
+Given two strings, append them together (known as "concatenation") and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
+
+conCat("abc", "cat") → "abcat"
+conCat("dog", "cat") → "dogcat"
+conCat("abc", "") → "abc"
+
+
+Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign".
+
+lastTwo("coding") → "codign"
+lastTwo("cat") → "cta"
+lastTwo("ab") → "ba"
+
+
+Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
+
+seeColor("redxx") → "red"
+seeColor("xxred") → ""
+seeColor("blueTimes") → "blue"
+
+
+Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
+
+frontAgain("edited") → true
+frontAgain("edit") → false
+frontAgain("ed") → true
+
+
+Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.
+
+minCat("Hello", "Hi") → "loHi"
+minCat("Hello", "java") → "ellojava"
+minCat("java", "Hello") → "javaello"
+
+
+Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length. If there are fewer than 2 chars, use whatever is there.
+
+extraFront("Hello") → "HeHeHe"
+extraFront("ab") → "ababab"
+extraFront("H") → "HHH"
+
+
+Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe". The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
+
+without2("HelloHe") → "lloHe"
+without2("HelloHi") → "HelloHi"
+without2("Hi") → ""
+
+
+Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+
+deFront("Hello") → "llo"
+deFront("java") → "va"
+deFront("away") → "aay"
+
+
+Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+
+startWord("hippo", "hi") → "hi"
+startWord("hippo", "xip") → "hip"
+startWord("hippo", "i") → "h"
+
+
+Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
+
+withoutX("xHix") → "Hi"
+withoutX("xHi") → "Hi"
+withoutX("Hxix") → "Hxi"
+
+
+Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged. This is a little harder than it looks.
+
+withoutX2("xHi") → "Hi"
+withoutX2("Hxi") → "Hi"
+withoutX2("Hi") → "Hi"
+
+
+Given an array of ints, return true if 6 appears as either the first or last element in the array. The array will be length 1 or more.
+
+firstLast6([1, 2, 6]) → true
+firstLast6([6, 1, 2, 3]) → true
+firstLast6([13, 6, 1, 2, 3]) → false
+
+
+Given an array of ints, return true if the array is length 1 or more, and the first element and the last element are equal.
+
+sameFirstLast([1, 2, 3]) → false
+sameFirstLast([1, 2, 3, 1]) → true
+sameFirstLast([1, 2, 1]) → true
+
+
+Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
+
+makePi() → [3, 1, 4]
+
+
+Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
+
+commonEnd([1, 2, 3], [7, 3]) → true
+commonEnd([1, 2, 3], [7, 3, 2]) → false
+commonEnd([1, 2, 3], [1, 3]) → true
+
+
+Given an array of ints length 3, return the sum of all the elements.
+
+sum3([1, 2, 3]) → 6
+sum3([5, 11, 2]) → 18
+sum3([7, 0, 0]) → 7
+
+
+Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
+
+rotateLeft3([1, 2, 3]) → [2, 3, 1]
+rotateLeft3([5, 11, 9]) → [11, 9, 5]
+rotateLeft3([7, 0, 0]) → [0, 0, 7]
+
+
+Given an array of ints length 3, return a new array with the elements in reverse order, so {1, 2, 3} becomes {3, 2, 1}.
+
+reverse3([1, 2, 3]) → [3, 2, 1]
+reverse3([5, 11, 9]) → [9, 11, 5]
+reverse3([7, 0, 0]) → [0, 0, 7]
+
+
+Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value. Return the changed array.
+
+maxEnd3([1, 2, 3]) → [3, 3, 3]
+maxEnd3([11, 5, 9]) → [11, 11, 11]
+maxEnd3([2, 11, 3]) → [3, 3, 3]
+
+
+Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+
+sum2([1, 2, 3]) → 3
+sum2([1, 1]) → 2
+sum2([1, 1, 1, 1]) → 2
+
+
+Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+
+middleWay([1, 2, 3], [4, 5, 6]) → [2, 5]
+middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
+middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
+
+
+Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
+
+makeEnds([1, 2, 3]) → [1, 3]
+makeEnds([1, 2, 3, 4]) → [1, 4]
+makeEnds([7, 4, 6, 2]) → [7, 2]
+
+
+Given an int array length 2, return true if it contains a 2 or a 3.
+
+has23([2, 5]) → true
+has23([4, 3]) → true
+has23([4, 5]) → false
+
+
+Given an int array length 2, return true if it does not contain a 2 or 3.
+
+no23([4, 5]) → true
+no23([4, 2]) → false
+no23([3, 5]) → false
+
+
+Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
+
+makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6]
+makeLast([1, 2]) → [0, 0, 0, 2]
+makeLast([3]) → [0, 3]
+
+
+Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
+
+double23([2, 2]) → true
+double23([3, 3]) → true
+double23([2, 3]) → false
+
+
+Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array.
+
+fix23([1, 2, 3]) → [1, 2, 0]
+fix23([2, 3, 5]) → [2, 0, 5]
+fix23([1, 2, 1]) → [1, 2, 1]
+
+
+Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
+
+start1([1, 2, 3], [1, 3]) → 2
+start1([7, 2, 3], [1]) → 1
+start1([1, 2], []) → 1
+
+
+Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. Return the array which has the largest sum. In event of a tie, return a.
+
+biggerTwo([1, 2], [3, 4]) → [3, 4]
+biggerTwo([3, 4], [1, 2]) → [3, 4]
+biggerTwo([1, 1], [1, 2]) → [1, 2]
+
+
+Given an array of ints of even length, return a new array length 2 containing the middle two elements from the original array. The original array will be length 2 or more.
+
+makeMiddle([1, 2, 3, 4]) → [2, 3]
+makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
+makeMiddle([1, 2]) → [1, 2]
+
+
+Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
+
+plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
+plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
+plusTwo([9, 2], [3, 4]) → [9, 2, 3, 4]
+
+
+Given an array of ints, swap the first and last elements in the array. Return the modified array. The array length will be at least 1.
+
+swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
+swapEnds([1, 2, 3]) → [3, 2, 1]
+swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
+
+
+Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
+
+midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
+midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
+midThree([1, 2, 3]) → [1, 2, 3]
+
+
+Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. The array length will be a least 1.
+
+maxTriple([1, 2, 3]) → 3
+maxTriple([1, 5, 3]) → 5
+maxTriple([5, 2, 3]) → 5
+
+
+Given an int array of any length, return a new array of its first 2 elements. If the array is smaller than length 2, use whatever elements are present.
+
+frontPiece([1, 2, 3]) → [1, 2]
+frontPiece([1, 2]) → [1, 2]
+frontPiece([1]) → [1]
+
+
+We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
+
+unlucky1([1, 3, 4, 5]) → true
+unlucky1([2, 1, 3, 4, 5]) → true
+unlucky1([1, 1, 1]) → false
+
+
+Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from a followed by the elements from b. The arrays may be any length, including 0, but there will be 2 or more elements available between the 2 arrays.
+
+make2([4, 5], [1, 2, 3]) → [4, 5]
+make2([4], [1, 2, 3]) → [4, 1]
+make2([], [1, 2]) → [1, 2]
+
+
+Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. If either array is length 0, ignore that array.
+
+front11([1, 2, 3], [7, 9, 8]) → [1, 7]
+front11([1], [2]) → [1, 2]
+front11([1, 7], []) → [1]
+
+
+When squirrels get together for a party, they like to have cigars. A squirrel party is successful when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is no upper bound on the number of cigars. Return true if the party with the given values is successful, or false otherwise.
+
+cigarParty(30, false) → false
+cigarParty(50, false) → true
+cigarParty(70, true) → true
+
+
+You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness of your clothes, in the range 0..10, and "date" is the stylishness of your date's clothes. The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is 2 (yes). With the exception that if either of you has style of 2 or less, then the result is 0 (no). Otherwise the result is 1 (maybe).
+
+dateFashion(5, 10) → 2
+dateFashion(5, 2) → 0
+dateFashion(5, 5) → 1
+
+
+The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer, return true if the squirrels play and false otherwise.
+
+squirrelPlay(70, false) → true
+squirrelPlay(95, false) → false
+squirrelPlay(95, true) → true
+
+
+You are driving a little too fast, and a police officer stops you. Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
+
+caughtSpeeding(60, false) → 0
+caughtSpeeding(65, false) → 1
+caughtSpeeding(65, true) → 0
+
+
+Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
+
+sortaSum(3, 4) → 7
+sortaSum(9, 4) → 20
+sortaSum(10, 11) → 21
+
+
+Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, return a string of the form "7:00" indicating when the alarm clock should ring. Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".
+
+alarmClock(1, false) → "7:00"
+alarmClock(5, false) → "7:00"
+alarmClock(0, false) → "10:00"
+
+
+The number 6 is a truly great number. Given two int values, a and b, return true if either one is 6. Or if their sum or difference is 6. Note: the function Math.abs(num) computes the absolute value of a number.
+
+love6(6, 4) → true
+love6(4, 5) → false
+love6(1, 5) → true
+
+
+Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is true, in which case return true if the number is less or equal to 1, or greater or equal to 10.
+
+in1To10(5, false) → true
+in1To10(11, false) → false
+in1To10(11, true) → true
+
+
+None
+
+specialEleven(22) → true
+specialEleven(23) → true
+specialEleven(24) → false
+
+
+None
+
+more20(20) → false
+more20(21) → true
+more20(22) → true
+
+
+None
+
+old35(3) → true
+old35(10) → true
+old35(15) → false
+
+
+None
+
+less20(18) → true
+less20(19) → true
+less20(20) → false
+
+
+None
+
+nearTen(12) → true
+nearTen(17) → false
+nearTen(19) → true
+
+
+Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19 inclusive, are extra lucky. So if either value is a teen, just return 19.
+
+teenSum(3, 4) → 7
+teenSum(10, 13) → 19
+teenSum(13, 2) → 19
+
+
+Your cell phone rings. Return true if you should answer it. Normally you answer, except in the morning you only answer if it is your mom calling. In all cases, if you are asleep, you do not answer.
+
+answerCell(false, false, false) → true
+answerCell(false, false, true) → false
+answerCell(true, false, false) → false
+
+
+We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as 0=bad, 1=good, or 2=great. A party is good (1) if both tea and candy are at least 5. However, if either tea or candy is at least double the amount of the other one, the party is great (2). However, in all cases, if either tea or candy is less than 5, the party is always bad (0).
+
+teaParty(6, 8) → 1
+teaParty(3, 8) → 0
+teaParty(20, 6) → 2
+
+
+None
+
+fizzString("fig") → "Fizz"
+fizzString("dib") → "Buzz"
+fizzString("fib") → "FizzBuzz"
+
+
+None
+
+fizzString2(1) → "1!"
+fizzString2(2) → "2!"
+fizzString2(3) → "Fizz!"
+
+
+Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+
+twoAsOne(1, 2, 3) → true
+twoAsOne(3, 1, 2) → true
+twoAsOne(3, 2, 2) → false
+
+
+Given three ints, a b c, return true if b is greater than a, and c is greater than b. However, with the exception that if "bOk" is true, b does not need to be greater than a.
+
+inOrder(1, 2, 4, false) → true
+inOrder(1, 2, 1, false) → false
+inOrder(1, 1, 2, true) → true
+
+
+Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality is allowed, such as 5 5 7 or 5 5 5.
+
+inOrderEqual(2, 5, 11, false) → true
+inOrderEqual(5, 7, 6, false) → false
+inOrderEqual(5, 5, 7, true) → true
+
+
+Given three ints, a b c, return true if two or more of them have the same rightmost digit. The ints are non-negative. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
+
+lastDigit(23, 19, 13) → true
+lastDigit(23, 19, 12) → false
+lastDigit(23, 19, 3) → true
+
+
+Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+
+lessBy10(1, 7, 11) → true
+lessBy10(1, 7, 10) → false
+lessBy10(11, 1, 7) → true
+
+
+Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is true, if the two dice show the same value, increment one die to the next value, wrapping around to 1 if its value was 6.
+
+withoutDoubles(2, 3, true) → 5
+withoutDoubles(3, 3, true) → 7
+withoutDoubles(3, 3, false) → 6
+
+
+Given two int values, return whichever value is larger. However if the two values have the same remainder when divided by 5, then the return the smaller value. However, in all cases, if the two values are the same, return 0. Note: the % "mod" operator computes the remainder, e.g. 7 % 5 is 2.
+
+maxMod5(2, 3) → 3
+maxMod5(6, 2) → 6
+maxMod5(3, 2) → 3
+
+
+You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they are all the value 2, the result is 10. Otherwise if they are all the same, the result is 5. Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.
+
+redTicket(2, 2, 2) → 10
+redTicket(2, 2, 1) → 0
+redTicket(0, 0, 0) → 5
+
+
+You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different from each other, the result is 0. If all of the numbers are the same, the result is 20. If two of the numbers are the same, the result is 10.
+
+greenTicket(1, 2, 3) → 0
+greenTicket(2, 2, 2) → 20
+greenTicket(1, 1, 2) → 10
+
+
+You have a blue lottery ticket, with ints a, b, and c on it. This makes three pairs, which we'll call ab, bc, and ac. Consider the sum of the numbers in each pair. If any pair sums to exactly 10, the result is 10. Otherwise if the ab sum is exactly 10 more than either bc or ac sums, the result is 5. Otherwise the result is 0.
+
+blueTicket(9, 1, 0) → 10
+blueTicket(9, 2, 0) → 0
+blueTicket(6, 1, 4) → 10
+
+
+Given two ints, each in the range 10..99, return true if there is a digit that appears in both numbers, such as the 2 in 12 and 23. (Note: division, e.g. n/10, gives the left digit while the % "mod" n%10 gives the right digit.)
+
+shareDigit(12, 23) → true
+shareDigit(12, 43) → false
+shareDigit(12, 44) → false
+
+
+Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same number of digits as a. If the sum has more digits than a, just return a without b. (Note: one way to compute the number of digits of a non-negative int n is to convert it to a string with String.valueOf(n) and then check the length of the string.)
+
+sumLimit(2, 3) → 5
+sumLimit(8, 3) → 8
+sumLimit(8, 1) → 9
+
+
+None
+
+makeBricks(3, 1, 8) → true
+makeBricks(3, 1, 9) → false
+makeBricks(3, 2, 10) → true
+
+
+Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.
+
+loneSum(1, 2, 3) → 6
+loneSum(3, 2, 3) → 2
+loneSum(3, 3, 3) → 0
+
+
+Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
+
+luckySum(1, 2, 3) → 6
+luckySum(1, 2, 13) → 3
+luckySum(1, 13, 3) → 1
+
+
+Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19 inclusive -- then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n) {"that takes in an int value and returns that value fixed for the teen rule. In this way, you avoid repeating the teen code 3 times (i.e. "decomposition"). Define the helper below and at the same indent level as the main noTeenSum().
+
+noTeenSum(1, 2, 3) → 6
+noTeenSum(2, 13, 1) → 3
+noTeenSum(2, 1, 14) → 3
+
+
+For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 5 or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if its rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of their rounded values. To avoid code repetition, write a separate helper "public int round10(int num) {" and call it 3 times. Write the helper entirely below and at the same indent level as roundSum().
+
+roundSum(16, 17, 18) → 60
+roundSum(12, 13, 14) → 30
+roundSum(6, 4, 4) → 10
+
+
+Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most 1), while the other is "far", differing from both other values by 2 or more. Note: Math.abs(num) computes the absolute value of a number.
+
+closeFar(1, 2, 10) → true
+closeFar(1, 2, 3) → false
+closeFar(4, 1, 3) → true
+
+
+Given 2 int values greater than 0, return whichever value is nearest to 21 without going over. Return 0 if they both go over.
+
+blackjack(19, 21) → 21
+blackjack(21, 19) → 21
+blackjack(19, 22) → 19
+
+
+Given three ints, a b c, one of them is small, one is medium and one is large. Return true if the three values are evenly spaced, so the difference between small and medium is the same as the difference between medium and large.
+
+evenlySpaced(2, 4, 6) → true
+evenlySpaced(4, 6, 2) → true
+evenlySpaced(4, 6, 3) → false
+
+
+None
+
+makeChocolate(4, 1, 9) → 4
+makeChocolate(4, 1, 10) → -1
+makeChocolate(4, 1, 7) → 2
+
+
+Given a string, return a string where for every char in the original, there are two chars.
+
+doubleChar("The") → "TThhee"
+doubleChar("AAbb") → "AAAAbbbb"
+doubleChar("Hi-There") → "HHii--TThheerree"
+
+
+Return the number of times that the string "hi" appears anywhere in the given string.
+
+countHi("abc hi ho") → 1
+countHi("ABChi hi") → 2
+countHi("hihi") → 2
+
+
+Return true if the string "cat" and "dog" appear the same number of times in the given string.
+
+catDog("catdog") → true
+catDog("catcat") → false
+catDog("1cat1cadodog") → true
+
+
+Return the number of times that the string "code" appears anywhere in the given string, except we'll accept any letter for the 'd', so "cope" and "cooe" count.
+
+countCode("aaacodebbb") → 1
+countCode("codexxcode") → 2
+countCode("cozexxcope") → 2
+
+
+Given two strings, return true if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). Note:  str.toLowerCase() returns the lowercase version of a string.
+
+endOther("Hiabc", "abc") → true
+endOther("AbC", "HiaBc") → true
+endOther("abc", "abXabc") → true
+
+
+Return true if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.). So "xxyz" counts but "x.xyz" does not.
+
+xyzThere("abcxyz") → true
+xyzThere("abc.xyz") → false
+xyzThere("xyz.abc") → true
+
+
+Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
+
+bobThere("abcbob") → true
+bobThere("b9b") → true
+bobThere("bac") → false
+
+
+We'll say that a String is xy-balanced if for all the 'x' chars in the string, there exists a 'y' char somewhere later in the string. So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Return true if the given string is xy-balanced.
+
+xyBalance("aaxbby") → true
+xyBalance("aaxbb") → false
+xyBalance("yaaxbb") → false
+
+
+None
+
+mixString("abc", "xyz") → "axbycz"
+mixString("Hi", "There") → "HTihere"
+mixString("xxxx", "There") → "xTxhxexre"
+
+
+Given a string and an int n, return a string made of n repetitions of the last n characters of the string. You may assume that n is between 0 and the length of the string, inclusive.
+
+repeatEnd("Hello", 3) → "llollollo"
+repeatEnd("Hello", 2) → "lolo"
+repeatEnd("Hello", 1) → "o"
+
+
+Given a string and an int n, return a string made of the first n characters of the string, followed by the first n-1 characters of the string, and so on. You may assume that n is between 0 and the length of the string, inclusive (i.e. n >= 0 and n <= str.length()).
+
+repeatFront("Chocolate", 4) → "ChocChoChC"
+repeatFront("Chocolate", 3) → "ChoChC"
+repeatFront("Ice Cream", 2) → "IcI"
+
+
+None
+
+repeatSeparator("Word", "X", 3) → "WordXWordXWord"
+repeatSeparator("This", "And", 2) → "ThisAndThis"
+repeatSeparator("This", "And", 1) → "This"
+
+
+Given a string, consider the prefix string made of the first N chars of the string. Does that prefix string appear somewhere else in the string? Assume that the string is not empty and that N is in the range 1..str.length().
+
+prefixAgain("abXYabc", 1) → true
+prefixAgain("abXYabc", 2) → true
+prefixAgain("abXYabc", 3) → false
+
+
+Given a string, does "xyz" appear in the middle of the string? To define middle, we'll say that the number of chars to the left and right of the "xyz" must differ by at most one. This problem is harder than it looks.
+
+xyzMiddle("AAxyzBB") → true
+xyzMiddle("AxyzBB") → true
+xyzMiddle("AxyzBBB") → false
+
+
+A sandwich is two pieces of bread with something in between. Return the string that is between the first and last appearance of "bread" in the given string, or return the empty string "" if there are not two pieces of bread.
+
+getSandwich("breadjambread") → "jam"
+getSandwich("xxbreadjambreadyy") → "jam"
+getSandwich("xxbreadyy") → ""
+
+
+Returns true if for every '*' (star) in the string, if there are chars both immediately before and after the star, they are the same.
+
+sameStarChar("xy*yzz") → true
+sameStarChar("xy*zzz") → false
+sameStarChar("*xa*az") → true
+
+
+Given a string, compute a new string by moving the first char to come after the next two chars, so "abc" yields "bca". Repeat this process for each subsequent group of 3 chars, so "abcdef" yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
+
+oneTwo("abc") → "bca"
+oneTwo("tca") → "cat"
+oneTwo("tcagdo") → "catdog"
+
+
+Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and ending with 'p'. Return a string where for all such words, the middle letter is gone, so "zipXzap" yields "zpXzp".
+
+zipZap("zipXzap") → "zpXzp"
+zipZap("zopzop") → "zpzp"
+zipZap("zzzopzop") → "zzzpzp"
+
+
+Return a version of the given string, where for every star (*) in the string the star and the chars immediately to its left and right are gone. So "ab*cd" yields "ad" and "ab**cd" also yields "ad".
+
+starOut("ab*cd") → "ad"
+starOut("ab**cd") → "ad"
+starOut("sm*eilly") → "silly"
+
+
+None
+
+plusOut("12xy34", "xy") → "++xy++"
+plusOut("12xy34", "1") → "1+++++"
+plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+
+
+None
+
+wordEnds("abcXY123XYijk", "XY") → "c13i"
+wordEnds("XY123XY", "XY") → "13"
+wordEnds("XY1XY", "XY") → "11"
+
+
+Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count, but not the 'y' in "yellow" (not case sensitive). We'll say that a y or z is at the end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char) tests if a char is an alphabetic letter.)
+
+countYZ("fez day") → 2
+countYZ("day fez") → 2
+countYZ("day fyyyz") → 2
+
+
+None
+
+withoutString("Hello there", "llo") → "He there"
+withoutString("Hello there", "e") → "Hllo thr"
+withoutString("Hello there", "x") → "Hello there"
+
+
+Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of appearances of "not" anywhere in the string (case sensitive).
+
+equalIsNot("This is not") → false
+equalIsNot("This is notnot") → true
+equalIsNot("noisxxnotyynotxisi") → true
+
+
+We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right. Return true if all the g's in the given string are happy.
+
+gHappy("xxggxx") → true
+gHappy("xxgxx") → false
+gHappy("xxggyygxx") → false
+
+
+We'll say that a "triple" in a string is a char appearing three times in a row. Return the number of triples in the given string. The triples may overlap.
+
+countTriple("abcXXXabc") → 1
+countTriple("xxxabyyyycd") → 3
+countTriple("a") → 0
+
+
+Given a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters. Return 0 if there are no digits in the string. (Note: Character.isDigit(char) tests if a char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+sumDigits("aa1bc2d3") → 6
+sumDigits("aa11b33") → 8
+sumDigits("Chocolate") → 0
+
+
+Given a string, return the longest substring that appears at both the beginning and end of the string without overlapping. For example, sameEnds("abXab") is "ab".
+
+sameEnds("abXYab") → "ab"
+sameEnds("xx") → "x"
+sameEnds("xxx") → "x"
+
+
+Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
+
+mirrorEnds("abXYZba") → "ab"
+mirrorEnds("abca") → "a"
+mirrorEnds("aba") → "aba"
+
+
+Given a string, return the length of the largest "block" in the string. A block is a run of adjacent chars that are the same.
+
+maxBlock("hoopla") → 2
+maxBlock("abbCCCddBBBxx") → 3
+maxBlock("") → 0
+
+
+Given a string, return the sum of the numbers appearing in the string, ignoring all other characters. A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+sumNumbers("abc123xyz") → 123
+sumNumbers("aa11b33") → 44
+sumNumbers("7 11") → 18
+
+
+Given a string, return a string where every appearance of the lowercase word "is" has been replaced with "is not". The word "is" should not be immediately preceeded or followed by a letter -- so for example the "is" in "this" does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
+
+notReplace("is test") → "is not test"
+notReplace("is-is") → "is not-is not"
+notReplace("This is right") → "This is not right"
+
+
+Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
+
+countEvens([2, 1, 2, 3, 4]) → 3
+countEvens([2, 2, 0]) → 3
+countEvens([1, 3, 5]) → 0
+
+
+Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods  return the smaller or larger of two values.
+
+bigDiff([10, 3, 5, 6]) → 7
+bigDiff([7, 2, 10, 9]) → 8
+bigDiff([2, 10, 7, 2]) → 8
+
+
+Return the "centered" average of an array of ints, which we'll say is the mean average of the values, except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest value, ignore just one copy, and likewise for the largest value. Use int division to produce the final average. You may assume that the array is length 3 or more.
+
+centeredAverage([1, 2, 3, 4, 100]) → 3
+centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
+centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+
+
+Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+
+sum13([1, 2, 2, 1]) → 6
+sum13([1, 1]) → 2
+sum13([1, 2, 2, 1, 13]) → 6
+
+
+Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.
+
+sum67([1, 2, 2]) → 5
+sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+sum67([1, 1, 6, 7, 2]) → 4
+
+
+Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+
+has22([1, 2, 2]) → true
+has22([1, 2, 1, 2]) → false
+has22([2, 1, 2]) → false
+
+
+Given an array of ints, return true if the array contains no 1's and no 3's.
+
+lucky13([0, 2, 4]) → true
+lucky13([1, 2, 3]) → false
+lucky13([1, 2, 4]) → false
+
+
+Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+
+sum28([2, 3, 2, 2, 4, 2]) → true
+sum28([2, 3, 2, 2, 4, 2, 2]) → false
+sum28([1, 2, 3, 4]) → false
+
+
+Given an array of ints, return true if the number of 1's is greater than the number of 4's
+
+more14([1, 4, 1]) → true
+more14([1, 4, 1, 4]) → false
+more14([1, 1]) → true
+
+
+None
+
+fizzArray(4) → [0, 1, 2, 3]
+fizzArray(1) → [0]
+fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+Given an array of ints, return true if every element is a 1 or a 4.
+
+only14([1, 4, 1, 4]) → true
+only14([1, 4, 2, 4]) → false
+only14([1, 1]) → true
+
+
+None
+
+fizzArray2(4) → ["0", "1", "2", "3"]
+fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+fizzArray2(2) → ["0", "1"]
+
+
+Given an array of ints, return true if it contains no 1's or it contains no 4's.
+
+no14([1, 2, 3]) → true
+no14([1, 2, 3, 4]) → false
+no14([2, 3, 4]) → true
+
+
+We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array, at least one of the pair is that value. Return true if the given value is everywhere in the array.
+
+isEverywhere([1, 2, 1, 3], 1) → true
+isEverywhere([1, 2, 1, 3], 2) → false
+isEverywhere([1, 2, 1, 3, 4], 1) → false
+
+
+Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+
+either24([1, 2, 2]) → true
+either24([4, 4, 1]) → true
+either24([4, 4, 1, 2, 2]) → false
+
+
+Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding element in nums2 (at the same index). Return the count of the number of times that the two elements differ by 2 or less, but are not equal.
+
+matchUp([1, 2, 3], [2, 3, 10]) → 2
+matchUp([1, 2, 3], [2, 3, 5]) → 3
+matchUp([1, 2, 3], [2, 3, 3]) → 2
+
+
+Given an array of ints, return true if the array contains two 7's next to each other, or there are two 7's separated by one element, such as with {7, 1, 7}.
+
+has77([1, 7, 7]) → true
+has77([1, 7, 1, 7]) → true
+has77([1, 7, 1, 1, 7]) → false
+
+
+Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+
+has12([1, 3, 2]) → true
+has12([3, 1, 2]) → true
+has12([3, 1, 4, 5, 2]) → true
+
+
+Given an array of ints, return true if the array contains either 3 even or 3 odd values all next to each other.
+
+modThree([2, 1, 3, 5]) → true
+modThree([2, 1, 2, 5]) → false
+modThree([2, 4, 2, 5]) → true
+
+
+Given an array of ints, return true if the value 3 appears in the array exactly 3 times, and no 3's are next to each other.
+
+haveThree([3, 1, 3, 1, 3]) → true
+haveThree([3, 1, 3, 3]) → false
+haveThree([3, 4, 3, 3, 4]) → false
+
+
+Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+
+twoTwo([4, 2, 2, 3]) → true
+twoTwo([2, 2, 4]) → true
+twoTwo([2, 2, 4, 2]) → false
+
+
+Return true if the group of N numbers at the start and end of the array are the same. For example, with {5, 6, 45, 99, 13, 5, 6}, the ends are the same for n=0 and n=2, and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusive.
+
+sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
+sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
+sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
+
+
+Return true if the array contains, somewhere, three increasing adjacent numbers like .... 4, 5, 6, ... or 23, 24, 25.
+
+tripleUp([1, 4, 5, 6, 2]) → true
+tripleUp([1, 2, 3]) → true
+tripleUp([1, 2, 4]) → false
+
+
+None
+
+fizzArray3(5, 10) → [5, 6, 7, 8, 9]
+fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
+fizzArray3(1, 3) → [1, 2]
+
+
+Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}. You may modify and return the given array, or return a new array.
+
+shiftLeft([6, 2, 5, 3]) → [2, 5, 3, 6]
+shiftLeft([1, 2]) → [2, 1]
+shiftLeft([1]) → [1]
+
+
+For each multiple of 10 in the given array, change all the values following it to be that multiple of 10, until encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
+
+tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
+tenRun([10, 1, 20, 2]) → [10, 10, 20, 20]
+tenRun([10, 1, 9, 20]) → [10, 10, 10, 20]
+
+
+Given a non-empty array of ints, return a new array containing the elements from the original array that come before the first 4 in the original array. The original array will contain at least one 4. Note that it is valid in java to create an array of length 0.
+
+pre4([1, 2, 4, 1]) → [1, 2]
+pre4([3, 1, 4]) → [3, 1]
+pre4([1, 4, 4]) → [1]
+
+
+Given a non-empty array of ints, return a new array containing the elements from the original array that come after the last 4 in the original array. The original array will contain at least one 4. Note that it is valid in java to create an array of length 0.
+
+post4([2, 4, 1, 2]) → [1, 2]
+post4([4, 1, 4, 2]) → [2]
+post4([4, 4, 1, 2, 3]) → [1, 2, 3]
+
+
+We'll say that an element in an array is "alone" if there are values before and after it, and those values are different from it. Return a version of the given array where every instance of the given value which is alone is replaced by whichever value to its left or right is larger.
+
+notAlone([1, 2, 3], 2) → [1, 3, 3]
+notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
+notAlone([3, 4], 3) → [3, 4]
+
+
+Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+
+zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+zeroFront([1, 0]) → [0, 1]
+
+
+Return a version of the given array where all the 10's have been removed. The remaining elements should shift left towards the start of the array as needed, and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the given array or make a new array.
+
+withoutTen([1, 10, 10, 2]) → [1, 2, 0, 0]
+withoutTen([10, 2, 10]) → [2, 0, 0]
+withoutTen([1, 99, 10]) → [1, 99, 0]
+
+
+Return a version of the given array where each zero value in the array is replaced by the largest odd value to the right of the zero in the array. If there is no odd value to the right of the zero, leave the zero as a zero.
+
+zeroMax([0, 5, 0, 3]) → [5, 5, 3, 3]
+zeroMax([0, 4, 0, 3]) → [3, 4, 3, 3]
+zeroMax([0, 1, 0]) → [1, 1, 0]
+
+
+Return an array that contains the exact same numbers as the given array, but rearranged so that all the even numbers come before all the odd numbers. Other than that, the numbers can be in any order. You may modify and return the given array, or make a new array.
+
+evenOdd([1, 0, 1, 0, 0, 1, 1]) → [0, 0, 0, 1, 1, 1, 1]
+evenOdd([3, 3, 2]) → [2, 3, 3]
+evenOdd([2, 2, 2]) → [2, 2, 2]
+
+
+None
+
+fizzBuzz(1, 6) → ["1", "2", "Fizz", "4", "Buzz"]
+fizzBuzz(1, 8) → ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7"]
+fizzBuzz(1, 11) → ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]
+
+
+Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span" is the number of elements between the two inclusive. A single value has a span of 1. Returns the largest span found in the given array. (Efficiency is not a priority.)
+
+maxSpan([1, 2, 1, 1, 3]) → 4
+maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
+maxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
+
+
+Return an array that contains exactly the same numbers as the given array, but rearranged so that every 3 is immediately followed by a 4. Do not move the 3's, but every other number may move. The array contains the same number of 3's and 4's, every 3 has a number after it that is not a 3, and a 3 appears in the array before any 4.
+
+fix34([1, 3, 1, 4]) → [1, 3, 4, 1]
+fix34([1, 3, 1, 4, 4, 3, 1]) → [1, 3, 4, 1, 1, 3, 4]
+fix34([3, 2, 2, 4]) → [3, 4, 2, 2]
+
+
+(This is a slightly harder version of the fix34 problem.) Return an array that contains exactly the same numbers as the given array, but rearranged so that every 4 is immediately followed by a 5. Do not move the 4's, but every other number may move. The array contains the same number of 4's and 5's, and every 4 has a number after it that is not a 4. In this version, 5's may appear anywhere in the original array.
+
+fix45([5, 4, 9, 4, 9, 5]) → [9, 4, 5, 4, 5, 9]
+fix45([1, 4, 1, 5]) → [1, 4, 5, 1]
+fix45([1, 4, 1, 5, 5, 4, 1]) → [1, 4, 5, 1, 1, 4, 5]
+
+
+Given a non-empty array, return true if there is a place to split the array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side.
+
+canBalance([1, 1, 1, 2, 1]) → true
+canBalance([2, 1, 1, 2, 1]) → false
+canBalance([10, 10]) → true
+
+
+None
+
+linearIn([1, 2, 4, 6], [2, 4]) → true
+linearIn([1, 2, 4, 6], [2, 3, 4]) → false
+linearIn([1, 2, 4, 4, 6], [2, 4]) → true
+
+
+Given n>=0, create an array length n*n with the following pattern, shown here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1} (spaces added to show the 3 groups).
+
+squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
+squareUp(2) → [0, 1, 2, 1]
+squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
+
+
+Given n>=0, create an array with the pattern {1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n} (spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n, which is known to sum to exactly n*(n + 1)/2.
+
+seriesUp(3) → [1, 1, 2, 1, 2, 3]
+seriesUp(4) → [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
+seriesUp(2) → [1, 1, 2]
+
+
+We'll say that a "mirror" section in an array is a group of contiguous elements such that somewhere in the array, the same group appears in reverse order. For example, the largest mirror section in {1, 2, 3, 8, 9, 3, 2, 1} is length 3 (the {1, 2, 3} part). Return the size of the largest mirror section found in the given array.
+
+maxMirror([1, 2, 3, 8, 9, 3, 2, 1]) → 3
+maxMirror([1, 2, 1, 4]) → 3
+maxMirror([7, 1, 2, 9, 7, 2, 1]) → 2
+
+
+Say that a "clump" in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
+
+countClumps([1, 2, 2, 3, 4, 4]) → 2
+countClumps([1, 1, 2, 1, 1]) → 2
+countClumps([1, 1, 1, 1, 1]) → 1
+
+
+Given an array of scores, return true if each score is equal or greater than the one before. The array will be length 2 or more.
+
+scoresIncreasing([1, 3, 4]) → true
+scoresIncreasing([1, 3, 2]) → false
+scoresIncreasing([1, 1, 4]) → true
+
+
+Given an array of scores, return true if there are scores of 100 next to each other in the array. The array length will be at least 2.
+
+scores100([1, 100, 100]) → true
+scores100([1, 100, 99, 100]) → false
+scores100([100, 1, 100, 100]) → true
+
+
+Given an array of scores sorted in increasing order, return true if the array contains 3 adjacent scores that differ from each other by at most 2, such as with {3, 4, 5} or {3, 5, 5}.
+
+scoresClump([3, 4, 5]) → true
+scoresClump([3, 4, 6]) → false
+scoresClump([1, 3, 5, 5]) → true
+
+
+None
+
+<code>int average(int[] scores, int start, int end) { </code>
+scoresAverage([2, 2, 4, 4]) → 4
+scoresAverage([4, 4, 4, 2, 2, 2]) → 4
+scoresAverage([3, 4, 5, 1, 2, 3]) → 4
+
+
+Given an array of strings, return the count of the number of strings with the given length.
+
+wordsCount(["a", "bb", "b", "ccc"], 1) → 2
+wordsCount(["a", "bb", "b", "ccc"], 3) → 1
+wordsCount(["a", "bb", "b", "ccc"], 4) → 0
+
+
+Given an array of strings, return a new array containing the first N strings. N will be in the range 1..length.
+
+wordsFront(["a", "b", "c", "d"], 1) → ["a"]
+wordsFront(["a", "b", "c", "d"], 2) → ["a", "b"]
+wordsFront(["a", "b", "c", "d"], 3) → ["a", "b", "c"]
+
+
+Given an array of strings, return a new List (e.g. an ArrayList) where all the strings of the given length are omitted. See wordsWithout() below which is more difficult because it uses arrays.
+
+wordsWithoutList(["a", "bb", "b", "ccc"], 1) → ["bb", "ccc"]
+wordsWithoutList(["a", "bb", "b", "ccc"], 3) → ["a", "bb", "b"]
+wordsWithoutList(["a", "bb", "b", "ccc"], 4) → ["a", "bb", "b", "ccc"]
+
+
+Given a positive int n, return true if it contains a 1 digit. Note: use % to get the rightmost digit, and / to discard the rightmost digit.
+
+hasOne(10) → true
+hasOne(22) → false
+hasOne(220) → false
+
+
+We'll say that a positive int divides itself if every digit in the number divides into the number evenly. So for example 128 divides itself since 1, 2, and 8 all divide into 128 evenly. We'll say that 0 does not divide into anything evenly, so no number with a 0 digit divides itself. Note: use % to get the rightmost digit, and / to discard the rightmost digit.
+
+dividesSelf(128) → true
+dividesSelf(12) → true
+dividesSelf(120) → false
+
+
+Given an array of positive ints, return a new array of length "count" containing the first even numbers from the original array. The original array will contain at least "count" even numbers.
+
+copyEvens([3, 2, 4, 5, 8], 2) → [2, 4]
+copyEvens([3, 2, 4, 5, 8], 3) → [2, 4, 8]
+copyEvens([6, 1, 2, 4, 5, 8], 3) → [6, 2, 4]
+
+
+We'll say that a positive int n is "endy" if it is in the range 0..10 or 90..100 (inclusive). Given an array of positive ints, return a new array of length "count" containing the first endy numbers from the original array. Decompose out a separate isEndy(int n) method to test if a number is endy. The original array will contain at least "count" endy numbers.
+
+copyEndy([9, 11, 90, 22, 6], 2) → [9, 90]
+copyEndy([9, 11, 90, 22, 6], 3) → [9, 90, 6]
+copyEndy([12, 1, 1, 13, 0, 20], 2) → [1, 1]
+
+
+Given 2 arrays that are the same length containing strings, compare the 1st string in one array to the 1st string in the other array, the 2nd to the 2nd and so on. Count the number of times that the 2 strings are non-empty and start with the same char. The strings may be any length, including 0.
+
+matchUp(["aa", "bb", "cc"], ["aaa", "xx", "bb"]) → 1
+matchUp(["aa", "bb", "cc"], ["aaa", "b", "bb"]) → 2
+matchUp(["aa", "bb", "cc"], ["", "", "ccc"]) → 1
+
+
+The "key" array is an array containing the correct answers to an exam, like {"a", "a", "b", "b"}. the "answers" array contains a student's answers, with "?" representing a question left blank. The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer.
+
+scoreUp(["a", "a", "b", "b"], ["a", "c", "b", "c"]) → 6
+scoreUp(["a", "a", "b", "b"], ["a", "a", "b", "c"]) → 11
+scoreUp(["a", "a", "b", "b"], ["a", "a", "b", "b"]) → 16
+
+
+Given an array of strings, return a new array without the strings that are equal to the target string. One approach is to count the occurrences of the target string, make a new array of the correct length, and then copy over the correct strings.
+
+wordsWithout(["a", "b", "c", "a"], "a") → ["b", "c"]
+wordsWithout(["a", "b", "c", "a"], "b") → ["a", "c", "a"]
+wordsWithout(["a", "b", "c", "a"], "c") → ["a", "b", "a"]
+
+
+Given two arrays, A and B, of non-negative int scores. A "special" score is one which is a multiple of 10, such as 40 or 90. Return the sum of largest special score in A and the largest special score in B. To practice decomposition, write a separate helper method which finds the largest special score in an array. Write your helper method after your scoresSpecial() method in the JavaBat text area.
+
+scoresSpecial([12, 10, 4], [2, 20, 30]) → 40
+scoresSpecial([20, 10, 4], [2, 20, 10]) → 40
+scoresSpecial([12, 11, 4], [2, 20, 31]) → 20
+
+
+We have an array of heights, representing the altitude along a walking trail. Given start/end indexes into the array, return the sum of the changes for a walk beginning at the start index and ending at the end index. For example, with the heights {5, 3, 6, 7, 2} and start=2, end=4 yields a sum of 1 + 5 = 6. The start end end index will both be valid indexes into the array with start <= end.
+
+sumHeights([5, 3, 6, 7, 2], 2, 4) → 6
+sumHeights([5, 3, 6, 7, 2], 0, 1) → 2
+sumHeights([5, 3, 6, 7, 2], 0, 4) → 11
+
+
+(A variation on the sumHeights problem.) We have an array of heights, representing the altitude along a walking trail. Given start/end indexes into the array, return the sum of the changes for a walk beginning at the start index and ending at the end index, however increases in height count double. For example, with the heights {5, 3, 6, 7, 2} and start=2, end=4 yields a sum of 1*2 + 5 = 7. The start end end index will both be valid indexes into the array with start <= end.
+
+sumHeights2([5, 3, 6, 7, 2], 2, 4) → 7
+sumHeights2([5, 3, 6, 7, 2], 0, 1) → 2
+sumHeights2([5, 3, 6, 7, 2], 0, 4) → 15
+
+
+(A variation on the sumHeights problem.) We have an array of heights, representing the altitude along a walking trail. Given start/end indexes into the array, return the number of "big" steps for a walk starting at the start index and ending at the end index. We'll say that  step is big if it is 5 or more up or down. The start end end index will both be valid indexes into the array with start <= end.
+
+bigHeights([5, 3, 6, 7, 2], 2, 4) → 1
+bigHeights([5, 3, 6, 7, 2], 0, 1) → 0
+bigHeights([5, 3, 6, 7, 2], 0, 4) → 1
+
+
+We have data for two users, A and B, each with a String name and an int id. The goal is to order the users such as for sorting. Return -1 if A comes before B, 1 if A comes after B, and 0 if they are the same. Order first by the string names, and then by the id numbers if the names are the same. Note: with Strings str1.compareTo(str2) returns an int value which is negative/0/positive to indicate how str1 is ordered to str2 (the value is not limited to -1/0/1). (On the AP, there would be two User objects, but here the code simply takes the two strings and two ints directly. The code logic is the same.)
+
+userCompare("bb", 1, "zz", 2) → -1
+userCompare("bb", 1, "aa", 2) → 1
+userCompare("bb", 1, "bb", 1) → 0
+
+
+Start with two arrays of strings, A and B, each with its elements in alphabetical order and without duplicates. Return a new array containing the first N elements from the two arrays. The result array should be in alphabetical order and without duplicates. A and B will both have a length which is N or more. The best "linear" solution makes a single pass over A and B, taking advantage of the fact that they are in alphabetical order, copying elements directly to the new array.
+
+mergeTwo(["a", "c", "z"], ["b", "f", "z"], 3) → ["a", "b", "c"]
+mergeTwo(["a", "c", "z"], ["c", "f", "z"], 3) → ["a", "c", "f"]
+mergeTwo(["f", "g", "z"], ["c", "f", "g"], 3) → ["c", "f", "g"]
+
+
+Start with two arrays of strings, a and b, each in alphabetical order, possibly with duplicates. Return the count of the number of strings which appear in both arrays. The best "linear" solution makes a single pass over both arrays, taking advantage of the fact that they are in alphabetical order.
+
+commonTwo(["a", "c", "x"], ["b", "c", "d", "x"]) → 2
+commonTwo(["a", "c", "x"], ["a", "b", "c", "x", "z"]) → 3
+commonTwo(["a", "b", "c"], ["a", "b", "c"]) → 3
+
+
+Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) ... 1. Compute the result recursively (without loops).
+
+factorial(1) → 1
+factorial(2) → 2
+factorial(3) → 6
+
+
+We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
+
+bunnyEars(0) → 0
+bunnyEars(1) → 2
+bunnyEars(2) → 4
+
+
+The fibonacci sequence is a famous bit of mathematics, and it happens to have a recursive definition. The first two values in the sequence are 0 and 1 (essentially 2 base cases). Each subsequent value is the sum of the previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth fibonacci number, with n=0 representing the start of the sequence.
+
+fibonacci(0) → 0
+fibonacci(1) → 1
+fibonacci(2) → 1
+
+
+We have bunnies standing in a line, numbered 1, 2, ... The odd bunnies (1, 3, ..) have the normal 2 ears. The even bunnies (2, 4, ..) we'll say have 3 ears, because they each have a raised foot. Recursively return the number of "ears" in the bunny line 1, 2, ... n (without loops or multiplication).
+
+bunnyEars2(0) → 0
+bunnyEars2(1) → 2
+bunnyEars2(2) → 5
+
+
+We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively (no loops or multiplication) the total number of blocks in such a triangle with the given number of rows.
+
+triangle(0) → 0
+triangle(1) → 1
+triangle(2) → 3
+
+
+Given a non-negative int n, return the sum of its digits recursively (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+
+sumDigits(126) → 9
+sumDigits(49) → 13
+sumDigits(12) → 3
+
+
+Given a non-negative int n, return the count of the occurrences of 7 as a digit, so for example 717 yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+
+count7(717) → 2
+count7(7) → 1
+count7(123) → 0
+
+
+Given a non-negative int n, compute recursively (no loops) the count of the occurrences of 8 as a digit, except that an 8 with another 8 immediately to its left counts double, so 8818 yields 4. Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+
+count8(8) → 1
+count8(818) → 2
+count8(8818) → 4
+
+
+None
+
+powerN(3, 1) → 3
+powerN(3, 2) → 9
+powerN(3, 3) → 27
+
+
+Given a string, compute recursively (no loops) the number of lowercase 'x' chars in the string.
+
+countX("xxhixx") → 4
+countX("xhixhix") → 3
+countX("hi") → 0
+
+
+Given a string, compute recursively (no loops) the number of times lowercase "hi" appears in the string.
+
+countHi("xxhixx") → 1
+countHi("xhixhix") → 2
+countHi("hi") → 1
+
+
+Given a string, compute recursively (no loops) a new string where all the lowercase 'x' chars have been changed to 'y' chars.
+
+changeXY("codex") → "codey"
+changeXY("xxhixx") → "yyhiyy"
+changeXY("xhixhix") → "yhiyhiy"
+
+
+Given a string, compute recursively (no loops) a new string where all appearances of "pi" have been replaced by "3.14".
+
+changePi("xpix") → "x3.14x"
+changePi("pipi") → "3.143.14"
+changePi("pip") → "3.14p"
+
+
+Given a string, compute recursively a new string where all the 'x' chars have been removed.
+
+noX("xaxb") → "ab"
+noX("abc") → "abc"
+noX("xx") → ""
+
+
+Given an array of ints, compute recursively if the array contains a 6. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+
+array6([1, 6, 4], 0) → true
+array6([1, 4], 0) → false
+array6([6], 0) → true
+
+
+Given an array of ints, compute recursively the number of times that the value 11 appears in the array. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+
+array11([1, 2, 11], 0) → 1
+array11([11, 11], 0) → 2
+array11([1, 2, 3, 4], 0) → 0
+
+
+Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+
+array220([1, 2, 20], 0) → true
+array220([3, 30], 0) → true
+array220([3], 0) → false
+
+
+Given a string, compute recursively a new string where all the adjacent chars are now separated by a "*".
+
+allStar("hello") → "h*e*l*l*o"
+allStar("abc") → "a*b*c"
+allStar("ab") → "a*b"
+
+
+Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a "*".
+
+pairStar("hello") → "hel*lo"
+pairStar("xxyy") → "x*xy*y"
+pairStar("aaaa") → "a*a*a*a"
+
+
+Given a string, compute recursively a new string where all the lowercase 'x' chars have been moved to the end of the string.
+
+endX("xxre") → "rexx"
+endX("xxhixx") → "hixxxx"
+endX("xhixhix") → "hihixxx"
+
+
+We'll say that a "pair" in a string is two instances of a char separated by a char. So "AxA" the A's make a pair. Pair's can overlap, so "AxAxA" contains 3 pairs -- 2 for A and 1 for x. Recursively compute the number of pairs in the given string.
+
+countPairs("axa") → 1
+countPairs("axax") → 2
+countPairs("axbx") → 1
+
+
+Count recursively the total number of "abc" and "aba" substrings that appear in the given string.
+
+countAbc("abc") → 1
+countAbc("abcxxabc") → 2
+countAbc("abaxxaba") → 2
+
+
+Given a string, compute recursively (no loops) the number of "11" substrings in the string. The "11" substrings should not overlap.
+
+count11("11abc11") → 2
+count11("abc11x11x11") → 3
+count11("111") → 1
+
+
+Given a string, return recursively a "cleaned" string where adjacent chars that are the same have been reduced to a single char. So "yyzzza" yields "yza".
+
+stringClean("yyzzza") → "yza"
+stringClean("abbbcdd") → "abcd"
+stringClean("Hello") → "Helo"
+
+
+Given a string, compute recursively the number of times lowercase "hi" appears in the string, however do not count "hi" that have an 'x' immedately before them.
+
+countHi2("ahixhi") → 1
+countHi2("ahibhi") → 2
+countHi2("xhixhi") → 0
+
+
+Given a string that contains a single pair of parenthesis, compute recursively a new string made of only of the parenthesis and their contents, so "xyz(abc)123" yields "(abc)".
+
+parenBit("xyz(abc)123") → "(abc)"
+parenBit("x(hello)") → "(hello)"
+parenBit("(xy)1") → "(xy)"
+
+
+Given a string, return true if it is a nesting of zero or more pairs of parenthesis, like "(())" or "((()))". Suggestion: check the first and last chars, and then recur on what's inside them.
+
+nestParen("(())") → true
+nestParen("((()))") → true
+nestParen("(((x))") → false
+
+
+None
+
+strCount("catcowcat", "cat") → 2
+strCount("catcowcat", "cow") → 1
+strCount("catcowcat", "dog") → 0
+
+
+None
+
+strCopies("catcowcat", "cat", 2) → true
+strCopies("catcowcat", "cow", 2) → false
+strCopies("catcowcat", "cow", 1) → true
+
+
+None
+
+strDist("catcowcat", "cat") → 9
+strDist("catcowcat", "cow") → 3
+strDist("cccatcowcatxx", "cat") → 9
+
+
+None
+
+groupSum(0, [2, 4, 8], 10) → true
+groupSum(0, [2, 4, 8], 14) → true
+groupSum(0, [2, 4, 8], 9) → false
+
+
+Given an array of ints, is it possible to choose a group of some of the ints, beginning at the start index, such that the group sums to the given target? However, with the additional constraint that all 6's must be chosen. (No loops needed.)
+
+groupSum6(0, [5, 6, 2], 8) → true
+groupSum6(0, [5, 6, 2], 9) → false
+groupSum6(0, [5, 6, 2], 7) → false
+
+
+Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target with this additional constraint: If a value in the array is chosen to be in the group, the value immediately following it in the array must not be chosen. (No loops needed.)
+
+groupNoAdj(0, [2, 5, 10, 4], 12) → true
+groupNoAdj(0, [2, 5, 10, 4], 14) → false
+groupNoAdj(0, [2, 5, 10, 4], 7) → false
+
+
+Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target with these additional constraints: all multiples of 5 in the array must be included in the group. If the value immediately following a multiple of 5 is 1, it must not be chosen. (No loops needed.)
+
+groupSum5(0, [2, 5, 10, 4], 19) → true
+groupSum5(0, [2, 5, 10, 4], 17) → true
+groupSum5(0, [2, 5, 10, 4], 12) → false
+
+
+Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target, with this additional constraint: if there are numbers in the array that are adjacent and the identical value, they must either all be chosen, or none of them chosen. For example, with the array {1, 2, 2, 2, 5, 2}, either all three 2's in the middle must be chosen or not, all as a group. (one loop can be used to find the extent of the identical values).
+
+groupSumClump(0, [2, 4, 8], 10) → true
+groupSumClump(0, [1, 2, 4, 8, 1], 14) → true
+groupSumClump(0, [2, 4, 4, 8], 14) → false
+
+
+Given an array of ints, is it possible to divide the ints into two groups, so that the sums of the two groups are the same. Every int must be in one group or the other. Write a recursive helper method that takes whatever arguments you like, and make the initial call to your recursive helper from splitArray(). (No loops needed.)
+
+splitArray([2, 2]) → true
+splitArray([2, 3]) → false
+splitArray([5, 2, 3]) → true
+
+
+Given an array of ints, is it possible to divide the ints into two groups, so that the sum of one group is a multiple of 10, and the sum of the other group is odd. Every int must be in one group or the other. Write a recursive helper method that takes whatever arguments you like, and make the initial call to your recursive helper from splitOdd10(). (No loops needed.)
+
+splitOdd10([5, 5, 5]) → true
+splitOdd10([5, 5, 6]) → false
+splitOdd10([5, 5, 6, 1]) → true
+
+
+Given an array of ints, is it possible to divide the ints into two groups, so that the sum of the two groups is the same, with these constraints: all the values that are multiple of 5 must be in one group, and all the values that are a multiple of 3 (and not a multiple of 5) must be in the other. (No loops needed.)
+
+split53([1, 1]) → true
+split53([1, 1, 1]) → false
+split53([2, 4, 2]) → true
+
+
+Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that value, and set the key "a" to have the value "". Basically "b" is a bully, taking the value and replacing it with the empty string.
+
+mapBully({"a": "candy", "b": "dirt"}) → {"a": "", "b": "candy"}
+mapBully({"a": "candy"}) → {"a": "", "b": "candy"}
+mapBully({"a": "candy", "b": "carrot", "c": "meh"}) → {"a": "", "b": "candy", "c": "meh"}
+
+
+Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that same value. In all cases remove the key "c", leaving the rest of the map unchanged.
+
+mapShare({"a": "aaa", "b": "bbb", "c": "ccc"}) → {"a": "aaa", "b": "aaa"}
+mapShare({"b": "xyz", "c": "ccc"}) → {"b": "xyz"}
+mapShare({"a": "aaa", "c": "meh", "d": "hi"}) → {"a": "aaa", "b": "aaa", "d": "hi"}
+
+
+Modify and return the given map as follows: for this problem the map may or may not contain the "a" and "b" keys. If both keys are present, append their 2 string values together and store the result under the key "ab".
+
+mapAB({"a": "Hi", "b": "There"}) → {"a": "Hi", "ab": "HiThere", "b": "There"}
+mapAB({"a": "Hi"}) → {"a": "Hi"}
+mapAB({"b": "There"}) → {"b": "There"}
+
+
+Given a map of food keys and topping values, modify and return the map as follows: if the key "ice cream" is present, set its value to "cherry". In all cases, set the key "bread" to have the value "butter".
+
+topping1({"ice cream": "peanuts"}) → {"bread": "butter", "ice cream": "cherry"}
+topping1({}) → {"bread": "butter"}
+topping1({"pancake": "syrup"}) → {"bread": "butter", "pancake": "syrup"}
+
+
+Given a map of food keys and their topping values, modify and return the map as follows: if the key "ice cream" has a value, set that as the value for the key "yogurt" also. If the key "spinach" has a value, change that value to "nuts".
+
+topping2({"ice cream": "cherry"}) → {"yogurt": "cherry", "ice cream": "cherry"}
+topping2({"spinach": "dirt", "ice cream": "cherry"}) → {"yogurt": "cherry", "spinach": "nuts", "ice cream": "cherry"}
+topping2({"yogurt": "salt"}) → {"yogurt": "salt"}
+
+
+Given a map of food keys and topping values, modify and return the map as follows:  if the key "potato" has a value, set that as the value for the key "fries". If the key "salad" has a value, set that as the value for the key "spinach".
+
+topping3({"potato": "ketchup"}) → {"potato": "ketchup", "fries": "ketchup"}
+topping3({"potato": "butter"}) → {"potato": "butter", "fries": "butter"}
+topping3({"salad": "oil", "potato": "ketchup"}) → {"spinach": "oil", "salad": "oil", "potato": "ketchup", "fries": "ketchup"}
+
+
+Modify and return the given map as follows: if the keys "a" and "b" are both in the map and have equal values, remove them both.
+
+mapAB2({"a": "aaa", "b": "aaa", "c": "cake"}) → {"c": "cake"}
+mapAB2({"a": "aaa", "b": "bbb"}) → {"a": "aaa", "b": "bbb"}
+mapAB2({"a": "aaa", "b": "bbb", "c": "aaa"}) → {"a": "aaa", "b": "bbb", "c": "aaa"}
+
+
+Modify and return the given map as follows: if exactly one of the keys "a" or "b" has a value in the map (but not both), set the other to have that same value in the map.
+
+mapAB3({"a": "aaa", "c": "cake"}) → {"a": "aaa", "b": "aaa", "c": "cake"}
+mapAB3({"b": "bbb", "c": "cake"}) → {"a": "bbb", "b": "bbb", "c": "cake"}
+mapAB3({"a": "aaa", "b": "bbb", "c": "cake"}) → {"a": "aaa", "b": "bbb", "c": "cake"}
+
+
+Modify and return the given map as follows: if the keys "a" and "b" have values that have different lengths, then set "c" to have the longer value. If the values exist and have the same length, change them both to the empty string in the map.
+
+mapAB4({"a": "aaa", "b": "bb", "c": "cake"}) → {"a": "aaa", "b": "bb", "c": "aaa"}
+mapAB4({"a": "aa", "b": "bbb", "c": "cake"}) → {"a": "aa", "b": "bbb", "c": "bbb"}
+mapAB4({"a": "aa", "b": "bbb"}) → {"a": "aa", "b": "bbb", "c": "bbb"}
+
+
+Given an array of strings, return a Map<String, Integer> containing a key for every different string in the array, always with the value 0. For example the string "hello" makes the pair "hello":0. We'll do more complicated counting later, but for this problem the value is simply 0.
+
+word0(["a", "b", "a", "b"]) → {"a": 0, "b": 0}
+word0(["a", "b", "a", "c", "b"]) → {"a": 0, "b": 0, "c": 0}
+word0(["c", "b", "a"]) → {"a": 0, "b": 0, "c": 0}
+
+
+Given an array of strings, return a Map<String, Integer> containing a key for every different string in the array, and the value is that string's length.
+
+wordLen(["a", "bb", "a", "bb"]) → {"bb": 2, "a": 1}
+wordLen(["this", "and", "that", "and"]) → {"that": 4, "and": 3, "this": 4}
+wordLen(["code", "code", "code", "bug"]) → {"code": 4, "bug": 3}
+
+
+Given an array of non-empty strings, create and return a Map<String, String> as follows: for each string add its first character as a key with its last character as the value.
+
+pairs(["code", "bug"]) → {"b": "g", "c": "e"}
+pairs(["man", "moon", "main"]) → {"m": "n"}
+pairs(["man", "moon", "good", "night"]) → {"g": "d", "m": "n", "n": "t"}
+
+
+The classic word-count algorithm: given an array of strings, return a Map<String, Integer> with a key for each different string, with the value the number of times that string appears in the array.
+
+wordCount(["a", "b", "a", "c", "b"]) → {"a": 2, "b": 2, "c": 1}
+wordCount(["c", "b", "a"]) → {"a": 1, "b": 1, "c": 1}
+wordCount(["c", "c", "c", "c"]) → {"c": 4}
+
+
+Given an array of non-empty strings, return a Map<String, String> with a key for every different first character seen, with the value of all the strings starting with that character appended together in the order they appear in the array.
+
+firstChar(["salt", "tea", "soda", "toast"]) → {"s": "saltsoda", "t": "teatoast"}
+firstChar(["aa", "bb", "cc", "aAA", "cCC", "d"]) → {"a": "aaaAA", "b": "bb", "c": "cccCC", "d": "d"}
+firstChar([]) → {}
+
+
+Loop over the given array of strings to build a result string like this: when a string appears the 2nd, 4th, 6th, etc. time in the array, append the string to the result. Return the empty string if no string appears a 2nd time.
+
+wordAppend(["a", "b", "a"]) → "a"
+wordAppend(["a", "b", "a", "c", "a", "d", "a"]) → "aa"
+wordAppend(["a", "", "a"]) → "a"
+
+
+Given an array of strings, return a Map<String, Boolean> where each different string is a key and its value is true if that string appears 2 or more times in the array.
+
+wordMultiple(["a", "b", "a", "c", "b"]) → {"a": true, "b": true, "c": false}
+wordMultiple(["c", "b", "a"]) → {"a": false, "b": false, "c": false}
+wordMultiple(["c", "c", "c", "c"]) → {"c": true}
+
+
+We'll say that 2 strings "match" if they are non-empty and their first chars are the same. Loop over and then return the given array of non-empty strings as follows: if a string matches an earlier string in the array, swap the 2 strings in the array. When a position in the array has been swapped, it no longer matches anything. Using a map, this can be solved making just one pass over the array. More difficult than it looks.
+
+allSwap(["ab", "ac"]) → ["ac", "ab"]
+allSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → ["ay", "by", "cy", "cx", "bx", "ax", "azz", "aaa"]
+allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax", "bx", "aj", "ai", "by", "bx"]
+
+
+We'll say that 2 strings "match" if they are non-empty and their first chars are the same. Loop over and then return the given array of non-empty strings as follows: if a string matches an earlier string in the array, swap the 2 strings in the array. A particular first char can only cause 1 swap, so once a char has caused a swap, its later swaps are disabled. Using a map, this can be solved making just one pass over the array. More difficult than it looks.
+
+firstSwap(["ab", "ac"]) → ["ac", "ab"]
+firstSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → ["ay", "by", "cy", "cx", "bx", "ax", "aaa", "azz"]
+firstSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax", "bx", "ai", "aj", "bx", "by"]
+
+
+Given a list of integers, return a list where each integer is multiplied by 2.
+
+doubling([1, 2, 3]) → [2, 4, 6]
+doubling([6, 8, 6, 8, -1]) → [12, 16, 12, 16, -2]
+doubling([]) → []
+
+
+Given a list of integers, return a list where each integer is multiplied with itself.
+
+square([1, 2, 3]) → [1, 4, 9]
+square([6, 8, -6, -8, 1]) → [36, 64, 36, 64, 1]
+square([]) → []
+
+
+Given a list of strings, return a list where each string has "*" added at its end.
+
+addStar(["a", "bb", "ccc"]) → ["a*", "bb*", "ccc*"]
+addStar(["hello", "there"]) → ["hello*", "there*"]
+addStar(["*"]) → ["**"]
+
+
+Given a list of strings, return a list where each string is replaced by 3 copies of the string concatenated together.
+
+copies3(["a", "bb", "ccc"]) → ["aaa", "bbbbbb", "ccccccccc"]
+copies3(["24", "a", ""]) → ["242424", "aaa", ""]
+copies3(["hello", "there"]) → ["hellohellohello", "theretherethere"]
+
+
+Given a list of strings, return a list where each string has "y" added at its start and end.
+
+moreY(["a", "b", "c"]) → ["yay", "yby", "ycy"]
+moreY(["hello", "there"]) → ["yhelloy", "ytherey"]
+moreY(["yay"]) → ["yyayy"]
+
+
+Given a list of integers, return a list where each integer is added to 1 and the result is multiplied by 10.
+
+math1([1, 2, 3]) → [20, 30, 40]
+math1([6, 8, 6, 8, 1]) → [70, 90, 70, 90, 20]
+math1([10]) → [110]
+
+
+Given a list of non-negative integers, return an integer list of the rightmost digits. (Note: use %)
+
+rightDigit([1, 22, 93]) → [1, 2, 3]
+rightDigit([16, 8, 886, 8, 1]) → [6, 8, 6, 8, 1]
+rightDigit([10, 0]) → [0, 0]
+
+
+Given a list of strings, return a list where each string is converted to lower case (Note: String toLowerCase() method).
+
+lower(["Hello", "Hi"]) → ["hello", "hi"]
+lower(["AAA", "BBB", "ccc"]) → ["aaa", "bbb", "ccc"]
+lower(["KitteN", "ChocolaTE"]) → ["kitten", "chocolate"]
+
+
+Given a list of strings, return a list where each string has all its "x" removed.
+
+noX(["ax", "bb", "cx"]) → ["a", "bb", "c"]
+noX(["xxax", "xbxbx", "xxcx"]) → ["a", "bb", "c"]
+noX(["x"]) → [""]
+
+
+Given a list of integers, return a list of the integers, omitting any that are less than 0.
+
+noNeg([1, -2]) → [1]
+noNeg([-3, -3, 3, 3]) → [3, 3]
+noNeg([-1, -1, -1]) → []
+
+
+Given a list of non-negative integers, return a list of those numbers except omitting any that end with 9. (Note:  % by 10)
+
+no9([1, 2, 19]) → [1, 2]
+no9([9, 19, 29, 3]) → [3]
+no9([1, 2, 3]) → [1, 2, 3]
+
+
+Given a list of integers, return a list of those numbers, omitting any that are between 13 and 19 inclusive.
+
+noTeen([12, 13, 19, 20]) → [12, 20]
+noTeen([1, 14, 1]) → [1, 1]
+noTeen([15]) → []
+
+
+Given a list of strings, return a list of the strings, omitting any string length 4 or more.
+
+noLong(["this", "not", "too", "long"]) → ["not", "too"]
+noLong(["a", "bbb", "cccc"]) → ["a", "bbb"]
+noLong(["cccc", "cccc", "cccc"]) → []
+
+
+Given a list of strings, return a list of the strings, omitting any string that contains a "z". (Note: the str.contains(x) method returns a boolean)
+
+noZ(["aaa", "bbb", "aza"]) → ["aaa", "bbb"]
+noZ(["hziz", "hzello", "hi"]) → ["hi"]
+noZ(["hello", "howz", "are", "youz"]) → ["hello", "are"]
+
+
+Given a list of strings, return a list of the strings, omitting any string length 3 or 4.
+
+no34(["a", "bb", "ccc"]) → ["a", "bb"]
+no34(["a", "bb", "ccc", "dddd"]) → ["a", "bb"]
+no34(["ccc", "dddd", "apple"]) → ["apple"]
+
+
+Given a list of strings, return a list where each string has "y" added at its end, omitting any resulting strings that contain "yy" as a substring anywhere.
+
+noYY(["a", "b", "c"]) → ["ay", "by", "cy"]
+noYY(["a", "b", "cy"]) → ["ay", "by"]
+noYY(["xx", "ya", "zz"]) → ["xxy", "yay", "zzy"]
+
+
+Given a list of non-negative integers, return a list of those numbers multiplied by 2, omitting any of the resulting numbers that end in 2.
+
+two2([1, 2, 3]) → [4, 6]
+two2([2, 6, 11]) → [4]
+two2([0]) → [0]
+
+
+Given a list of integers, return a list of those numbers squared and the product added to 10, omitting any of the resulting numbers that end in 5 or 6.
+
+square56([3, 1, 4]) → [19, 11]
+square56([1]) → [11]
+square56([2]) → [14]
+
+
