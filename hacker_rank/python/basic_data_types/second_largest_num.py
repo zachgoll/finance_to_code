@@ -1,15 +1,13 @@
 def get_largest(array):
-    largest = array[len(array) - 1]
-    for i in range(len(array) - 1):
-        if (array[i] > array[i+1]):
+    largest = array[0]
+    for i in range(len(array)):
+        if (array[i] >= largest):
             largest = array[i]
     return largest
 
 
 def rep_largest(array, largest):
-    for i in range(len(array)):
-        if (array[i] == largest):
-            array[i] = 0
+    while largest in array: array.remove(largest)
     return array
 
 
