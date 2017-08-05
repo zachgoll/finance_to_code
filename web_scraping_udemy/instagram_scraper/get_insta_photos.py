@@ -5,14 +5,19 @@ import getpass
 import os, requests, shutil
 
 class App:
+    # Must redefine 'path' to your desired photo download location 
     def __init__(self, username, password,
                 path='/Users/Zach/Desktop/instaphotos'):
+
         self.username = username
         self.password = password
         self.error_flag = False
         self.target_username = username
         self.path = path
+
+        # Must specify path to chromedriver executable here
         self.driver = webdriver.Chrome('/Users/Zach/Desktop/chromedriver')
+
         self.driver.get('https://www.instagram.com')
         sleep(1)
         if self.error_flag == False:
@@ -22,7 +27,6 @@ class App:
         sleep(1)
         if self.error_flag == False:
             self.scroll_down()
-        # os.path.exists()
         if not os.path.exists(self.path):
             os.makedirs(self.path)
         self.download_images()
