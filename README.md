@@ -11,7 +11,7 @@ educating myself in the vast field of computer science.  Below lists the courses
 | [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)| [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/cs50) | Feb. 22, 2017 - May 05, 2017 |
 | * [Nand to Tetris (book + accompanying website)](http://www.nand2tetris.org) | [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/cs50/virtual_computer_final_project) | May 05, 2017 - June 25, 2017 |
 | [42 Coding University 4-Week "Piscine"](https://www.42.us.org/) | [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/42_piscine) | June 26, 2017 - July 22, 2017 |
-| [Web Scraping Udemy Course] | [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/web_scraping_udemy) | August 1, 2017 - August 7, 2017 |
+| [Web Scraping Udemy Course](https://www.udemy.com/web-scraping-with-python-beautifulsoup/learn/v4/) | [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/web_scraping_udemy) | August 1, 2017 - August 7, 2017 |
 
 ### In progress
 
