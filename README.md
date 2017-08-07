@@ -5,15 +5,15 @@ educating myself in the vast field of computer science.  Below lists the courses
 
 ### Completed
 
-| Tables        | Are           | Cool  |
+| Course        | My Work   | Dates |  
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+|  [Colt Steele's Web Development Bootcamp on Udemy](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview) | [MY PROJECT FILES](https://github.com/zachgoll/finance_to_code/tree/master/web_dev_bootcamp_udemy) | Dec. 4, 2016 - Feb. 10, 2017 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
 
-* [Colt Steele's Web Development Bootcamp on Udemy](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
-  * [MY PROJECT FILES](https://github.com/zachgoll/finance_to_code/tree/master/web_dev_bootcamp_udemy) (Dec. 4, 2016 - Feb. 10, 2017)
+* 
+  *  (Dec. 4, 2016 - Feb. 10, 2017)
 
 * [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x) 
   * [MY PROJECT FILES](https://github.com/zachgoll/finance_to_code/tree/master/cs50) (Feb. 22, 2017 - May 05, 2017)
