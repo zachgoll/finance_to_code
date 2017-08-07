@@ -5,7 +5,7 @@ educating myself in the vast field of computer science.  Below lists the courses
 
 ### Completed
 
-| Course        | My Work   | Dates | Hours to complete |
+| Course/Project  | My Work   | Dates | Hours to complete |
 | :-------------: |:-------------:| :-----:| :----: |
 |  [Colt Steele's Web-dev Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview) | [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/web_dev_bootcamp_udemy) | Dec. 4, 2016 - Feb. 10, 2017 | 60 |
 | [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)| [Project Files](https://github.com/zachgoll/finance_to_code/tree/master/cs50) | Feb. 22, 2017 - May 05, 2017 | 95 |
