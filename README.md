@@ -15,5 +15,5 @@ educating myself in the vast field of computer science.  Below lists the courses
 
 ### In progress
 
-* [Udacity's Data Science Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002)
-* [HackerRank Python Exercises](https://www.hackerrank.com/domains/python/py-introduction)
+* Ethereum Development ([Dapps - Udemy](https://www.udemy.com/ethereum-dapp/learn/v4/overview))
+* Hyperledger Composer Development
