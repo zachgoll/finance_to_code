@@ -1,3 +1,9 @@
+## Update
+
+I stopped updating this repository, but have not stopped learning :)
+
+If you've somehow stumbled on this repo, you can check out [zachgollwitzer.com](https://www.zachgollwitzer.com) to see what I'm up to.
+
 ## Project Overview
 
 This repository documents all the projects and miscellaneous work I have done while
